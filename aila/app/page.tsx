@@ -26,7 +26,7 @@ export default function Home() {
 					</h2>
 				</div>
 
-				<div className="p-4 row-span-3 col-span-4 bg-slate-300 rounded-2xl w-full flex flex-col justify-between">
+				<div className="p-4 row-span-3 col-span-4 bg-slate-100 rounded-2xl w-full flex flex-col justify-between">
 					<div className="flex flex-row items-center justify-between">
 						<span className="font-light">We would love to hear from you</span>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10">
