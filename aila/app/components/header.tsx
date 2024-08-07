@@ -1,0 +1,15 @@
+import Link from "next/link";
+
+const Header = () => {
+    return (
+        <nav className="w-full h-16 bg-slate-50 p-4 rounded-xl flex items-center justify-between">
+            <h1>Logo</h1>
+            <div className="flex flex-row space-x-4 uppercase">
+                <Link href="/about">About</Link>
+                <Link href="/contact">Contact</Link>
+            </div>
+        </nav>
+    );
+}
+ 
+export default Header;
