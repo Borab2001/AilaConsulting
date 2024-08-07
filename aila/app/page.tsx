@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
 	return (
 		<main className="flex flex-1 flex-grow h-full pt-4">
@@ -26,17 +28,17 @@ export default function Home() {
 					</h2>
 				</div>
 
-				<div className="p-4 row-span-3 col-span-4 bg-slate-100 rounded-2xl w-full flex flex-col justify-between">
+				<Link href="/contact" className="p-4 row-span-3 col-span-4 bg-slate-100 rounded-2xl w-full flex flex-col justify-between group">
 					<div className="flex flex-row items-center justify-between">
 						<span className="font-light">We would love to hear from you</span>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
 							<path fillRule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clipRule="evenodd" />
 						</svg>
 					</div>
 					<h2 className="text-5xl font-bold mb-4">
 						Contact Us
 					</h2>
-				</div>
+				</Link>
 				
 				<div className="p-4 row-span-1 col-span-4 bg-slate-100 rounded-2xl w-full flex items-center justify-center gap-10">
 					<span className="uppercase font-light">Facebook</span>
