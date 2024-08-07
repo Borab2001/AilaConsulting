@@ -4,9 +4,9 @@ export default function Home() {
 	return (
 		<main className="flex flex-1 flex-grow h-full pt-4">
 			<div className="flex-1 w-full h-auto grid grid-cols-12 gap-4">
-				<div className="p-4 row-span-5 col-span-5 bg-slate-100 rounded-2xl w-full">
+				<div className="p-4 row-span-5 col-span-5 bg-slate-100 rounded-2xl w-full flex items-end">
 					<h2 className="text-3xl font-bold mb-4">
-						1
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
 					</h2>
 				</div>
 
@@ -17,15 +17,35 @@ export default function Home() {
 				</div>
 
 				<div className="p-4 row-span-7 col-span-4 bg-slate-100 rounded-2xl w-full">
-					<h2 className="text-3xl font-bold mb-4">
-						3
-					</h2>
+					<div className="flex flex-row items-center w-full space-x-4">
+						<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+						<div className="flex flex-col items-start justify-center">
+							<h2 className="text-3xl font-bold mb-0">Title here</h2>
+							<span className="">Lorem ipsum dolor explanation here</span>
+						</div>
+					</div>
+
+					<div className="flex flex-row items-center w-full space-x-4">
+						<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+						<div className="flex flex-col items-start justify-center">
+							<h2 className="text-3xl font-bold mb-0">Title here</h2>
+							<span className="">Lorem ipsum dolor explanation here</span>
+						</div>
+					</div>
+
+					<div className="flex flex-row items-center w-full space-x-4">
+						<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+						<div className="flex flex-col items-start justify-center">
+							<h2 className="text-3xl font-bold mb-0">Title here</h2>
+							<span className="">Lorem ipsum dolor explanation here</span>
+						</div>
+					</div>
 				</div>
 
-				<div className="p-4 row-span-3 col-span-4 bg-slate-100 rounded-2xl w-full">
-					<h2 className="text-3xl font-bold mb-4">
-						4
-					</h2>
+				<div className="p-4 row-span-3 col-span-4 bg-slate-100 rounded-2xl w-full flex items-end">
+					<span className="text-lg mb-4">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
+					</span>
 				</div>
 
 				<Link href="/contact" className="p-4 row-span-3 col-span-4 bg-slate-100 rounded-2xl w-full flex flex-col justify-between group">
