@@ -36,7 +36,6 @@ export default function Home() {
 					<h2 className="text-5xl font-bold mb-4">
 						Contact Us
 					</h2>
-					
 				</div>
 				
 				<div className="p-4 row-span-1 col-span-4 bg-slate-100 rounded-2xl w-full flex items-center justify-center gap-10">
