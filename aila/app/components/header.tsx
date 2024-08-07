@@ -9,6 +9,7 @@ const Header = () => {
             <nav className="flex flex-row space-x-8 uppercase">
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
+                <Link href="/services">Services</Link>
             </nav>
         </header>
     );
