@@ -4,19 +4,19 @@ export default function Home() {
 	return (
 		<main className="flex flex-1 flex-grow h-full pt-4">
 			<div className="flex-1 w-full h-auto grid grid-cols-12 gap-4">
-				<div className="p-4 row-span-5 col-span-5 bg-slate-100 rounded-2xl w-full flex items-end">
+				<div className="p-4 row-span-5 col-span-5 bg-gray-50 rounded-2xl w-full flex items-end">
 					<h2 className="text-3xl font-bold mb-4">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
 					</h2>
 				</div>
 
-				<div className="p-4 row-span-5 col-span-3 bg-slate-100 rounded-2xl w-full flex-grow">
+				<div className="p-4 row-span-5 col-span-3 bg-gray-50 rounded-2xl w-full flex-grow">
 					<h2 className="text-3xl font-bold mb-4">
 						2
 					</h2>
 				</div>
 
-				<div className="p-4 row-span-7 col-span-4 bg-slate-100 rounded-2xl w-full">
+				<div className="p-4 row-span-7 col-span-4 bg-gray-50 rounded-2xl w-full">
 					<div className="flex flex-row items-center w-full space-x-4">
 						<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
 						<div className="flex flex-col items-start justify-center">
@@ -42,13 +42,13 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="p-4 row-span-3 col-span-4 bg-slate-100 rounded-2xl w-full flex items-end">
+				<div className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex items-end">
 					<span className="text-lg mb-4">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
 					</span>
 				</div>
 
-				<Link href="/contact" className="p-4 row-span-3 col-span-4 bg-slate-100 rounded-2xl w-full flex flex-col justify-between group">
+				<Link href="/contact" className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex flex-col justify-between group">
 					<div className="flex flex-row items-center justify-between">
 						<span className="font-light">We would love to hear from you</span>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
@@ -60,7 +60,7 @@ export default function Home() {
 					</h2>
 				</Link>
 				
-				<div className="p-4 row-span-1 col-span-4 bg-slate-100 rounded-2xl w-full flex items-center justify-center gap-10">
+				<div className="p-4 row-span-1 col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10">
 					<span className="uppercase font-light">Facebook</span>
 					<span className="uppercase font-light">Instagram</span>
 					<span className="uppercase font-light">Phone</span>
