@@ -1,6 +1,23 @@
 import Link from "next/link";
 
 export default function Home() {
+
+	const socials = [
+        {
+            name: 'Facebook',
+            href: '/facebook',
+        },
+        {
+            name: 'Instagram',
+            href: '/instagram',
+        },
+        {
+            name: 'Phone',
+            href: '/phone',
+        },
+        
+    ];
+
 	return (
 		<main className="flex flex-1 flex-grow h-full pt-4">
 			<div className="flex-1 w-full h-auto grid grid-cols-12 gap-4">
@@ -61,9 +78,14 @@ export default function Home() {
 				</Link>
 				
 				<div className="p-4 row-span-1 col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10">
-					<span className="uppercase font-light">Facebook</span>
-					<span className="uppercase font-light">Instagram</span>
-					<span className="uppercase font-light">Phone</span>
+					{socials.map((social, index) => (
+						<Link
+							key={`social${index}`}	
+						 	href={social.href} className="uppercase font-light"
+						>
+							{social.name}
+						</Link>
+					))}
 				</div>
 			</div>
 		</main>
