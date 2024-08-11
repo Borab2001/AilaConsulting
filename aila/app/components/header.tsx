@@ -26,7 +26,9 @@ const Header = () => {
     return (
         <header className="w-full h-16 bg-gray-50 p-4 rounded-2xl flex items-center justify-between">
             {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}
-            <Image src="/aila_bolder.svg" width={320} height={320} alt={"Logo"} />
+            <Link href="/">
+                <Image src="/aila_bolder.svg" width={320} height={320} alt={"Logo"} />
+            </Link>
 
             <nav className="flex flex-row space-x-8 uppercase">
                 {links.map((link, index) => (
