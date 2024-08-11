@@ -27,11 +27,11 @@ export default function Home() {
 					</h2>
 				</div>
 
-				<div className="p-4 row-span-5 col-span-3 bg-gray-50 rounded-2xl w-full flex-grow">
-					<h2 className="text-3xl font-bold mb-4">
-						2
-					</h2>
-				</div>
+				<Link href="/about" className="p-4 row-span-5 col-span-3 bg-gray-50 rounded-2xl w-full flex-grow flex justify-center items-center group group-hover:blur-md cursor-pointer">
+					<div className="scale-0 w-20 h-20 bg-gray-400 text-white flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
+						<span>Learn More</span>
+					</div>
+				</Link>
 
 				<div className="p-4 row-span-7 col-span-4 bg-gray-50 rounded-2xl w-full">
 					<div className="flex flex-row items-center w-full space-x-4">
