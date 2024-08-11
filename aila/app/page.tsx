@@ -65,7 +65,7 @@ export default function Home() {
 					</span>
 				</div>
 
-				<Link href="/contact" className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex flex-col justify-between group">
+				<Link href="/contact" className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex flex-col justify-between group hover:bg-gray-100 transition ease-in-out duration-300">
 					<div className="flex flex-row items-center justify-between">
 						<span className="font-light">We would love to hear from you</span>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
@@ -81,7 +81,7 @@ export default function Home() {
 					{socials.map((social, index) => (
 						<Link
 							key={`social${index}`}	
-						 	href={social.href} className="uppercase font-light relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
+						 	href={social.href} className="uppercase font-light relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
 						>
 							{social.name}
 						</Link>
