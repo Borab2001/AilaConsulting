@@ -24,7 +24,12 @@ const Header = () => {
     ];
 
     return (
-        <header className="w-full h-16 bg-gray-50 p-4 rounded-2xl flex items-center justify-between">
+        <motion.header 
+            className="w-full h-16 bg-gray-50 p-4 rounded-2xl flex items-center justify-between"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}    
+        >
             {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}
             <Link href="/">
                 <Image src="/aila_bolder.svg" width={320} height={320} alt={"Logo"} />
@@ -43,7 +48,7 @@ const Header = () => {
                     </Link>
                 ))}
             </nav>
-        </header>
+        </motion.header>
     );
 }
  

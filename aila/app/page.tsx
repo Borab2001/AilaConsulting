@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
 
@@ -18,22 +21,57 @@ export default function Home() {
         
     ];
 
+	const gridVariants = {
+		hidden: { opacity: 0, y: 0 },
+		visible: (i: number) => ({
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: i * 0.3 + 0.8,
+				duration: 0.6,
+			},
+		}),
+	};
+
 	return (
 		<main className="flex flex-1 flex-grow h-full pt-4">
 			<div className="flex-1 w-full h-auto grid grid-cols-12 gap-4">
-				<div className="p-4 row-span-5 col-span-5 bg-gray-50 rounded-2xl w-full flex items-end">
+
+				{/* Grid Child 1 */}
+				<motion.div 
+					className="p-4 row-span-5 col-span-5 bg-gray-50 rounded-2xl w-full flex items-end"
+					custom={0}
+					initial="hidden"
+					animate="visible"
+					variants={gridVariants}
+				>
 					<h2 className="text-3xl font-bold mb-4">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
 					</h2>
-				</div>
+				</motion.div>
 
-				<Link href="/about" className="p-4 row-span-5 col-span-3 bg-gray-50 rounded-2xl w-full flex-grow flex justify-center items-center group group-hover:blur-md cursor-pointer">
+				{/* Grid Child 2 */}
+				<motion.a 
+					href="/about" 
+					className="p-4 row-span-5 col-span-3 bg-gray-50 rounded-2xl w-full flex-grow flex justify-center items-center group group-hover:blur-md cursor-pointer"
+					custom={1}
+					initial="hidden"
+					animate="visible"
+					variants={gridVariants}	
+				>
 					<div className="scale-0 w-20 h-20 bg-gray-400 text-white flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
 						<span>Learn More</span>
 					</div>
-				</Link>
+				</motion.a>
 
-				<div className="p-4 row-span-7 col-span-4 bg-gray-50 rounded-2xl w-full">
+				{/* Grid Child 3 */}
+				<motion.div 
+					className="p-4 row-span-7 col-span-4 bg-gray-50 rounded-2xl w-full"
+					custom={2}
+					initial="hidden"
+					animate="visible"
+					variants={gridVariants}	
+				>
 					<div className="flex flex-row items-center w-full space-x-4">
 						<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
 						<div className="flex flex-col items-start justify-center">
@@ -57,15 +95,30 @@ export default function Home() {
 							<span className="">Lorem ipsum dolor explanation here</span>
 						</div>
 					</div>
-				</div>
+				</motion.div>
 
-				<div className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex items-end">
+				{/* Grid Child 4 */}
+				<motion.div 
+					className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex items-end"
+					custom={3}
+					initial="hidden"
+					animate="visible"
+					variants={gridVariants}	
+				>
 					<span className="text-lg mb-4">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
 					</span>
-				</div>
+				</motion.div>
 
-				<Link href="/contact" className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex flex-col justify-between group hover:bg-gray-100 transition ease-in-out duration-300">
+				{/* Grid Child 5 */}
+				<motion.a 
+					href="/contact" 
+					className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex flex-col justify-between group hover:bg-gray-100 transition ease-in-out duration-300"
+					custom={4}
+					initial="hidden"
+					animate="visible"
+					variants={gridVariants}
+				>
 					<div className="flex flex-row items-center justify-between">
 						<span className="font-light">We would love to hear from you</span>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
@@ -75,9 +128,16 @@ export default function Home() {
 					<h2 className="text-5xl font-bold mb-4">
 						Contact Us
 					</h2>
-				</Link>
+				</motion.a>
 				
-				<div className="p-4 row-span-1 col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10">
+				{/* Grid Child 6 */}
+				<motion.div 
+					className="p-4 row-span-1 col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10"
+					custom={5}
+					initial="hidden"
+					animate="visible"
+					variants={gridVariants}
+				>
 					{socials.map((social, index) => (
 						<Link
 							key={`social${index}`}	
@@ -86,7 +146,7 @@ export default function Home() {
 							{social.name}
 						</Link>
 					))}
-				</div>
+				</motion.div>
 			</div>
 		</main>
 	);
