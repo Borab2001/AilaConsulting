@@ -1,9 +1,8 @@
 "use client";
 
+import TransitionLink from "@/lib/transition-link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-
 
 const Header = () => {
 
@@ -31,13 +30,13 @@ const Header = () => {
             transition={{ duration: 0.5, delay: 0.5 }}    
         >
             {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}
-            <Link href="/">
-                <Image src="/aila_bolder.svg" width={320} height={320} alt={"Logo"} />
-            </Link>
+            <TransitionLink href="/">
+                <Image src="/aila_bolder.svg" width={300} height={300} alt={"Logo"} />
+            </TransitionLink>
 
             <nav className="flex flex-row space-x-8 uppercase">
                 {links.map((link, index) => (
-                    <Link 
+                    <TransitionLink 
                         href={link.url} 
                         key={`link${index}`}
                         className="relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
@@ -45,7 +44,7 @@ const Header = () => {
                         <span>
                             {link.name}
                         </span>
-                    </Link>
+                    </TransitionLink>
                 ))}
             </nav>
         </motion.header>
