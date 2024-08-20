@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import TransitionLink from "@/lib/transition-link";
 
 export default function Home() {
 
@@ -51,18 +52,19 @@ export default function Home() {
 				</motion.div>
 
 				{/* Grid Child 2 */}
-				<motion.a 
-					href="/about" 
-					className="p-4 row-span-5 col-span-3 bg-gray-50 rounded-2xl w-full flex-grow flex justify-center items-center group group-hover:blur-md cursor-pointer"
+				<motion.div 
+					className="row-span-5 col-span-3 bg-gray-50 rounded-2xl w-full flex-grow"
 					custom={1}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}	
 				>
-					<div className="scale-0 w-20 h-20 bg-gray-400 text-white flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
-						<span>Learn More</span>
-					</div>
-				</motion.a>
+					<TransitionLink href="/about" className="p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
+						<div className="scale-0 w-20 h-20 bg-gray-400 text-white flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
+							<span>Learn More</span>
+						</div>
+					</TransitionLink>
+				</motion.div>
 
 				{/* Grid Child 3 */}
 				<motion.div 
@@ -111,24 +113,25 @@ export default function Home() {
 				</motion.div>
 
 				{/* Grid Child 5 */}
-				<motion.a 
-					href="/contact" 
-					className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex flex-col justify-between group hover:bg-gray-100 transition ease-in-out duration-300"
+				<motion.div 
+					className="row-span-3 col-span-4 rounded-2xl w-full overflow-hidden"
 					custom={4}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}
 				>
-					<div className="flex flex-row items-center justify-between">
-						<span className="font-light">We would love to hear from you</span>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
-							<path fillRule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clipRule="evenodd" />
-						</svg>
-					</div>
-					<h2 className="text-5xl font-bold mb-4">
-						Contact Us
-					</h2>
-				</motion.a>
+					<TransitionLink href="/contact" className="p-4 w-full h-full flex flex-col justify-between bg-gray-50 group hover:bg-gray-100 transition ease-in-out duration-300">
+						<div className="flex flex-row items-center justify-between">
+							<span className="font-light">We would love to hear from you</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
+								<path fillRule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clipRule="evenodd" />
+							</svg>
+						</div>
+						<h2 className="text-5xl font-bold mb-4">
+							Contact Us
+						</h2>
+					</TransitionLink>
+				</motion.div>
 				
 				{/* Grid Child 6 */}
 				<motion.div 
@@ -139,12 +142,13 @@ export default function Home() {
 					variants={gridVariants}
 				>
 					{socials.map((social, index) => (
-						<Link
+						<TransitionLink
 							key={`social${index}`}	
-						 	href={social.href} className="uppercase font-light relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
+						 	href={social.href} 
+							className="uppercase font-light relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
 						>
 							{social.name}
-						</Link>
+						</TransitionLink>
 					))}
 				</motion.div>
 			</div>
