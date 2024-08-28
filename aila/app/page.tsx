@@ -36,11 +36,11 @@ export default function Home() {
 
 	return (
 		<main className="flex flex-1 flex-grow h-full pt-4">
-			<div className="flex-1 w-full h-auto grid grid-cols-12 gap-4">
+			<div className="flex-1 w-full md:h-[125vh] lg:h-auto grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-4">
 
 				{/* Grid Child 1 */}
 				<motion.div 
-					className="p-4 row-span-5 col-span-5 bg-gray-50 rounded-2xl w-full flex items-end"
+					className="p-4 md:row-span-4 md:col-span-5 lg:row-span-5 lg:col-span-5 bg-gray-50 rounded-2xl w-full flex items-end"
 					custom={0}
 					initial="hidden"
 					animate="visible"
@@ -53,7 +53,7 @@ export default function Home() {
 
 				{/* Grid Child 2 */}
 				<motion.div 
-					className="row-span-5 col-span-3 bg-gray-50 rounded-2xl w-full flex-grow"
+					className="md:row-span-7 md:col-span-3 lg:row-span-5 lg:col-span-3 bg-gray-50 rounded-2xl w-full flex-grow"
 					custom={1}
 					initial="hidden"
 					animate="visible"
@@ -68,7 +68,7 @@ export default function Home() {
 
 				{/* Grid Child 3 */}
 				<motion.div 
-					className="p-4 row-span-7 col-span-4 bg-gray-50 rounded-2xl w-full"
+					className="p-4 md:row-span-5 md:col-span-5 lg:row-span-7 lg:col-span-4 bg-gray-50 rounded-2xl w-full"
 					custom={2}
 					initial="hidden"
 					animate="visible"
@@ -101,7 +101,7 @@ export default function Home() {
 
 				{/* Grid Child 4 */}
 				<motion.div 
-					className="p-4 row-span-3 col-span-4 bg-gray-50 rounded-2xl w-full flex items-end"
+					className="p-4 md:row-span-2 md:col-span-3 lg:row-span-3 lg:col-span-4 bg-gray-50 rounded-2xl w-full flex items-end"
 					custom={3}
 					initial="hidden"
 					animate="visible"
@@ -114,7 +114,7 @@ export default function Home() {
 
 				{/* Grid Child 5 */}
 				<motion.div 
-					className="row-span-3 col-span-4 rounded-2xl w-full overflow-hidden"
+					className="md:row-span-1 md:col-span-4 lg:row-span-3 lg:col-span-4 rounded-2xl w-full overflow-hidden"
 					custom={4}
 					initial="hidden"
 					animate="visible"
@@ -135,7 +135,7 @@ export default function Home() {
 				
 				{/* Grid Child 6 */}
 				<motion.div 
-					className="p-4 row-span-1 col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10"
+					className="p-4 md:row-span-1 md:col-span-4 lg:row-span-1 lg:col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10"
 					custom={5}
 					initial="hidden"
 					animate="visible"
