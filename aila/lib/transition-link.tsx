@@ -8,12 +8,14 @@ interface TransitionLinkProps extends LinkProps {
     children: React.ReactNode;
     href: string;
     className?: string;
+    onLinkClick?: () => void;
 }
 
 const TransitionLink: React.FC<TransitionLinkProps> = ({
     children,
     href,
     className,
+    onLinkClick,
     ...props
 }) => {
     
@@ -21,6 +23,7 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
     
     const handleTransition = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
+        if (onLinkClick) onLinkClick();
         document.body.style.transition = "opacity 0.5s ease-in-out";
         document.body.style.opacity = "0";
 

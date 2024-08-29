@@ -25,6 +25,10 @@ const MobileHeader = () => {
 
     const [isActive, setIsActive] = useState(false);
 
+    const handleLinkClick = () => {
+        setIsActive(false);
+    };
+
     return (
         <motion.header 
             className={`w-full sticky top-4 ${isActive ? "h-auto" : "h-auto"} bg-gray-50 p-4 rounded-2xl flex flex-col md:hidden`}
@@ -34,7 +38,10 @@ const MobileHeader = () => {
         >
             <div className="flex items-center justify-between">
                 {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}
-                <TransitionLink href="/">
+                <TransitionLink 
+                    href="/"
+                    onLinkClick={handleLinkClick}
+                >
                     <Image src="/aila_bolder.svg" width={300} height={300} alt={"Logo"} />
                 </TransitionLink>
                 
@@ -54,9 +61,10 @@ const MobileHeader = () => {
             >
                 {links.map((link, index) => (
                     <TransitionLink 
-                        href={link.url} 
+                        href={link.url}
                         key={`link${index}`}
                         className="relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
+                        onLinkClick={handleLinkClick}
                     >
                         <motion.span
                             initial={{ opacity: 0 }}
