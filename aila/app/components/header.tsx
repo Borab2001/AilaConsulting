@@ -24,7 +24,7 @@ const Header = () => {
 
     return (
         <motion.header 
-            className="w-full h-16 bg-gray-50 p-4 rounded-2xl flex items-center justify-between"
+            className="w-full h-16 bg-gray-50 p-4 rounded-2xl hidden md:flex items-center justify-between"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}    
