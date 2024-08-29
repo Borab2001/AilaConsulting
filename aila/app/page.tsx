@@ -36,11 +36,11 @@ export default function Home() {
 
 	return (
 		<main className="flex flex-1 flex-grow h-full pt-4">
-			<div className="flex-1 w-full md:h-[125vh] lg:h-auto grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-4">
+			<div className="flex-1 w-full md:h-[125vh] lg:h-auto grid grid-rows-18 grid-cols-1 md:grid-rows-10 md:grid-cols-8 lg:grid-rows-8 lg:grid-cols-12 gap-4">
 
 				{/* Grid Child 1 */}
 				<motion.div 
-					className="p-4 md:row-span-4 md:col-span-5 lg:row-span-5 lg:col-span-5 bg-gray-50 rounded-2xl w-full flex items-end"
+					className="p-4 min-h-[260px] md:min-h-0 row-span-2 md:row-span-3 md:col-span-5 lg:row-span-5 lg:col-span-5 bg-gray-50 rounded-2xl w-full flex items-end"
 					custom={0}
 					initial="hidden"
 					animate="visible"
@@ -53,7 +53,7 @@ export default function Home() {
 
 				{/* Grid Child 2 */}
 				<motion.div 
-					className="md:row-span-7 md:col-span-3 lg:row-span-5 lg:col-span-3 bg-gray-50 rounded-2xl w-full flex-grow"
+					className="min-h-[480px] md:min-h-0 row-span-6 md:row-span-5 md:col-span-3 lg:row-span-5 lg:col-span-3 bg-gray-50 rounded-2xl w-full flex-grow"
 					custom={1}
 					initial="hidden"
 					animate="visible"
@@ -68,7 +68,7 @@ export default function Home() {
 
 				{/* Grid Child 3 */}
 				<motion.div 
-					className="p-4 md:row-span-5 md:col-span-5 lg:row-span-7 lg:col-span-4 bg-gray-50 rounded-2xl w-full"
+					className="p-4 min-h-[400px] md:min-h-0 row-span-5 md:row-span-5 md:col-span-5 lg:row-span-7 lg:col-span-4 bg-gray-50 rounded-2xl w-full"
 					custom={2}
 					initial="hidden"
 					animate="visible"
@@ -101,20 +101,20 @@ export default function Home() {
 
 				{/* Grid Child 4 */}
 				<motion.div 
-					className="p-4 md:row-span-2 md:col-span-3 lg:row-span-3 lg:col-span-4 bg-gray-50 rounded-2xl w-full flex items-end"
+					className="p-4 min-h-[260px] md:min-h-0 row-span-2 md:row-span-3 md:col-span-3 lg:row-span-3 lg:col-span-4 bg-gray-50 rounded-2xl w-full flex items-end"
 					custom={3}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}	
 				>
-					<span className="text-lg mb-4">
+					<span className="text-balance text-md lg:text-lg mb-4">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
 					</span>
 				</motion.div>
 
 				{/* Grid Child 5 */}
 				<motion.div 
-					className="md:row-span-1 md:col-span-4 lg:row-span-3 lg:col-span-4 rounded-2xl w-full overflow-hidden"
+					className="min-h-[260px] md:min-h-0 row-span-2 md:row-span-2 md:col-span-4 lg:row-span-3 lg:col-span-4 rounded-2xl w-full overflow-hidden"
 					custom={4}
 					initial="hidden"
 					animate="visible"
@@ -135,7 +135,7 @@ export default function Home() {
 				
 				{/* Grid Child 6 */}
 				<motion.div 
-					className="p-4 md:row-span-1 md:col-span-4 lg:row-span-1 lg:col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10"
+					className="min-h-[100px] md:min-h-0 p-4 row-span-1 md:row-span-2 md:col-span-4 lg:row-span-1 lg:col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10"
 					custom={5}
 					initial="hidden"
 					animate="visible"
