@@ -31,7 +31,7 @@ const MobileHeader = () => {
 
     return (
         <motion.header 
-            className={`w-full sticky top-4 ${isActive ? "h-auto" : "h-auto"} bg-gray-50 p-4 rounded-2xl flex flex-col md:hidden`}
+            className={`w-full sticky top-4 ${isActive ? "h-auto bg-gray-200" : "h-auto"} bg-gray-50 p-4 rounded-2xl flex flex-col md:hidden transition-colors duration-500 ease-in-out`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}    
@@ -42,7 +42,7 @@ const MobileHeader = () => {
                     href="/"
                     onLinkClick={handleLinkClick}
                 >
-                    <Image src="/aila_bolder.svg" width={300} height={300} alt={"Logo"} />
+                    <Image src="/aila_bolder.svg" className="w-[200] sm:w-[300px]" width={300} height={300} alt={"Logo"} />
                 </TransitionLink>
                 
                 <p 
@@ -63,7 +63,7 @@ const MobileHeader = () => {
                     <TransitionLink 
                         href={link.url}
                         key={`link${index}`}
-                        className="relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
+                        className={`${isActive ? "pointer-events-auto" : "pointer-events-none"} relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300`}
                         onLinkClick={handleLinkClick}
                     >
                         <motion.span
