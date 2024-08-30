@@ -31,7 +31,7 @@ const MobileHeader = () => {
 
     return (
         <motion.header 
-            className={`w-full sticky top-4 ${isActive ? "h-auto bg-gray-200" : "h-auto"} bg-gray-50 p-4 rounded-2xl flex flex-col md:hidden transition-colors duration-500 ease-in-out`}
+            className={`w-full sticky top-4 ${isActive ? "h-auto bg-gray-100" : "h-auto bg-gray-50"} p-4 rounded-2xl flex flex-col md:hidden transition-colors duration-500 ease-in-out`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}    
@@ -42,7 +42,7 @@ const MobileHeader = () => {
                     href="/"
                     onLinkClick={handleLinkClick}
                 >
-                    <Image src="/aila_bolder.svg" className="w-[200] sm:w-[300px]" width={300} height={300} alt={"Logo"} />
+                    <Image src="/aila_bolder.svg" className="sm:w-[300px]" width={200} height={200} alt={"Logo"} />
                 </TransitionLink>
                 
                 <p 
