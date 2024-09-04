@@ -15,6 +15,9 @@ const config: Config = {
       },
       width : {
         "header" : "calc(100% - 2rem)"
+      },
+      aspectRatio: {
+        "header" : "5 / 3"
       }
     },
   },

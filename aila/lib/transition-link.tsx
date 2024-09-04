@@ -9,6 +9,8 @@ interface TransitionLinkProps extends LinkProps {
     href: string;
     className?: string;
     onLinkClick?: () => void;
+    onMouseOver?: () => void;
+    onMouseLeave?: () => void;
 }
 
 const TransitionLink: React.FC<TransitionLinkProps> = ({
@@ -16,6 +18,8 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
     href,
     className,
     onLinkClick,
+    onMouseOver,
+    onMouseLeave,
     ...props
 }) => {
     
@@ -41,6 +45,8 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
             {...props}
             onClick={handleTransition}
             className={className}
+            onMouseOver={onMouseOver}
+            onMouseLeave={onMouseLeave}
         >
             {children}
         </Link>
