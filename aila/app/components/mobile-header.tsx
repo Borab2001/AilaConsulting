@@ -31,12 +31,12 @@ const MobileHeader = () => {
 
     return (
         <motion.header 
-            className={`w-full sticky top-4 ${isActive ? "h-auto bg-gray-100" : "h-auto bg-gray-50"} p-4 rounded-2xl flex flex-col md:hidden transition-colors duration-500 ease-in-out`}
+            className={`w-header fixed top-4 ${isActive ? "h-auto bg-gray-100" : "h-auto bg-gray-50"} p-4 rounded-2xl flex flex-col md:hidden transition-colors duration-500 ease-in-out`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}    
         >
-            <div className="flex items-center justify-between">
+            <div className="py-1 h-full flex items-center justify-between">
                 {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}
                 <TransitionLink 
                     href="/"

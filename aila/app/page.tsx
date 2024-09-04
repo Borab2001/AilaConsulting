@@ -35,7 +35,7 @@ export default function Home() {
 	};
 
 	return (
-		<main className="flex flex-1 flex-grow h-full pt-4">
+		<main className="flex flex-1 flex-grow h-full pt-20">
 			<div className="flex-1 w-full md:h-[125vh] lg:h-auto grid grid-rows-18 grid-cols-1 md:grid-rows-10 md:grid-cols-8 lg:grid-rows-8 lg:grid-cols-12 gap-4">
 
 				{/* Grid Child 1 */}
