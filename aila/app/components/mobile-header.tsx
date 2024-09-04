@@ -29,6 +29,8 @@ const MobileHeader = () => {
         
     ];
 
+    const currentYear = new Date().getFullYear();
+
     const [isActive, setIsActive] = useState(false);
     const [selectedLink, setSelectedLink] = useState({isActive: false, index: 0});
 
@@ -68,7 +70,7 @@ const MobileHeader = () => {
                     animate={{ height: isActive ? "256px" : 0 }}
                     transition={{ duration: 1, ease: "easeInOut", delay: isActive ? 0 : 0.2 }}
                 >
-                    <div className={`flex flex-col items-start justify-center space-y-8 ${isActive ? "w-full" : "w-0"}`}>
+                    <div className={`flex flex-col items-start justify-center space-y-8 ${isActive ? "w-full" : "w-auto"}`}>
                         <div className="uppercase flex flex-col items-start justify-center space-y-8">
                             {links.map((link, index) => (
                                 <TransitionLink 
@@ -94,7 +96,9 @@ const MobileHeader = () => {
                             animate={{ opacity: isActive ? 1 : 0 }}
                             transition={{ duration: 0.5, ease: "easeInOut", delay: isActive ? 0.7 : 0 }}
                         >
-                            Footer
+                            <p className="w-full text-center text-sm text-gray-800 font-light">
+                                <span className="uppercase text-gray-400">Copyright: </span>
+                                &#169; Aila Consulting {currentYear}</p>
                         </motion.div>
                     </div>
                     <motion.div className={`relative h-full aspect-header rounded-md overflow-hidden ${isActive ? "block" : "hidden"}`}>
