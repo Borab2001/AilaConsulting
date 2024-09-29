@@ -42,7 +42,7 @@ const MobileHeader = () => {
         <div className={`inset-0 fixed z-10 h-screen w-full transition-all duration-1000 ${isActive ? "bg-black/10 backdrop-blur-sm" : "bg-transparent backdrop-blur-none pointer-events-none"}`}>
 
             <motion.header 
-                className={`w-header absolute top-4 left-4 pointer-events-auto ${isActive ? "h-auto bg-white" : "h-auto bg-gray-50"} p-4 rounded-2xl flex flex-col md:hidden transition-colors duration-500 ease-in-out`}
+                className={`w-header absolute top-4 left-4 pointer-events-auto bg-gradient-gray p-4 rounded-2xl flex flex-col md:hidden transition-all duration-500 ease-in-out`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}    

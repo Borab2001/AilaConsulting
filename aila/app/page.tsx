@@ -40,7 +40,7 @@ export default function Home() {
 
 				{/* Grid Child 1 */}
 				<motion.div 
-					className="p-4 min-h-[260px] md:min-h-0 row-span-2 md:row-span-3 md:col-span-5 lg:row-span-5 lg:col-span-5 bg-gray-50 rounded-2xl w-full flex items-end"
+					className="p-4 min-h-[260px] md:min-h-0 row-span-2 md:row-span-3 md:col-span-5 lg:row-span-5 lg:col-span-5 bg-gradient-gray rounded-2xl w-full flex items-end"
 					custom={0}
 					initial="hidden"
 					animate="visible"
@@ -53,14 +53,14 @@ export default function Home() {
 
 				{/* Grid Child 2 */}
 				<motion.div 
-					className="min-h-[480px] md:min-h-0 row-span-6 md:row-span-5 md:col-span-3 lg:row-span-5 lg:col-span-3 bg-gray-50 rounded-2xl w-full flex-grow"
+					className="min-h-[480px] md:min-h-0 row-span-6 md:row-span-5 md:col-span-3 lg:row-span-5 lg:col-span-3 bg-istanbul bg-cover bg-center rounded-2xl w-full flex-grow"
 					custom={1}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}	
 				>
 					<TransitionLink href="/about" className="p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
-						<div className="scale-0 w-20 h-20 bg-gray-400 text-white flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
+						<div className="scale-0 w-20 h-20 bg-gradient-gray text-gridBlack flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
 							<span>Learn More</span>
 						</div>
 					</TransitionLink>
@@ -68,7 +68,7 @@ export default function Home() {
 
 				{/* Grid Child 3 */}
 				<motion.div 
-					className="p-4 min-h-[400px] md:min-h-0 row-span-5 md:row-span-5 md:col-span-5 lg:row-span-7 lg:col-span-4 bg-gray-50 rounded-2xl w-full"
+					className="p-4 min-h-[400px] md:min-h-0 row-span-5 md:row-span-5 md:col-span-5 lg:row-span-7 lg:col-span-4 bg-gradient-gray rounded-2xl w-full"
 					custom={2}
 					initial="hidden"
 					animate="visible"
@@ -101,7 +101,7 @@ export default function Home() {
 
 				{/* Grid Child 4 */}
 				<motion.div 
-					className="p-4 min-h-[260px] md:min-h-0 row-span-2 md:row-span-3 md:col-span-3 lg:row-span-3 lg:col-span-4 bg-gray-50 rounded-2xl w-full flex items-end"
+					className="p-4 min-h-[260px] md:min-h-0 row-span-2 md:row-span-3 md:col-span-3 lg:row-span-3 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex items-end"
 					custom={3}
 					initial="hidden"
 					animate="visible"
@@ -120,7 +120,7 @@ export default function Home() {
 					animate="visible"
 					variants={gridVariants}
 				>
-					<TransitionLink href="/contact" className="p-4 w-full h-full flex flex-col justify-between bg-gray-50 group hover:bg-gray-100 transition ease-in-out duration-300">
+					<TransitionLink href="/contact" className="p-4 w-full h-full flex flex-col justify-between bg-gridBlack group hover:bg-neutral-900 text-gridTextWhite transition ease-in-out duration-300">
 						<div className="flex flex-row items-center justify-between">
 							<span className="font-light">We would love to hear from you</span>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
@@ -135,7 +135,7 @@ export default function Home() {
 				
 				{/* Grid Child 6 */}
 				<motion.div 
-					className="min-h-[100px] md:min-h-0 p-4 row-span-1 md:row-span-2 md:col-span-4 lg:row-span-1 lg:col-span-4 bg-gray-50 rounded-2xl w-full flex items-center justify-center gap-10"
+					className="min-h-[100px] md:min-h-0 p-4 row-span-1 md:row-span-2 md:col-span-4 lg:row-span-1 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex items-center justify-center gap-10"
 					custom={5}
 					initial="hidden"
 					animate="visible"
