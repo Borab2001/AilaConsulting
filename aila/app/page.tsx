@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import TransitionLink from "@/lib/transition-link";
+import { ServiceBeams } from "./components/service-beams";
 
 export default function Home() {
 
@@ -68,35 +69,38 @@ export default function Home() {
 
 				{/* Grid Child 3 */}
 				<motion.div 
-					className="p-4 min-h-[400px] md:min-h-0 row-span-5 md:row-span-5 md:col-span-5 lg:row-span-7 lg:col-span-4 bg-gradient-gray rounded-2xl w-full"
+					className="p-4 min-h-[400px] md:min-h-0 row-span-5 md:row-span-5 md:col-span-5 lg:row-span-7 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex flex-col justify-between"	
 					custom={2}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}	
 				>
-					<div className="flex flex-row items-center w-full space-x-4">
-						<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
-						<div className="flex flex-col items-start justify-center">
-							<h2 className="text-3xl font-bold mb-0">Title here</h2>
-							<span className="">Lorem ipsum dolor explanation here</span>
+					<div className="flex flex-col gap-2">
+						<div className="flex flex-row items-center w-full space-x-4">
+							<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+							<div className="flex flex-col items-start justify-center">
+								<h2 className="text-3xl font-bold mb-0">Title here</h2>
+								<span className="">Lorem ipsum dolor explanation here</span>
+							</div>
 						</div>
-					</div>
 
-					<div className="flex flex-row items-center w-full space-x-4">
-						<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
-						<div className="flex flex-col items-start justify-center">
-							<h2 className="text-3xl font-bold mb-0">Title here</h2>
-							<span className="">Lorem ipsum dolor explanation here</span>
+						<div className="flex flex-row items-center w-full space-x-4">
+							<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+							<div className="flex flex-col items-start justify-center">
+								<h2 className="text-3xl font-bold mb-0">Title here</h2>
+								<span className="">Lorem ipsum dolor explanation here</span>
+							</div>
 						</div>
-					</div>
 
-					<div className="flex flex-row items-center w-full space-x-4">
-						<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
-						<div className="flex flex-col items-start justify-center">
-							<h2 className="text-3xl font-bold mb-0">Title here</h2>
-							<span className="">Lorem ipsum dolor explanation here</span>
+						<div className="flex flex-row items-center w-full space-x-4">
+							<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+							<div className="flex flex-col items-start justify-center">
+								<h2 className="text-3xl font-bold mb-0">Title here</h2>
+								<span className="">Lorem ipsum dolor explanation here</span>
+							</div>
 						</div>
 					</div>
+					<ServiceBeams />
 				</motion.div>
 
 				{/* Grid Child 4 */}
