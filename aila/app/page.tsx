@@ -77,26 +77,26 @@ export default function Home() {
 				>
 					<div className="flex flex-col gap-2">
 						<div className="flex flex-row items-center w-full space-x-4">
-							<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+							<div className="bg-neutral-300 h-12 w-12 rounded-full flex-shrink-0 flex-grow-0"/>
 							<div className="flex flex-col items-start justify-center">
-								<h2 className="text-3xl font-bold mb-0">Title here</h2>
-								<span className="">Lorem ipsum dolor explanation here</span>
+								<h2 className="text-2xl font-bold mb-0">Visa Solutions</h2>
+								<span className="">Fast-track your student, work, and family visas.</span>
 							</div>
 						</div>
 
 						<div className="flex flex-row items-center w-full space-x-4">
-							<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+							<div className="bg-neutral-300 h-12 w-12 rounded-full flex-shrink-0 flex-grow-0"/>
 							<div className="flex flex-col items-start justify-center">
-								<h2 className="text-3xl font-bold mb-0">Title here</h2>
-								<span className="">Lorem ipsum dolor explanation here</span>
+								<h2 className="text-2xl font-bold mb-0">Certified Translations</h2>
+								<span className="">Certified translations between French, Turkish, and Russian.</span>
 							</div>
 						</div>
 
 						<div className="flex flex-row items-center w-full space-x-4">
-							<div className="bg-neutral-300 h-12 w-12 rounded-full"/>
+							<div className="bg-neutral-300 h-12 w-12 rounded-full flex-shrink-0 flex-grow-0"/>
 							<div className="flex flex-col items-start justify-center">
-								<h2 className="text-3xl font-bold mb-0">Title here</h2>
-								<span className="">Lorem ipsum dolor explanation here</span>
+								<h2 className="text-2xl font-bold mb-0">Residence Permit Assistance</h2>
+								<span className="">Easy applications and renewals with expert support.</span>
 							</div>
 						</div>
 					</div>
