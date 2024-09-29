@@ -48,7 +48,7 @@ export default function Home() {
 					variants={gridVariants}
 				>
 					<h2 className="text-3xl font-bold mb-4">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
+						Transform your international relocation into a breeze with our all-in-one solution.
 					</h2>
 				</motion.div>
 
@@ -112,7 +112,7 @@ export default function Home() {
 					variants={gridVariants}	
 				>
 					<span className="text-balance text-md lg:text-lg mb-4">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.
+						We specialize in rapid visa approvals (student, work, family), offer certified translations in French, Turkish, and Russian, and provide seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.
 					</span>
 				</motion.div>
 
