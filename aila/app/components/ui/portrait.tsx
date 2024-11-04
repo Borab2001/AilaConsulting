@@ -26,8 +26,8 @@ const Portrait = () => {
 				right: "auto",
 				bottom: "auto",
                 transform: "translate(-50%, -50%)",
-				minWidth: 300,
-				minHeight: 400,
+				// minWidth: 300,
+				// minHeight: 400,
             }}	
             animate={{ 
                 position: "absolute", 

@@ -38,7 +38,7 @@ export default function Home() {
 
 	return (
 		<main className="flex flex-1 flex-grow h-full pt-20">
-			<div className="flex-1 w-full md:h-[125vh] lg:h-auto grid grid-rows-18 grid-cols-1 md:grid-rows-10 md:grid-cols-8 lg:grid-rows-8 lg:grid-cols-12 gap-4">
+			<div className="flex-1 w-full md:h-[125vh] lg:h-auto grid grid-rows-18 grid-cols-1 md:grid-rows-10 md:grid-cols-8 lg:grid-rows-9 lg:grid-cols-12 gap-4">
 
 				{/* Grid Child 1 */}
 				<motion.div 
@@ -73,7 +73,7 @@ export default function Home() {
 
 				{/* Grid Child 3 */}
 				<motion.div 
-					className="p-4 min-h-[400px] md:min-h-0 row-span-5 md:row-span-5 md:col-span-5 lg:row-span-7 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex flex-col justify-between"	
+					className="p-4 min-h-[400px] md:min-h-0 row-span-5 md:row-span-5 md:col-span-5 lg:row-span-8 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex flex-col justify-between"	
 					custom={2}
 					initial="hidden"
 					animate="visible"
@@ -109,7 +109,7 @@ export default function Home() {
 
 				{/* Grid Child 4 */}
 				<motion.div 
-					className="p-4 min-h-[260px] md:min-h-0 row-span-2 md:row-span-3 md:col-span-3 lg:row-span-3 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex items-end"
+					className="p-4 min-h-[260px] md:min-h-0 row-span-2 md:row-span-3 md:col-span-3 lg:row-span-4 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex items-end"
 					custom={3}
 					initial="hidden"
 					animate="visible"
@@ -122,7 +122,7 @@ export default function Home() {
 
 				{/* Grid Child 5 */}
 				<motion.div 
-					className="min-h-[260px] md:min-h-0 row-span-2 md:row-span-2 md:col-span-4 lg:row-span-3 lg:col-span-4 rounded-2xl w-full overflow-hidden"
+					className="min-h-[260px] md:min-h-0 row-span-2 md:row-span-2 md:col-span-4 lg:row-span-4 lg:col-span-4 rounded-2xl w-full overflow-hidden"
 					custom={4}
 					initial="hidden"
 					animate="visible"
@@ -143,7 +143,7 @@ export default function Home() {
 				
 				{/* Grid Child 6 */}
 				<motion.div 
-					className="min-h-[100px] md:min-h-0 p-4 row-span-1 md:row-span-2 md:col-span-4 lg:row-span-1 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex items-center justify-center gap-10"
+					className="min-h-[100px] md:min-h-0 p-4 row-span-1 md:row-span-2 md:col-span-4 lg:row-span-2 lg:col-span-4 bg-gradient-gray rounded-2xl w-full flex items-center justify-center gap-10"
 					custom={5}
 					initial="hidden"
 					animate="visible"
