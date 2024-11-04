@@ -15,7 +15,7 @@
   },
    
   "portrait": {
-    "image": "/portrait.png"
+    "image": "/4.jpg"
   },
 
   "about": {
@@ -35,18 +35,18 @@
       {
         "title": "Visa Solutions",
         "url": "",
-        "media": "/work.png"
+        "media": "/1.jpg"
       },
       {
         "title": "Certified Translations",
         "url": "",
-        "media": "/work.png"
+        "media": "/2.jpg"
 
       },
       {
         "title": "Residence Permits",
         "url": "",
-        "media": "/work.png"
+        "media": "/3.jpg"
 
       }
     ],
