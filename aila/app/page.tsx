@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import TransitionLink from "@/lib/transition-link";
 import { ServiceBeams } from "./components/service-beams";
+import Portrait from "./components/ui/portrait";
 
 export default function Home() {
 
@@ -29,7 +30,7 @@ export default function Home() {
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: i * 0.3 + 0.8,
+				delay: i * 0.3 + 2.8,
 				duration: 0.6,
 			},
 		}),
@@ -53,7 +54,7 @@ export default function Home() {
 				</motion.div>
 
 				{/* Grid Child 2 */}
-				<motion.div 
+				{/* <motion.div 
 					className="min-h-[480px] md:min-h-0 row-span-6 md:row-span-5 md:col-span-3 lg:row-span-5 lg:col-span-3 bg-istanbul bg-cover bg-center rounded-2xl w-full flex-grow"
 					custom={1}
 					initial="hidden"
@@ -65,7 +66,10 @@ export default function Home() {
 							<span>Learn More</span>
 						</div>
 					</TransitionLink>
-				</motion.div>
+				</motion.div> */}
+				<div className="relative min-h-[480px] md:min-h-0 row-span-6 md:row-span-5 md:col-span-3 lg:row-span-5 lg:col-span-3 w-full flex-grow">
+					<Portrait />
+				</div>
 
 				{/* Grid Child 3 */}
 				<motion.div 
