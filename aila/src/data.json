@@ -1,6 +1,6 @@
 {
   "nav": {
-    "logo": "Bentolio",
+    "logo": "Aila Consulting",
     "links": [
       {
         "title": "Buy Next.js template",
@@ -10,7 +10,7 @@
   },
 
   "intro": {
-    "heading": "Let’s create dance floor <span class='italic'> magic</span> for your special day",
+    "heading": "Transform your international relocation <span class='italic'> easily</span>.",
     "icon": "/icons/intro-icon.svg"
   },
    
@@ -19,12 +19,12 @@
   },
 
   "about": {
-    "text": "DJ Lisa is a passionate wedding DJ, acclaimed for blending diverse musical genres with expert crowd-reading skills. Based in Florida, she crafts personalized soundtracks that turn every wedding into an unforgettable celebration.",
+    "text": "We specialize in rapid visa approvals (student, work, family), offer certified translations in French, Turkish, and Russian, and provide seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your adventure.",
     "icon": "/icons/about-icon.svg"
   },
 
   "contact": {
-    "label": "Have some questions?",
+    "label": "We would love to hear from you",
     "heading": "Contact <span class='italic'>me</span>",
     "linkIcon": "/icons/arrow-icon.svg",
     "email": "hello@rauftech.com"
@@ -33,32 +33,21 @@
   "work": {
     "projects": [
       {
-        "title": "First Dance",
+        "title": "Visa Solutions",
         "url": "",
         "media": "/work.png"
       },
       {
-        "title": "Cocktail Hour",
+        "title": "Certified Translations",
         "url": "",
         "media": "/work.png"
 
       },
       {
-        "title": "Dinner Music",
+        "title": "Residence Permits",
         "url": "",
         "media": "/work.png"
 
-      },
-      {
-        "title": "After Party",
-        "url": "",
-        "media": "/work.png"
-
-      },
-      {
-        "title": "Last Dance",
-        "url": "",
-        "media": "/work.png"
       }
     ],
     "linkIcon": "/icons/arrow-icon-black.svg"  
@@ -68,16 +57,16 @@
   "socials": {
     "links": [
       {
-        "title": "Figma",
-        "url": "https://www.figma.com/@lilcoderman"
+        "title": "Facebook",
+        "url": "/"
       },
       {
         "title": "Instagram",
-        "url": "https://www.instagram.com/lilcoderman/"
+        "url": "https://www.instagram.com/aila.consulting/"
       },
       {
-        "title": "Github",
-        "url": "https://github.com/abdulrauf11"
+        "title": "Phone",
+        "url": "/"
       }
     ]
   }

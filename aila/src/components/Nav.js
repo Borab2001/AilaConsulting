@@ -17,7 +17,7 @@ export default function Nav({ data, timeline }) {
         <div className='logo overflow-hidden font-heading text-2xl font-normal'>
           <span className='block'>{data?.logo}</span>
         </div>
-        <div className='cta flex items-center gap-4'>
+        {/* <div className='cta flex items-center gap-4'>
           {data?.links?.map(link => (
             <a
               key={link.title}
@@ -31,7 +31,7 @@ export default function Nav({ data, timeline }) {
               </button>
             </a>
           ))}
-        </div>
+        </div> */}
       </nav>
     </Box>
   );

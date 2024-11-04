@@ -38,7 +38,7 @@ export default function Contact({ data, timeline }) {
           onMouseLeave={handleMouseLeave}
         >
           <div className='contact-bar flex items-center justify-between'>
-            <p className='max-w-[10ch] text-base leading-[120%]'>
+            <p className='max-w-[25ch] text-base leading-[120%]'>
               {data?.label}
             </p>
 
