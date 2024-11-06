@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --text-color: 0, 0, 0;
   --foreground-color: 241, 245, 249;
   --background-color: 255, 255, 255;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -16,11 +16,17 @@
   }
 } */
 
+:root {
+  --text-color: 153, 153, 153;
+  --foreground-color: 16, 16, 16;
+  --background-color: 5, 5, 5;
+}
+
 body {
   /* color: rgb(var(--text-color)); */
-  /* background-color: rgb(var(--background-color)); */
+  background-color: rgb(var(--background-color));
   color: #ffffff;
-  background-color: rgb(23 23 23);
+  /* background-color: rgb(23 23 23); */
   background-image: url('/background.jpg');
   background-position: center;
   background-size: cover;

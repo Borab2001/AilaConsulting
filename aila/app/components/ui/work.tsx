@@ -83,7 +83,7 @@ export default function Work() {
                     />
                 ))}
             </div>
-            <div className="pointer-events-none absolute bottom-0 left-0 z-10 h-8 w-full bg-gradient-to-b from-primary/0 to-primary/50"></div>
+            <div className="pointer-events-none absolute bottom-0 left-0 z-10 h-8 w-full bg-gradient-to-b from-bento/0 to-bento/50"></div>
         </div>
     );
 }
@@ -109,10 +109,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                     variants={headingVariants}
                     className="overflow-hidden text-xl"
                 >
-                    <motion.h2 className="pb-1">
+                    <motion.h2 className="pb-1 text-title">
                         {project.title}
                     </motion.h2>
-                    <motion.span className="text-sm text-neutral-500">{project.subtitle}</motion.span>
+                    <motion.span className="text-sm text-subtitle">{project.subtitle}</motion.span>
                 </motion.div>
             </div>
 

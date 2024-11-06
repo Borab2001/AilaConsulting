@@ -42,7 +42,7 @@ const MobileHeader = () => {
         <div className={`inset-0 fixed z-50 h-screen w-full transition-all duration-1000 ${isActive ? "bg-white/20 backdrop-blur-sm" : "bg-transparent backdrop-blur-none pointer-events-none"}`}>
 
             <motion.header 
-                className={`w-header absolute top-4 left-4 pointer-events-auto bg-neutral-900 text-white p-4 rounded-2xl flex flex-col md:hidden transition-all duration-500 ease-in-out`}
+                className={`w-header absolute top-4 left-4 pointer-events-auto bg-bento border border-border text-title p-4 rounded-2xl flex flex-col md:hidden transition-all duration-500 ease-in-out`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}    
@@ -57,7 +57,7 @@ const MobileHeader = () => {
                     </TransitionLink>
                     
                     <p 
-                        className="text-md text-white font-normal uppercase cursor-pointer"
+                        className="text-md text-title font-normal uppercase cursor-pointer"
                         onClick={() => setIsActive(!isActive)}      
                     >
                         Menu

@@ -16,7 +16,7 @@ const Portrait = () => {
 
 	return (
 		<motion.div 
-			className="bg-istanbul bg-cover bg-center rounded-2xl"
+			className="bg-istanbul bg-cover bg-center rounded-2xl border border-border"
 			// custom={1}
 			// initial="fixed inset-4 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20"
 			initial={{ 
