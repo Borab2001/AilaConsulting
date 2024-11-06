@@ -36,6 +36,18 @@ const thumbnailVariants = {
     visible: { opacity: 1, height: 'auto', transition: { duration: 0.5 } },
 };
 
+// const borderVariants = {
+//     hidden: { scaleX: 0 },
+//     visible: {
+//         scaleX: 1,
+//         transition: {
+//             delay: 0.3,
+//             staggerChildren: 0.18,
+//             ease: 'easeInOut',
+//         },
+//     },
+// };
+
 export default function Work() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
