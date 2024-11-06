@@ -14,12 +14,12 @@ export default function Home() {
 
 	const socials = [
         {
-            name: 'Facebook',
-            href: '/facebook',
+            name: 'X',
+            href: '/https://x.com/ailaconsulting',
         },
         {
             name: 'Instagram',
-            href: '/instagram',
+            href: '/https://www.instagram.com/ailaconsulting/',
         },
         {
             name: 'Phone',
