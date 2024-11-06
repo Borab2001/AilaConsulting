@@ -8,6 +8,7 @@ import Portrait from "./components/ui/portrait";
 import Header from "./components/header";
 import Image from "next/image";
 import MobileHeader from "./components/mobile-header";
+import Work from "./components/ui/work";
 
 export default function Home() {
 
@@ -113,7 +114,7 @@ export default function Home() {
 							/>	
 						</div>
 						<span className="text-balance text-md lg:text-lg mb-4">
-							We specialize in rapid visa approvals (student, work, family), offer certified translations in French, Turkish, and Russian, and provide seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.
+							We specialize in rapid visa approvals, offer certified translations and provide seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.
 						</span>
 					</motion.div>
 
@@ -151,7 +152,7 @@ export default function Home() {
 						animate="visible"
 						variants={gridVariants}	
 					>
-						<div className="flex flex-col gap-2">
+						{/* <div className="flex flex-col gap-2">
 							<div className="flex flex-row items-center w-full space-x-4">
 								<div className="bg-neutral-300 h-12 w-12 rounded-full flex-shrink-0 flex-grow-0"/>
 								<div className="flex flex-col items-start justify-center">
@@ -175,6 +176,9 @@ export default function Home() {
 									<span className="">Easy applications and renewals with expert support.</span>
 								</div>
 							</div>
+						</div> */}
+						<div className='col-span-4 row-span-8 max-lg:col-span-full'>
+							<Work />
 						</div>
 						{/* <ServiceBeams /> */}
 					</motion.div>
