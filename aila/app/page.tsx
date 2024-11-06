@@ -58,7 +58,7 @@ export default function Home() {
 					
 					{/* Grid Child 1 */}
 					<motion.div 
-						className="p-4 col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full bg-gradient-gray rounded-2xl w-full flex flex-col justify-between gap-4"
+						className="p-4 col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full bg-neutral-900 rounded-2xl w-full flex flex-col justify-between gap-4"
 						custom={0}
 						initial="hidden"
 						animate="visible"
@@ -87,7 +87,7 @@ export default function Home() {
 						variants={gridVariants}	
 					>
 						<TransitionLink href="/about" className="p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
-							<div className="scale-0 w-20 h-20 bg-gradient-gray text-gridBlack flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
+							<div className="scale-0 w-20 h-20 bg-neutral-900 text-gridBlack flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
 								<span>Learn More</span>
 							</div>
 						</TransitionLink>
@@ -98,7 +98,7 @@ export default function Home() {
 
 					{/* Grid Child 4 */}
 					<motion.div 
-						className="p-4 col-span-4 row-span-4 min-h-[288px] max-lg:col-span-6 max-md:col-span-full bg-gradient-gray rounded-2xl w-full flex flex-col justify-between"
+						className="p-4 col-span-4 row-span-4 min-h-[288px] max-lg:col-span-6 max-md:col-span-full bg-neutral-900 rounded-2xl w-full flex flex-col justify-between"
 						custom={3}
 						initial="hidden"
 						animate="visible"
@@ -126,7 +126,7 @@ export default function Home() {
 						animate="visible"
 						variants={gridVariants}
 					>
-						<TransitionLink href="/contact" className="p-4 w-full h-full flex flex-col justify-between bg-gridBlack group hover:bg-neutral-900 text-gridTextWhite transition ease-in-out duration-300">
+						<TransitionLink href="/contact" className="p-4 w-full h-full flex flex-col justify-between bg-white group hover:bg-neutral-200 text-neutral-900 transition ease-in-out duration-300">
 							<div className="flex flex-row items-center justify-between">
 								<span className="font-light">We would love to hear from you</span>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
@@ -146,7 +146,7 @@ export default function Home() {
 					
 					{/* Grid Child 3 */}
 					<motion.div 
-						className="p-4 min-h-[400px] md:min-h-0 col-span-4 row-span-8 max-lg:col-span-full bg-gradient-gray rounded-2xl w-full flex flex-col justify-between"	
+						className="p-4 min-h-[400px] md:min-h-0 col-span-4 row-span-8 max-lg:col-span-full bg-neutral-900 rounded-2xl w-full flex flex-col justify-between"	
 						custom={2}
 						initial="hidden"
 						animate="visible"
@@ -185,7 +185,7 @@ export default function Home() {
 
 					{/* Grid Child 6 */}
 					<motion.div 
-						className="min-h-[100px] md:min-h-0 p-4 col-span-4 row-span-1 max-lg:col-span-full bg-gradient-gray rounded-2xl w-full flex items-center justify-center gap-10"
+						className="min-h-[100px] md:min-h-0 p-4 col-span-4 row-span-1 max-lg:col-span-full bg-neutral-900 rounded-2xl w-full flex items-center justify-center gap-10"
 						custom={5}
 						initial="hidden"
 						animate="visible"
@@ -195,7 +195,7 @@ export default function Home() {
 							<TransitionLink
 								key={`social${index}`}	
 								href={social.href} 
-								className="uppercase font-light relative after:absolute after:bg-black after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
+								className="uppercase font-light relative after:absolute after:bg-white after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
 							>
 								{social.name}
 							</TransitionLink>

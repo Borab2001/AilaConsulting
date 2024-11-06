@@ -42,7 +42,7 @@ const Portrait = () => {
             transition={{ ease: "easeInOut", duration: 2, delay: 3 }}
 		>
 			<TransitionLink href="/about" className="p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
-				<div className="scale-0 w-20 h-20 bg-gradient-gray text-gridBlack flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
+				<div className="scale-0 w-20 h-20 bg-white text-neutral-900 flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
 					<span>Learn More</span>
 				</div>
 			</TransitionLink>
