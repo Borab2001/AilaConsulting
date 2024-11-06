@@ -58,7 +58,7 @@ export default function Home() {
 					
 					{/* Grid Child 1 */}
 					<motion.div 
-						className="p-4 col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4"
+						className="p-4 min-h-[288px] col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4"
 						custom={0}
 						initial="hidden"
 						animate="visible"
