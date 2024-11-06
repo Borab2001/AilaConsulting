@@ -20,7 +20,7 @@ body {
   /* color: rgb(var(--text-color)); */
   /* background-color: rgb(var(--background-color)); */
   color: #ffffff;
-  background-color: #000000;
+  background-color: rgb(23 23 23);
   background-image: url('/background.jpg');
   background-position: center;
   background-size: cover;
