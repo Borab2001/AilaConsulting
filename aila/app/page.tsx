@@ -153,16 +153,27 @@ export default function Home() {
 						animate="visible"
 						variants={gridVariants}
 					>
-						<TransitionLink href="/contact" className="p-4 w-full h-full flex flex-col justify-between bg-primary group hover:bg-neutral-200 text-neutral-900 transition ease-in-out duration-300">
-							<div className="flex flex-row items-center justify-between">
+						{/* <TransitionLink href="/contact" className="p-4 w-full h-full flex flex-col justify-between bg-primary group hover:bg-neutral-200 text-neutral-900 transition ease-in-out duration-300"> */}
+						<TransitionLink
+							href="/contact"
+							className="relative p-4 w-full h-full flex flex-col justify-between bg-primary group hover:bg-element text-neutral-900 hover:text-title transition ease-in-out duration-300 rounded-2xl"
+						>
+							<div className="flex flex-row items-center justify-between relative z-10">
 								<span className="font-light">We would love to hear from you</span>
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2">
-									<path fillRule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clipRule="evenodd" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									className="size-10 transition-transform ease-in-out duration-500 group-hover:translate-x-2 group-hover:-translate-y-2"
+								>
+									<path
+										fillRule="evenodd"
+										d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+										clipRule="evenodd"
+									/>
 								</svg>
 							</div>
-							<h2 className="text-5xl font-bold mb-4">
-								Contact Us
-							</h2>
+							<h2 className="text-5xl font-bold mb-4 relative z-10">Contact Us</h2>
 						</TransitionLink>
 					</motion.div>
 				</div>
