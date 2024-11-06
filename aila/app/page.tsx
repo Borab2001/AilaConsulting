@@ -97,19 +97,21 @@ export default function Home() {
 
 					{/* Grid Child 4 */}
 					<motion.div 
-						className="p-4 col-span-4 row-span-4 min-h-[288px] max-lg:col-span-6 max-md:col-span-full bg-gradient-gray rounded-2xl w-full flex items-end"
+						className="p-4 col-span-4 row-span-4 min-h-[288px] max-lg:col-span-6 max-md:col-span-full bg-gradient-gray rounded-2xl w-full flex flex-col justify-between"
 						custom={3}
 						initial="hidden"
 						animate="visible"
 						variants={gridVariants}	
 					>
-						<Image
-							src="/next.svg"
-							width={48}
-							height={48}
-							alt='flower'
-							className='w-full h-full'
-						/>	
+						<div className="size-[2.75rem]">
+							<Image
+								src="/next.svg"
+								className='w-full h-full'
+								width={48}
+								height={48}
+								alt='flower'
+							/>	
+						</div>
 						<span className="text-balance text-md lg:text-lg mb-4">
 							We specialize in rapid visa approvals (student, work, family), offer certified translations in French, Turkish, and Russian, and provide seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.
 						</span>
@@ -174,7 +176,7 @@ export default function Home() {
 								</div>
 							</div>
 						</div>
-						<ServiceBeams />
+						{/* <ServiceBeams /> */}
 					</motion.div>
 
 					{/* Grid Child 6 */}
