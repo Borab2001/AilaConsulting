@@ -83,7 +83,7 @@ export default function Home() {
 											
 						</div>
 						<h2 className="text-3xl font-bold mb-4">
-							Transform your international relocation into a breeze with our all-in-one solution.
+							Transform your <i>international</i> relocation into a breeze with our <i>all-in-one</i> solution.
 						</h2>
 					</motion.div>
 
