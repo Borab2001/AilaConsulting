@@ -45,7 +45,7 @@ const MobileHeader = () => {
                 className={`w-header absolute top-4 left-4 pointer-events-auto bg-bento border border-border text-title p-4 rounded-2xl flex flex-col md:hidden transition-all duration-500 ease-in-out`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}    
+                transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}    
             >
                 <div className="py-1 h-full flex items-center justify-between">
                     {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}

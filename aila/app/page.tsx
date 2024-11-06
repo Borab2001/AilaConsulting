@@ -1,12 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import TransitionLink from "@/lib/transition-link";
-import { ServiceBeams } from "./components/service-beams";
-import Portrait from "./components/ui/portrait";
+// import { ServiceBeams } from "./components/service-beams";
+// import Portrait from "./components/ui/portrait";
 import Header from "./components/header";
-import Image from "next/image";
 import MobileHeader from "./components/mobile-header";
 import Work from "./components/ui/work";
 
@@ -34,8 +32,8 @@ export default function Home() {
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: i * 0.3 + 2.8,
-				duration: 0.6,
+				delay: i * 0.4 + 1,
+				duration: 0.8,
 			},
 		}),
 	};
@@ -90,7 +88,7 @@ export default function Home() {
 					</motion.div>
 
 					{/* Grid Child 2 */}
-					{/* <motion.div 
+					<motion.div 
 						className="min-h-[480px] md:min-h-0 row-span-6 md:row-span-5 md:col-span-3 lg:row-span-5 lg:col-span-3 bg-istanbul bg-cover bg-center rounded-2xl w-full flex-grow"
 						custom={1}
 						initial="hidden"
@@ -98,14 +96,14 @@ export default function Home() {
 						variants={gridVariants}	
 					>
 						<TransitionLink href="/about" className="p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
-							<div className="scale-0 w-20 h-20 bg-bento border border-border text-gridBlack flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
+							<div className="scale-0 w-20 h-20 bg-bento border border-border text-title flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
 								<span>Learn More</span>
 							</div>
 						</TransitionLink>
-					</motion.div> */}
-					<div className="relative min-h-[480px] md:min-h-0 col-span-3 row-span-5 max-lg:col-span-4 max-md:col-span-full w-full flex-grow">
+					</motion.div>
+					{/* <div className="relative min-h-[480px] md:min-h-0 col-span-3 row-span-5 max-lg:col-span-4 max-md:col-span-full w-full flex-grow">
 						<Portrait />
-					</div>
+					</div> */}
 
 					{/* Grid Child 4 */}
 					<motion.div 
