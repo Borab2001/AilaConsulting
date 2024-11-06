@@ -54,9 +54,10 @@ export default function Home() {
 
 				{/* Left column */}
 				<div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+					
 					{/* Grid Child 1 */}
 					<motion.div 
-						className="p-4 col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full bg-gradient-gray rounded-2xl w-full flex-col justify-between gap-4"
+						className="p-4 col-span-5 row-span-5 max-lg:col-span-8 max-md:col-span-full bg-gradient-gray rounded-2xl w-full flex flex-col justify-between gap-4"
 						custom={0}
 						initial="hidden"
 						animate="visible"
@@ -102,6 +103,13 @@ export default function Home() {
 						animate="visible"
 						variants={gridVariants}	
 					>
+						<Image
+							src="/next.svg"
+							width={48}
+							height={48}
+							alt='flower'
+							className='w-full h-full'
+						/>	
 						<span className="text-balance text-md lg:text-lg mb-4">
 							We specialize in rapid visa approvals (student, work, family), offer certified translations in French, Turkish, and Russian, and provide seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.
 						</span>
