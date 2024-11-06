@@ -37,23 +37,23 @@ const thumbnailVariants = {
 };
 
 export default function Work() {
-  const [selectedIndex, setSelectedIndex] = useState<number>(0); // Start with first item selected
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const services: Service[] = [
         {
-        title: 'Visa Solutions',
-        subtitle: 'Fast-track your student, work, and family visas.',
-        image: '/images/1.jpg',
+            title: 'Visa Solutions',
+            subtitle: 'Fast-track your student, work, and family visas.',
+            image: '/images/1.jpg',
         },
         {
-        title: 'Certified Translations',
-        subtitle: 'Certified translations in French, Turkish & Russian.',
-        image: '/images/2.jpg',
+            title: 'Certified Translations',
+            subtitle: 'Certified translations in French, Turkish & Russian.',
+            image: '/images/2.jpg',
         },
         {
-        title: 'Residence Permit',
-        subtitle: 'Easy applications and renewals with expert support.',
-        image: '/images/3.jpg',
+            title: 'Residence Permit',
+            subtitle: 'Easy applications and renewals with expert support.',
+            image: '/images/3.jpg',
         },
   ];
 
@@ -86,7 +86,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
     return (
         <motion.button
             onClick={onClick}
-            className="relative py-2 pointer-events-auto"
+            className={`relative py-2 ${isSelected ? 'pointer-events-none' : 'pointer-events-auto'}`}
         >
             <div className="flex w-full justify-between text-left">
                 
@@ -109,7 +109,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                 initial="hidden"
                 animate={controls}
                 variants={thumbnailVariants}
-                className="thumbnail pointer-events-auto relative block aspect-[3/2] w-full origin-top overflow-hidden rounded-[16px] bg-secondary my-2"
+                className="relative block aspect-[3/2] w-full origin-top overflow-hidden rounded-[16px] bg-secondary my-2"
             >
                 <Image
                     src={project.image}
