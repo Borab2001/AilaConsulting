@@ -12,8 +12,8 @@ export default function Globe() {
 
             const globe = createGlobe(canvasRef.current, {
                 devicePixelRatio: 2,
-                width: 600, // Adjust the width as needed
-                height: 600, // Adjust the height as needed
+                width: 500, // Adjust the width as needed
+                height: 500, // Adjust the height as needed
                 phi: 0, // Starting rotation
                 theta: 0.3, // Tilt angle
                 dark: 1, // Background set to black
@@ -39,6 +39,6 @@ export default function Globe() {
     }, []);
 
     return (
-        <canvas ref={canvasRef} />
+        <canvas ref={canvasRef} height={500} width={500} />
     );
 }
