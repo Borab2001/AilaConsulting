@@ -89,7 +89,7 @@ export default function Home() {
 
 					{/* Grid Child 2 */}
 					<motion.div 
-						className="min-h-[480px] md:min-h-0 row-span-6 md:row-span-5 md:col-span-3 lg:row-span-5 lg:col-span-3 bg-istanbul bg-cover bg-center rounded-2xl w-full flex-grow"
+						className="min-h-[480px] md:min-h-0 col-span-3 row-span-5 max-lg:col-span-4 max-md:col-span-full bg-istanbul bg-cover bg-center rounded-2xl w-full flex-grow"
 						custom={1}
 						initial="hidden"
 						animate="visible"
