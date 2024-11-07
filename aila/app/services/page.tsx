@@ -45,7 +45,7 @@ export default function Services() {
                         <h2 className="text-3xl font-bold mb-4">
 							Transform your <i>international</i> relocation into a breeze with our <i>all-in-one</i> solution.
 						</h2>
-                        <div className="flex-1 w-auto h-auto flex items-center justify-center absolute left-full top-full -right-1/2 -bottom-1/4">
+                        <div className="flex-1 w-auto h-auto flex items-center justify-center absolute left-full -right-1/2 -bottom-1/4">
                             <Globe />
                         </div>
                     </motion.div>
