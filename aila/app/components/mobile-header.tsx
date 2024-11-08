@@ -47,7 +47,7 @@ const MobileHeader = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}    
             >
-                <div className="py-1 h-full flex items-center justify-between">
+                <div className="h-full flex items-center justify-between">
                     {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}
                     <TransitionLink 
                         href="/"

@@ -1,7 +1,9 @@
+import BentoLayout, { gridVariants } from "../components/bento-layout";
+
 export default function Contact() {
     return (
-        <main className="flex flex-1 flex-grow h-full pt-20">
-            
-        </main>
+       <BentoLayout gridVariants={gridVariants}>
+            Contact Page
+        </BentoLayout>
     );
 }
