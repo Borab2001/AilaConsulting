@@ -1,5 +1,4 @@
 import { motion, useAnimation } from 'framer-motion';
-import { easeInOut } from 'framer-motion/dom';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
