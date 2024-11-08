@@ -8,6 +8,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaXTwitter } from "rea
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
+import { LocationCard } from "../components/ui/location-card";
 
 
 export default function Contact() {
@@ -72,14 +73,14 @@ export default function Contact() {
 					<h2 className="text-2xl font-semibold">
 						Based in <i>Istanbul</i>
 					</h2>
-                    <div className="flex flex-row gap-2">
+                    {/* <div className="flex flex-row gap-2">
                         <HiOutlineLocationMarker size={24} />
                         <span>
                             Taksim
                         </span>
-                    </div>
+                    </div> */}
                     {/* Thumbnail */}
-                    <div className="relative block aspect-[4/3] w-full origin-top overflow-hidden rounded-2xl"
+                    {/* <div className="relative block aspect-[4/3] w-full origin-top overflow-hidden rounded-2xl"
                     >
                         <Image
                             src="/images/5.jpg"
@@ -89,7 +90,8 @@ export default function Contact() {
                             placeholder="blur"
                             blurDataURL={BLUR_DATA_URL}
                         />
-                    </div>
+                    </div> */}
+                    <LocationCard />
 				</motion.div>
                 <motion.div 
 					className="p-4 min-h-[288px] md:min-h-0 col-span-4 row-span-4 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-2 relative overflow-hidden"
