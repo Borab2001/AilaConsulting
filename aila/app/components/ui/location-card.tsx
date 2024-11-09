@@ -104,7 +104,7 @@ export function LocationCard() {
 										animate={{ opacity: 1 }}
 										exit={{ opacity: 0 }}
 										// className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,primary,primary,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
-										className="text-text text-xs md:text-sm lg:text-base h-fit pb-4 flex flex-col items-start gap-4 overflow-hidden"
+										className="text-text text-sm lg:text-base h-fit pb-4 flex flex-col items-start gap-4 overflow-hidden"
 									>
 										{typeof active.content === "function"
 										? active.content()
