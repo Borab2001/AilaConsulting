@@ -12,7 +12,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-interface KoalaWelcomeEmailProps {
+interface AilaContactEmailProps {
 	userFirstname: string;
 }
 
@@ -20,9 +20,9 @@ const baseUrl = process.env.VERCEL_URL
 	? `https://${process.env.VERCEL_URL}`
 	: "";
 
-export const KoalaWelcomeEmail = ({
+export const AilaContactEmail = ({
   	userFirstname,
-}: KoalaWelcomeEmailProps) => (
+}: AilaContactEmailProps) => (
 	<Html>
 		<Head />
 		<Preview>
@@ -63,11 +63,11 @@ export const KoalaWelcomeEmail = ({
 	</Html>
 );
 
-KoalaWelcomeEmail.PreviewProps = {
+AilaContactEmail.PreviewProps = {
   	userFirstname: "Alan",
-} as KoalaWelcomeEmailProps;
+} as AilaContactEmailProps;
 
-export default KoalaWelcomeEmail;
+export default AilaContactEmail;
 
 const main = {
 	backgroundColor: "#ffffff",
