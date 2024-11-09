@@ -41,7 +41,7 @@ export function LocationCard() {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						className="fixed inset-0 bg-black/20 h-full w-full z-10"
+						className="fixed inset-0 bg-background/20 h-full w-full z-10"
 					/>
 				)}
 			</AnimatePresence>
@@ -52,7 +52,7 @@ export function LocationCard() {
 						<motion.div
 							layoutId={`card-${active.title}-${id}`}
 							ref={ref}
-							className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+							className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-border sm:rounded-3xl overflow-hidden"
 						>
 							<motion.div layoutId={`image-${active.title}-${id}`}>
 								<Image
@@ -70,23 +70,23 @@ export function LocationCard() {
 									<div className="">
 										<motion.h3
 											layoutId={`title-${active.title}-${id}`}
-											className="font-bold text-neutral-700 dark:text-neutral-200"
+											className="font-bold text-title"
 										>
 											{active.title}
 										</motion.h3>
 										
 										<motion.p
-											layoutId={`description-${active.description}-${id}`}
-											className="text-neutral-600 dark:text-neutral-400"
+											layoutId={`subtitle-${active.subtitle}-${id}`}
+											className="text-subtitle"
 										>
-											{active.description}
+											{active.subtitle}
 										</motion.p>
 									</div>
 
 									<motion.button
 										layoutId={`button-${active.title}-${id}`}
 										onClick={() => setActive(null)}
-										className="h-10 w-10 flex items-center justify-center text-sm rounded-full font-bold bg-primary text-background rotate-45"
+										className="h-10 w-10 flex flex-grow-0 flex-shrink-0 items-center justify-center text-sm rounded-full font-bold bg-primary text-background rotate-45"
 										initial={{ rotate: 0 }}
 										animate={{ rotate: 45 }}
 									>
@@ -100,7 +100,8 @@ export function LocationCard() {
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
 										exit={{ opacity: 0 }}
-										className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+										// className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,primary,primary,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+										className="text-text text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-hidden"
 									>
 										{typeof active.content === "function"
 										? active.content()
@@ -113,45 +114,54 @@ export function LocationCard() {
 				) : null}
 			</AnimatePresence>
 
-			<div className="max-w-2xl mx-auto w-full gap-4">
+			<div className="w-full gap-4">
 				{cards.map((card, index) => (
 					<motion.div
 						layoutId={`card-${card.title}-${id}`}
 						key={`card-${card.title}-${id}`}
 						onClick={() => setActive(card)}
-						className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+						className="p-2 flex flex-row justify-between items-center hover:bg-element rounded-xl cursor-pointer"
 					>
-						<div className="flex gap-4 flex-col md:flex-row ">
+						<div className="w-full flex gap-4 flex-col sm:flex-row ">
 							<motion.div layoutId={`image-${card.title}-${id}`}>
 								<Image
-									width={100}
-									height={100}
+									width={300}
+									height={300}
 									src={card.src}
 									alt={card.title}
-									className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
+									className="h-auto w-full aspect-4/3 sm:h-20 sm:w-20 lg:h-14 lg:w-14 rounded-lg object-cover object-top"
 								/>
 							</motion.div>
-						
-							<div className="">
-								<motion.h3
-									layoutId={`title-${card.title}-${id}`}
-									className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+							<div className="flex flex-row justify-between items-center">
+								<div className="flex flex-col justify-center items-start">
+									<motion.h3
+										layoutId={`title-${card.title}-${id}`}
+										className="truncate font-medium text-title"
+									>
+										{card.title}
+									</motion.h3>
+									
+									<motion.p
+										layoutId={`subtitle-${card.subtitle}-${id}`}
+										className="text-subtitle text-md"
+									>
+										{card.subtitle}
+									</motion.p>
+								</div>
+
+								<motion.button
+									layoutId={`button-${card.title}-${id}`}
+									className="h-10 w-10 flex sm:hidden flex-grow-0 flex-shrink-0 items-center justify-center text-sm rounded-full font-bold bg-primary text-background"
 								>
-									{card.title}
-								</motion.h3>
-								
-								<motion.p
-									layoutId={`description-${card.description}-${id}`}
-									className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
-								>
-									{card.description}
-								</motion.p>
+									{card.open}
+								</motion.button>
 							</div>
 						</div>
 						
 						<motion.button
 							layoutId={`button-${card.title}-${id}`}
-							className="h-10 w-10 flex items-center justify-center text-sm rounded-full font-bold bg-primary text-background"						>
+							className="h-10 w-10 hidden sm:flex flex-grow-0 flex-shrink-0 items-center justify-center text-sm rounded-full font-bold bg-primary text-background"
+						>
 							{card.open}
 						</motion.button>
 					</motion.div>
@@ -194,8 +204,8 @@ export function LocationCard() {
 
 const cards = [
 	{
-		description: "Taksim, Istanbul",
-		title: "Address here 1010",
+		title: "Taksim",
+		subtitle: "Istanbul, Turkey",
 		src: "/images/5.jpg",
 		open: <FaPlus size={16} />,
 		content: () => {
