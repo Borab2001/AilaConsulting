@@ -13,6 +13,7 @@ export function LocationCard() {
 	);
 	const ref = useRef<HTMLDivElement>(null);
 	const id = useId();
+    const BLUR_DATA_URL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjCAvx/A8AA+oB81aCOA0AAAAASUVORK5CYII=';
 
 	useEffect(() => {
 		function onKeyDown(event: KeyboardEvent) {
@@ -62,6 +63,8 @@ export function LocationCard() {
 									src={active.src}
 									alt={active.title}
 									className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+									placeholder="blur"
+                            		blurDataURL={BLUR_DATA_URL}
 								/>
 							</motion.div>
 
@@ -70,7 +73,7 @@ export function LocationCard() {
 									<div className="">
 										<motion.h3
 											layoutId={`title-${active.title}-${id}`}
-											className="font-bold text-title"
+											className="font-semibold text-title"
 										>
 											{active.title}
 										</motion.h3>
@@ -130,6 +133,8 @@ export function LocationCard() {
 									src={card.src}
 									alt={card.title}
 									className="h-auto w-full aspect-4/3 sm:h-20 sm:w-20 lg:h-14 lg:w-14 rounded-lg object-cover object-top"
+									placeholder="blur"
+                            		blurDataURL={BLUR_DATA_URL}
 								/>
 							</motion.div>
 							<div className="flex flex-row justify-between items-center">

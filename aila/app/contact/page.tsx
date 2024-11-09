@@ -11,8 +11,6 @@ import { LocationCard } from "../components/ui/location-card";
 
 
 export default function Contact() {
-    
-    const BLUR_DATA_URL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjCAvx/A8AA+oB81aCOA0AAAAASUVORK5CYII=';
 
     const locationDetails = [
         {
