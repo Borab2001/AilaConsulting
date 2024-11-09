@@ -132,7 +132,7 @@ export function LocationCard() {
 									height={300}
 									src={card.src}
 									alt={card.title}
-									className="h-14 w-14 sm:h-24 sm:w-24 lg:h-20 lg:w-20 xl:h-24 xl:w-24 rounded-lg object-cover object-top"
+									className="h-14 w-14 sm:h-24 sm:w-24 lg:h-20 lg:w-20 rounded-lg object-cover object-top"
 									placeholder="blur"
                             		blurDataURL={BLUR_DATA_URL}
 								/>
