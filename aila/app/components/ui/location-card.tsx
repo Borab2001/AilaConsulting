@@ -125,47 +125,38 @@ export function LocationCard() {
 						onClick={() => setActive(card)}
 						className="p-2 flex flex-row justify-between items-center hover:bg-element rounded-xl cursor-pointer"
 					>
-						<div className="w-full flex gap-4 flex-col sm:flex-row ">
+						<div className="w-full flex gap-4 flex-row ">
 							<motion.div layoutId={`image-${card.title}-${id}`}>
 								<Image
 									width={300}
 									height={300}
 									src={card.src}
 									alt={card.title}
-									className="h-auto w-full aspect-4/3 sm:h-20 sm:w-20 lg:h-14 lg:w-14 rounded-lg object-cover object-top"
+									className="h-14 w-14 sm:h-24 sm:w-24 lg:h-20 lg:w-20 xl:h-24 xl:w-24 rounded-lg object-cover object-top"
 									placeholder="blur"
                             		blurDataURL={BLUR_DATA_URL}
 								/>
 							</motion.div>
-							<div className="flex flex-row justify-between items-center">
-								<div className="flex flex-col justify-center items-start">
-									<motion.h3
-										layoutId={`title-${card.title}-${id}`}
-										className="truncate font-medium text-title"
-									>
-										{card.title}
-									</motion.h3>
-									
-									<motion.p
-										layoutId={`subtitle-${card.subtitle}-${id}`}
-										className="text-subtitle text-md"
-									>
-										{card.subtitle}
-									</motion.p>
-								</div>
-
-								<motion.button
-									layoutId={`button-${card.title}-${id}`}
-									className="h-10 w-10 flex sm:hidden flex-grow-0 flex-shrink-0 items-center justify-center text-sm rounded-full font-bold bg-primary text-background"
+							<div className="flex flex-col justify-center items-start">
+								<motion.h3
+									layoutId={`title-${card.title}-${id}`}
+									className="truncate font-medium text-title"
 								>
-									{card.open}
-								</motion.button>
+									{card.title}
+								</motion.h3>
+								
+								<motion.p
+									layoutId={`subtitle-${card.subtitle}-${id}`}
+									className="text-subtitle text-md"
+								>
+									{card.subtitle}
+								</motion.p>
 							</div>
 						</div>
 						
 						<motion.button
 							layoutId={`button-${card.title}-${id}`}
-							className="h-10 w-10 hidden sm:flex flex-grow-0 flex-shrink-0 items-center justify-center text-sm rounded-full font-bold bg-primary text-background"
+							className="h-10 w-10 flex flex-grow-0 flex-shrink-0 items-center justify-center text-sm rounded-full font-bold bg-primary text-background"
 						>
 							{card.open}
 						</motion.button>
