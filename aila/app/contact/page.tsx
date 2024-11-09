@@ -55,7 +55,7 @@ export default function Contact() {
             {/* Left column */}
 			<div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
 				<motion.div 
-					className="p-4 min-h-[700px] lg:min-h-0 col-span-8 row-span-9 max-lg:col-span-8 max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
+					className="p-4 min-h-[700px] lg:min-h-0 col-span-8 row-span-9 max-lg:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
 					custom={0}
 					initial="hidden"
 					animate="visible"
