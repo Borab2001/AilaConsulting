@@ -33,7 +33,7 @@ export default function Services() {
 			<div className="col-span-7 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
 				<motion.div 
 					className="p-4 min-h-[288px] col-span-7 row-span-5 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
-					custom={0}
+					custom={1}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}
