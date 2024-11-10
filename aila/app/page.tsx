@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import TransitionLink from "@/lib/transition-link";
-import Work from "./components/ui/work";
-import BentoLayout, { gridVariants } from "./components/bento-layout";
+import Work from "@/components/ui/work";
+import BentoLayout, { gridVariants } from "@/components/bento-layout";
 
 export default function Home() {
 

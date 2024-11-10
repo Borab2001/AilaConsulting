@@ -1,8 +1,8 @@
 "use client";
 
-import Globe from "../components/ui/globe";
-import { ServiceBeams } from "../components/service-beams";
-import BentoLayout, { gridVariants } from "../components/bento-layout";
+import Globe from "@/components/ui/globe";
+import { ServiceBeams } from "@/components/service-beams";
+import BentoLayout, { gridVariants } from "@/components/bento-layout";
 
 import { motion } from "framer-motion";
 import React from "react";

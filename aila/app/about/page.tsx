@@ -1,4 +1,4 @@
-import BentoLayout, { gridVariants } from "../components/bento-layout";
+import BentoLayout, { gridVariants } from "@/components/bento-layout";
 
 export default function About() {
     return (

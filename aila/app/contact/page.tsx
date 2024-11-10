@@ -1,13 +1,14 @@
 "use client";
 
-import BentoLayout, { gridVariants } from "../components/bento-layout";
+import BentoLayout, { gridVariants } from "@/components/bento-layout";
 
 import { motion } from "framer-motion";
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
-import { LocationCard } from "../components/ui/location-card";
+import { LocationCard } from "@/components/ui/location-card";
+import ContactForm from "@/components/contact-form";
 
 
 export default function Contact() {
@@ -69,6 +70,7 @@ export default function Contact() {
                             Need help with something? Need some info? Get in touch with our team.
                         </span>
                     </div>
+                    <ContactForm />
 				</motion.div>
 			</div>
 
