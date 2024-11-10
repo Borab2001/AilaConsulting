@@ -1,14 +1,15 @@
 "use client";
 
 import BentoLayout, { gridVariants } from "@/components/bento-layout";
+import { LocationCard } from "@/components/ui/location-card";
+import ContactForm from "@/components/contact-form";
 
 import { motion } from "framer-motion";
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
+
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaXTwitter } from "react-icons/fa6";
 import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
-import { LocationCard } from "@/components/ui/location-card";
-import ContactForm from "@/components/contact-form";
 
 
 export default function Contact() {

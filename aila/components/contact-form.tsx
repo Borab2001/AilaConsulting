@@ -42,33 +42,35 @@ const ContactForm = () => {
                 className="space-y-6"
                 onSubmit={form.handleSubmit(onSubmit)}
             >
-                <FormField
-                    name="firstName"
-                    control={form.control}
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel htmlFor="firstName">First Name</FormLabel>
-                            <FormControl>
-                                <Input id="firstName" type="text" {...field} />
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-4">
+                    <FormField
+                        name="firstName"
+                        control={form.control}
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel htmlFor="firstName">First Name</FormLabel>
+                                <FormControl>
+                                    <Input id="firstName" type="text" {...field} />
+                                </FormControl>
                                 <FormMessage>{form.formState.errors.firstName?.message}</FormMessage>
-                            </FormControl>
-                        </FormItem>
-                    )}
-                />
+                            </FormItem>
+                        )}
+                    />
 
-                <FormField
-                    name="lastName"
-                    control={form.control}
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel htmlFor="lastName">Last Name</FormLabel>
-                            <FormControl>
-                                <Input id="lastName" type="text" {...field} />
+                    <FormField
+                        name="lastName"
+                        control={form.control}
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel htmlFor="lastName">Last Name</FormLabel>
+                                <FormControl>
+                                    <Input id="lastName" type="text" {...field} />
+                                </FormControl>
                                 <FormMessage>{form.formState.errors.lastName?.message}</FormMessage>
-                            </FormControl>
-                        </FormItem>
-                    )}
-                />
+                            </FormItem>
+                        )}
+                    />
+                </div>
 
                 <FormField
                     name="email"
@@ -78,8 +80,8 @@ const ContactForm = () => {
                             <FormLabel htmlFor="email">Email</FormLabel>
                             <FormControl>
                                 <Input id="email" type="email" {...field} />
-                                <FormMessage>{form.formState.errors.email?.message}</FormMessage>
                             </FormControl>
+                            <FormMessage>{form.formState.errors.email?.message}</FormMessage>
                         </FormItem>
                     )}
                 />
@@ -92,8 +94,8 @@ const ContactForm = () => {
                             <FormLabel htmlFor="message">Message</FormLabel>
                             <FormControl>
                                 <Textarea id="message" {...field} />
-                                <FormMessage>{form.formState.errors.message?.message}</FormMessage>
                             </FormControl>
+                            <FormMessage>{form.formState.errors.message?.message}</FormMessage>
                         </FormItem>
                     )}
                 />
