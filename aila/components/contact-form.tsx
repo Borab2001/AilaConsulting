@@ -44,35 +44,33 @@ const ContactForm = () => {
                 className="space-y-6"
                 onSubmit={form.handleSubmit(onSubmit)}
             >
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-y-0 sm:gap-x-4">
-                    <FormField
-                        name="firstName"
-                        control={form.control}
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel htmlFor="firstName">First Name</FormLabel>
-                                <FormControl>
-                                    <Input id="firstName" type="text" {...field} />
-                                </FormControl>
-                                <FormMessage>{form.formState.errors.firstName?.message}</FormMessage>
-                            </FormItem>
-                        )}
-                    />
+                <FormField
+                    name="firstName"
+                    control={form.control}
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel htmlFor="firstName">First Name</FormLabel>
+                            <FormControl>
+                                <Input id="firstName" type="text" {...field} placeholder="Your first name here..." />
+                            </FormControl>
+                            <FormMessage>{form.formState.errors.firstName?.message}</FormMessage>
+                        </FormItem>
+                    )}
+                />
 
-                    <FormField
-                        name="lastName"
-                        control={form.control}
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel htmlFor="lastName">Last Name</FormLabel>
-                                <FormControl>
-                                    <Input id="lastName" type="text" {...field} />
-                                </FormControl>
-                                <FormMessage>{form.formState.errors.lastName?.message}</FormMessage>
-                            </FormItem>
-                        )}
-                    />
-                </div>
+                <FormField
+                    name="lastName"
+                    control={form.control}
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel htmlFor="lastName">Last Name</FormLabel>
+                            <FormControl>
+                                <Input id="lastName" type="text" placeholder="Your last name here..." {...field} />
+                            </FormControl>
+                            <FormMessage>{form.formState.errors.lastName?.message}</FormMessage>
+                        </FormItem>
+                    )}
+                />
 
                 <FormField
                     name="email"
@@ -81,7 +79,7 @@ const ContactForm = () => {
                         <FormItem>
                             <FormLabel htmlFor="email">Email</FormLabel>
                             <FormControl>
-                                <Input id="email" type="email" {...field} />
+                                <Input id="email" type="email" placeholder="Your email here..." {...field} />
                             </FormControl>
                             <FormMessage>{form.formState.errors.email?.message}</FormMessage>
                         </FormItem>
@@ -95,7 +93,7 @@ const ContactForm = () => {
                         <FormItem>
                             <FormLabel htmlFor="message">Message</FormLabel>
                             <FormControl>
-                                <Textarea id="message" {...field} />
+                                <Textarea id="message" {...field} placeholder="Your message here..." />
                             </FormControl>
                             <FormMessage>{form.formState.errors.message?.message}</FormMessage>
                         </FormItem>

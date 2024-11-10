@@ -20,8 +20,8 @@ const config: Config = {
   		colors: {
   			'background': 'rgb(5, 5, 5)',
   			'bento': 'rgb(16, 16, 16)',
-  			'border': 'rgb(25, 25, 25)',
-  			'element': 'rgb(31, 31, 31)',
+  			'element': 'rgb(25, 25, 25)',
+  			'border': 'rgb(31, 31, 31)',
   			'elementBorder': 'rgb(33, 33, 33)',
   			'title': 'rgb(204, 204, 204)',
   			'subtitle': 'rgb(117, 117, 117)',

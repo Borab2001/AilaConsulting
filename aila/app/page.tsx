@@ -128,7 +128,7 @@ export default function Home() {
 					{/* <TransitionLink href="/contact" className="p-4 w-full h-full flex flex-col justify-between bg-primary group hover:bg-neutral-200 text-neutral-900 transition ease-in-out duration-300"> */}
 					<TransitionLink
 						href="/contact"
-						className="relative p-4 w-full h-full flex flex-col justify-between bg-primary group hover:bg-element text-neutral-900 hover:text-title transition ease-in-out duration-300 rounded-2xl"
+						className="relative p-4 w-full h-full flex flex-col justify-between bg-primary group hover:bg-element text-bento hover:text-title transition ease-in-out duration-300"
 					>
 						<div className="flex flex-row items-center justify-between relative z-10">
 							<span className="font-light">We would love to hear from you</span>
