@@ -13,7 +13,10 @@ import {
 import * as React from "react";
 
 interface AilaContactEmailProps {
-	userFirstname: string;
+	firstName: string;
+	lastName: string;
+	email: string;
+	message: string;
 }
 
 const baseUrl = process.env.VERCEL_URL
@@ -21,7 +24,10 @@ const baseUrl = process.env.VERCEL_URL
 	: "";
 
 export const AilaContactEmail = ({
-  	userFirstname,
+  	firstName,
+	lastName,
+	email,
+	message
 }: AilaContactEmailProps) => (
 	<Html>
 		<Head />
@@ -38,10 +44,10 @@ export const AilaContactEmail = ({
 					alt="Aila Consulting"
 					style={logo}
 				/>
-				<Text style={paragraph}>Hi {userFirstname},</Text>
+				<Text style={paragraph}>First Name: {firstName},</Text>
+				<Text style={paragraph}>Last Name: {lastName},</Text>
 				<Text style={paragraph}>
-					Welcome to Koala, the sales intelligence platform that helps you
-					uncover qualified leads and close deals faster.
+					{message}
 				</Text>
 				
 				<Section style={btnContainer}>
@@ -63,9 +69,11 @@ export const AilaContactEmail = ({
 	</Html>
 );
 
-AilaContactEmail.PreviewProps = {
-  	userFirstname: "Alan",
-} as AilaContactEmailProps;
+// AilaContactEmail.PreviewProps = {
+//   	firstName: {firstName},
+// 	lastName: {lastName},
+
+// } as AilaContactEmailProps;
 
 export default AilaContactEmail;
 
