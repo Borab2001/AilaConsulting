@@ -79,7 +79,7 @@ export default function Contact() {
 			<div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
 				<motion.div 
 					className="p-4 min-h-[288px] md:min-h-0 col-span-4 row-span-5 max-lg:col-span-full max-md:col-span-full bg-bento border border-border rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
-					custom={0}
+					custom={1}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}
@@ -128,7 +128,7 @@ export default function Contact() {
 				</motion.div>
                 <motion.div 
 					className="p-4 min-h-[288px] md:min-h-0 col-span-4 row-span-4 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-2 relative overflow-hidden"
-					custom={0}
+					custom={2}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}
