@@ -63,7 +63,7 @@ export default function Contact() {
 					animate="visible"
 					variants={gridVariants}
 				>
-                    <div>
+                    <div className="mb-8">
                         <h1 className="text-3xl font-bold mb-4">
                             Contact our experts
                         </h1>
