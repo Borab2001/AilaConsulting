@@ -1,15 +1,16 @@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
+import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
 
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useRouter } from "next/navigation";
+
 import { EmailSchema } from "@/schema";
-import { Textarea } from "./ui/textarea";
+import { SendEmail } from "@/actions";
 
 
 const ContactForm = () => {
@@ -28,7 +29,8 @@ const ContactForm = () => {
 
     const onSubmit = async (data: z.infer<typeof EmailSchema>) => {
         try {
-            console.log(data);
+            await SendEmail(data);
+
             toast.success("Your message is sent successfully!");
             router.refresh();
         } catch (error) {
