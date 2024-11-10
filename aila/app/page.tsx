@@ -4,21 +4,22 @@ import { motion } from "framer-motion";
 import TransitionLink from "@/lib/transition-link";
 import Work from "@/components/ui/work";
 import BentoLayout, { gridVariants } from "@/components/bento-layout";
+import Link from "next/link";
 
 export default function Home() {
 
 	const socials = [
         {
             name: 'X',
-            href: '/https://x.com/ailaconsulting',
+            href: 'https://x.com/ailaconsulting',
         },
         {
             name: 'Instagram',
-            href: '/https://www.instagram.com/ailaconsulting/',
+            href: 'https://www.instagram.com/ailaconsulting/',
         },
         {
             name: 'Phone',
-            href: '/phone',
+            href: 'phone',
         },
         
     ];
@@ -202,13 +203,16 @@ export default function Home() {
 					variants={gridVariants}
 				>
 					{socials.map((social, index) => (
-						<TransitionLink
+						// <TransitionLink
+						<Link
 							key={`social${index}`}	
-							href={social.href} 
+							href={social.href}
+							target="_blank"
 							className="uppercase font-light relative after:absolute after:bg-title after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
 						>
 							{social.name}
-						</TransitionLink>
+						</Link>
+						// </TransitionLink>
 					))}
 				</motion.div>
 			</div>
