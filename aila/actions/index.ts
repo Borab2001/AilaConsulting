@@ -22,7 +22,7 @@ export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
                 firstName: values.firstName,
                 lastName: values.lastName,
                 email: values.email,
-                message: values.message,
+                message: formattedMessage,
             }),
         });
         
