@@ -6,7 +6,6 @@ import {
 	Hr,
 	Html,
 	Preview,
-	Section,
 	Text,
 } from "@react-email/components";
 import * as React from "react";
@@ -42,6 +41,7 @@ export const AilaContactEmail = ({
 				<Heading style={title}>New Contact Submission</Heading>
 				<Text style={paragraph}>First Name: {firstName}</Text>
 				<Text style={paragraph}>Last Name: {lastName}</Text>
+				<Text style={paragraph}>Email: {email}</Text>
 				<Text style={paragraph}>
 					{message}
 				</Text>
