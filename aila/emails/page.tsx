@@ -49,20 +49,9 @@ export const AilaContactEmail = ({
 				<Text style={paragraph}>
 					{message}
 				</Text>
-				
-				<Section style={btnContainer}>
-					<Button style={button} href="https://getkoala.com">
-						Get started
-					</Button>
-				</Section>
-				<Text style={paragraph}>
-					Best,
-					<br />
-					The Koala team
-				</Text>
 				<Hr style={hr} />
 				<Text style={footer}>
-					470 Noor Ave STE B #1148, South San Francisco, CA 94080
+					Hüseyinağa, İstiklal Cd. No:76, 34435 Beyoğlu / İstanbul, Türkiye
 				</Text>
 			</Container>
 		</Body>
