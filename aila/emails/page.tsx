@@ -33,7 +33,7 @@ export const AilaContactEmail = ({
 	<Html>
 		<Head />
 		<Preview>
-			The sales intelligence platform that helps you uncover qualified leads.
+			New Contact Submission from {firstName} {lastName}.
 		</Preview>
 		
 		<Body style={main}>
