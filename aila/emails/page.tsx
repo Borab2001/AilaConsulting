@@ -1,11 +1,10 @@
 import {
 	Body,
-	Button,
 	Container,
 	Head,
+	Heading,
 	Hr,
 	Html,
-	Img,
 	Preview,
 	Section,
 	Text,
@@ -23,6 +22,9 @@ const baseUrl = process.env.VERCEL_URL
 	? `https://${process.env.VERCEL_URL}`
 	: "";
 
+const currentYear = new Date().getFullYear();
+
+
 export const AilaContactEmail = ({
   	firstName,
 	lastName,
@@ -37,21 +39,17 @@ export const AilaContactEmail = ({
 		
 		<Body style={main}>
 			<Container style={container}>
-				<Img
-					src="https://ailaconsulting.vercel.app/aila_bolder.svg"
-					width="170"
-					height="50"
-					alt="Aila Consulting"
-					style={logo}
-				/>
-				<Text style={paragraph}>First Name: {firstName},</Text>
-				<Text style={paragraph}>Last Name: {lastName},</Text>
+				<Heading style={title}>New Contact Submission</Heading>
+				<Text style={paragraph}>First Name: {firstName}</Text>
+				<Text style={paragraph}>Last Name: {lastName}</Text>
 				<Text style={paragraph}>
 					{message}
 				</Text>
 				<Hr style={hr} />
 				<Text style={footer}>
 					Hüseyinağa, İstiklal Cd. No:76, 34435 Beyoğlu / İstanbul, Türkiye
+					<br />
+					&#169; Aila Consulting {currentYear}
 				</Text>
 			</Container>
 		</Body>
@@ -77,28 +75,16 @@ const container = {
 	padding: "20px 0 48px",
 };
 
-const logo = {
-  	margin: "0 auto",
-};
+const title = {
+	color: "#000000",
+	fontSize: "24px",
+	fontWeight: "600",
+	marginBottom: "20px",
+}
 
 const paragraph = {
 	fontSize: "16px",
 	lineHeight: "26px",
-};
-
-const btnContainer = {
-  	textAlign: "center" as const,
-};
-
-const button = {
-	backgroundColor: "#5F51E8",
-	borderRadius: "3px",
-	color: "#fff",
-	fontSize: "16px",
-	textDecoration: "none",
-	textAlign: "center" as const,
-	display: "block",
-	padding: "12px",
 };
 
 const hr = {
@@ -107,6 +93,6 @@ const hr = {
 };
 
 const footer = {
-	color: "#8898aa",
+	color: "#cccccc",
 	fontSize: "12px",
 };
