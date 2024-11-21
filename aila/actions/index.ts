@@ -14,7 +14,7 @@ export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
         const formattedMessage = values.message.replace(/\n/g, "<br>");
         
         const { data, error } = await resend.emails.send({
-            from: 'Aila Website <onboarding@resend.dev>',
+            from: 'website@ailaconsulting.com',
             to: 'info@ailaconsulting.com',
             subject: 'New Contact Submission',
             replyTo: values.email,
