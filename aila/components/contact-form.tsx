@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { LoaderCircle } from "lucide-react";
 
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form"
@@ -32,6 +33,7 @@ const ContactForm = () => {
             await SendEmail(data);
 
             toast.success("Your message is sent successfully!");
+            form.reset();
             router.refresh();
         } catch (error) {
             toast.error("An error occurred. Please try again later.");
@@ -100,7 +102,22 @@ const ContactForm = () => {
                     )}
                 />
 
-                <Button type="submit">Send</Button>
+                
+                <Button type="submit" disabled={form.formState.isSubmitting}>
+                    {form.formState.isSubmitting ? (
+                        <>
+                            <LoaderCircle
+                                className="-ms-1 me-2 animate-spin"
+                                size={16}
+                                strokeWidth={2}
+                                aria-hidden="true"
+                            />
+                            Sending...
+                        </>
+                    ) : (
+                        "Send"
+                    )}
+                </Button>
             </form>
         </Form>
     );
