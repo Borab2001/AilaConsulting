@@ -21,8 +21,8 @@ export default function Contact() {
             icon: <HiOutlinePhone size={24} />
         },
         {
-            name: 'Address here',
-            href: 'maps address',
+            name: 'Hüseyinağa, İstiklal Cd. No. 76, Istanbul',
+            href: 'https://maps.app.goo.gl/ekRHmM1b74dUNg8RA',
             icon: <HiOutlineLocationMarker size={24} />
         },
         
