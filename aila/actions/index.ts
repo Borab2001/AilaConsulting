@@ -11,7 +11,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
     try {
-        const formattedMessage = values.message.replace(/\n/g, "<br>");
+        const messageLines = values.message.split('\n');
         
         const { data, error } = await resend.emails.send({
             from: 'website@ailaconsulting.com',
@@ -22,7 +22,9 @@ export const SendEmail = async (values: z.infer<typeof EmailSchema>) => {
                 firstName: values.firstName,
                 lastName: values.lastName,
                 email: values.email,
-                message: formattedMessage,
+                // message: values.message,
+                messageLines: messageLines,
+
             }),
         });
         

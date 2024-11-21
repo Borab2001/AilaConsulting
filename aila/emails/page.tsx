@@ -14,7 +14,8 @@ interface AilaContactEmailProps {
 	firstName: string;
 	lastName: string;
 	email: string;
-	message: string;
+	// message: string;
+	messageLines: string[];
 }
 
 const baseUrl = process.env.VERCEL_URL
@@ -28,7 +29,8 @@ export const AilaContactEmail = ({
   	firstName,
 	lastName,
 	email,
-	message
+	// message,
+	messageLines
 }: AilaContactEmailProps) => (
 	<Html>
 		<Head />
@@ -42,9 +44,12 @@ export const AilaContactEmail = ({
 				<Text style={paragraph}>First Name: {firstName}</Text>
 				<Text style={paragraph}>Last Name: {lastName}</Text>
 				<Text style={paragraph}>Email: {email}</Text>
-				<Text style={paragraph}>
+				{/* <Text style={paragraph}>
 					{message}
-				</Text>
+				</Text> */}
+				{messageLines.map((line, index) => (
+					<Text key={index} style={paragraph}>{line}</Text>
+				))}
 				<Hr style={hr} />
 				<Text style={footer}>
 					Hüseyinağa, İstiklal Cd. No:76, 34435 Beyoğlu / İstanbul, Türkiye
