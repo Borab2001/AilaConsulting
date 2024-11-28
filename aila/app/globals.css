@@ -11,6 +11,9 @@
 
 html {
   background-color: rgb(var(--background-color));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   /* color: rgb(var(--text-color)); */
