@@ -18,8 +18,8 @@ export default function Home() {
             href: 'https://www.instagram.com/ailaconsulting/',
         },
         {
-            name: 'Phone',
-            href: 'phone',
+            name: 'TikTok',
+            href: 'https://www.tiktok.com/@ailaconsulting',
         },
         
     ];
