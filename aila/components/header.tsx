@@ -32,7 +32,7 @@ const Header = () => {
         >
             {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}
             <TransitionLink href="/">
-                <Image src="/aila_bolder.svg" width={300} height={300} alt={"Logo"} />
+                <Image src="/logo.svg" width={300} height={300} alt={"Logo"} />
             </TransitionLink>
 
             <nav className="flex flex-row space-x-8 uppercase text-title">

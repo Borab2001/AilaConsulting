@@ -53,7 +53,7 @@ const MobileHeader = () => {
                             href="/"
                             onLinkClick={handleLinkClick}
                         >
-                            <Image src="/aila_bolder.svg" className="sm:w-[300px]" width={200} height={200} alt={"Logo"} />
+                            <Image src="/logo.svg" className="sm:w-[300px]" width={200} height={200} alt={"Logo"} />
                         </TransitionLink>
                         
                         <span 
