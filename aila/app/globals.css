@@ -9,14 +9,14 @@
   --background-color: 5, 5, 5;
 }
 
+html {
+  background-color: rgb(var(--background-color));
+}
 body {
   /* color: rgb(var(--text-color)); */
   background-color: rgb(var(--background-color));
   color: #ffffff;
   /* background-color: rgb(23 23 23); */
-  background-image: url('/background.jpg');
-  background-position: center;
-  background-size: cover;
   margin: 0;
   padding: 1rem;
   box-sizing: border-box;
