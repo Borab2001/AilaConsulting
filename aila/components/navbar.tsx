@@ -70,12 +70,14 @@ const Navbar = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className="fixed z-40 top-0 right-0 h-screen bg-bento"
+            className="fixed z-40 top-0 right-0 h-screen bg-bento border-l border-border"
         >
             {/* body */}
-            <div className="p-24 flex justify-between">
+            <div className="h-full p-24 flex flex-col justify-between">
                 <nav className="flex flex-col gap-8 mt-20 text-5xl text-primary capitalize">
-                    <p className="text-sm uppercase text-subtitle">Navigation</p>
+                    <p className="w-full text-sm uppercase text-subtitle">Navigation</p>
+
+                    {/* <hr className="w-full border border-subtitle" /> */}
                     {
                         links.map((link, index) => {
                             return (
@@ -93,13 +95,13 @@ const Navbar = () => {
                             )
                         })
                     }
-                     <p className="w-full uppercase text-md text-neutral-400 font-light">
-                        <p className="text-sm uppercase text-subtitle">Copyright</p>
-                        <span className="text-sm text-title capitalize">
-                            &#169;{currentYear} Aila Consulting 
-                        </span>
-                    </p>
                 </nav>
+                <div className="flex flex-col justify-between gap-4 w-full uppercase">
+                    <p className="text-sm uppercase text-subtitle">Copyright</p>
+                    <span className="text-sm text-title capitalize">
+                        &#169;{currentYear} Aila Consulting 
+                    </span>
+                </div>
             </div>
         </motion.div>
     );
