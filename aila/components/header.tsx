@@ -3,7 +3,7 @@
 import TransitionLink from "@/lib/transition-link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import MobileHeader from "./mobile-header";
+import MobileHeader from "./header-button";
 
 const Header = () => {
 

@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import Header from "./header";
-import MobileHeader from "./mobile-header";
+import MobileHeader from "./header-button";
 
 interface BentoLayoutProps {
     children: ReactNode;
