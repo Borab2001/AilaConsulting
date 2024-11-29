@@ -114,7 +114,7 @@ export default function Home() {
 
 					</div>
 					<span className="text-balance text-md lg:text-lg mb-4">
-						We specialize in rapid visa approvals, offer certified translations and provide seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.
+						We specialize in rapid visa approvals, certified translations and seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.
 					</span>
 				</motion.div>
 

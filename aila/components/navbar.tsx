@@ -76,8 +76,6 @@ const Navbar = () => {
             <div className="h-full p-24 flex flex-col justify-between">
                 <nav className="flex flex-col gap-8 mt-20 text-5xl text-primary capitalize">
                     <p className="w-full text-sm uppercase text-subtitle">Navigation</p>
-
-                    {/* <hr className="w-full border border-subtitle" /> */}
                     {
                         links.map((link, index) => {
                             return (

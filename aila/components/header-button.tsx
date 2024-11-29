@@ -1,12 +1,20 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./navbar";
 
 const HeaderButton = () => {
 
     const [isActive, setIsActive] = useState(false);
+
+    useEffect(() => {
+        if (isActive) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    }, [isActive]);
 
     return (
         // <div className={`inset-0 fixed z-50 h-screen w-full transition-all ease-in-out duration-500 ${isActive ? "bg-black/50 backdrop-blur-sm" : "bg-transparent backdrop-blur-none pointer-events-none"}`}>
