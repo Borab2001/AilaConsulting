@@ -14,7 +14,6 @@ const Header = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}    
         >
-            {/* <Image src="/aila.svg" width={300} height={300} alt={"Logo"} /> */}
             <TransitionLink 
                 href="/" 
                 className="absolute top-4 left-4 z-30 w-[calc(100%-112px)] h-16 bg-bento border border-border p-4 rounded-2xl flex items-center justify-between"

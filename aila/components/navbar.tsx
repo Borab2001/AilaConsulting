@@ -1,6 +1,6 @@
 import TransitionLink from "@/lib/transition-link";
 
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { useState } from "react";
 
 
@@ -22,14 +22,14 @@ export const slide = {
     initial: {
         x: "80px",
     },
-    enter: {
+    enter: (i: number) => ({
         x: "0px",
-        transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]},
-    },
-    exit: {
+        transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: i * 0.05},
+    }),
+    exit: (i: number) => ({
         x: "80px",
-        transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]},
-    },
+        transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: i * 0.05},
+    }),
 };
 
 const Navbar = () => {
@@ -80,7 +80,8 @@ const Navbar = () => {
                         links.map((link, index) => {
                             return (
                                 <motion.div 
-                                    key={index} 
+                                    key={index}
+                                    custom={index}
                                     variants={slide} 
                                     initial="initial"
                                     animate="enter"
