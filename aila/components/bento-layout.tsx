@@ -32,7 +32,6 @@ const BentoLayout: React.FC<BentoLayoutProps> = ({
             <div className="grid h-auto flex-1 min-h-[700px] grid-cols-12 grid-rows-10 gap-4 max-lg:h-auto max-lg:grid-rows-none">
                 <div className="col-span-full row-span-1">
                     <Header />
-                    <MobileHeader />
                 </div>
                 {children}
             </div>
