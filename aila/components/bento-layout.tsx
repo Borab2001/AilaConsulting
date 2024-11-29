@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import Header from "./header";
-import MobileHeader from "./mobile-header";
+import MobileHeader from "./header-button";
 
 interface BentoLayoutProps {
     children: ReactNode;
@@ -27,12 +27,11 @@ const BentoLayout: React.FC<BentoLayoutProps> = ({
     gridVariants
 }) => {
     return (
-        <main className="flex flex-1 flex-grow h-full pt-16 md:pt-0">
+        <main className="flex flex-1 flex-grow h-full pt-16 lg:pt-0">
             {/* Bento Grid */}
             <div className="grid h-auto flex-1 min-h-[700px] grid-cols-12 grid-rows-10 gap-4 max-lg:h-auto max-lg:grid-rows-none">
                 <div className="col-span-full row-span-1">
                     <Header />
-                    <MobileHeader />
                 </div>
                 {children}
             </div>

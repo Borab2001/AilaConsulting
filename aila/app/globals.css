@@ -28,6 +28,11 @@ body {
   flex-direction: column;
 }
 
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
