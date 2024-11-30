@@ -64,7 +64,7 @@ const Navbar = () => {
             exit="exit"
             className="fixed z-40 top-0 right-0 max-w-[400px] w-full flex justify-center h-screen bg-bento border-l border-border"
         >
-            <div className="h-full py-24 flex flex-col justify-between">
+            <div className="h-full p-menu flex flex-col justify-between">
                 <nav className="flex flex-col gap-8 mt-20 text-5xl text-primary capitalize">
                     <p className="w-full text-sm uppercase text-subtitle">Navigation</p>
                     {

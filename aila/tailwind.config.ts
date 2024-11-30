@@ -17,6 +17,9 @@ const config: Config = {
   		width: {
   			'header': 'calc(100% - 2rem)'
   		},
+		padding: {
+			'menu': '10vh 0 15vh'
+		},
   		colors: {
   			'background': 'rgb(5, 5, 5)',
   			'bento': 'rgb(16, 16, 16)',
