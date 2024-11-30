@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -13,7 +13,10 @@ export const metadata: Metadata = {
 	keywords: "visa, ikamet, residence permit, work permit, turkey, istanbul, aila, consulting",
 };
 
-export const viewport = "width=device-width, initial-scale=1.0";
+export const viewport: Viewport = {
+    initialScale: 1,
+    width: 'device-width'
+}
 
 export default function RootLayout({
 	children,
