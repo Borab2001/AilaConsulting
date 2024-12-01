@@ -29,6 +29,7 @@ export default function RootLayout({
 				<meta charSet="UTF-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 				<meta name="apple-mobile-web-app-title" content="Aila" />
+				<meta name="theme-color" content="#050505" />
 				<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 				<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 				<link rel="shortcut icon" href="/favicon.ico" />
