@@ -16,7 +16,15 @@
         "title": "About Page in development..."
     },
     "ContactPage": {
-        "title": ""
+        "phone": "+90 212 000 00 00",
+        "address": "Hüseyinağa, İstiklal Cd. No. 76, Istanbul",
+        "contactTitle": "Contact our experts",
+        "contactSpan": "Need help with something? Need some info? Get in touch with our team.",
+        "basedIn": "Based in <italic>Istanbul</italic>",
+        "socials": "Our <italic>Socials</italic>",
+        "locationTitle": "Taksim",
+        "locationSubtitle": "Istanbul, Turkey",
+        "locationDetails": "Istiklal Avenue, nestled in Taksim, Istanbul, is one of the city’s most iconic pedestrian streets, pulsing with history, culture, and vibrant energy. A hub of activity day and night, it’s a place where the heart of Istanbul beats loudest. Our consulting company is right here on Istiklal Avenue, ready to assist with all your translation needs, visa applications, and residence permits—making the process smooth and accessible in Istanbul’s most dynamic district."
     },
     "ServicesPage": {
         "title": ""

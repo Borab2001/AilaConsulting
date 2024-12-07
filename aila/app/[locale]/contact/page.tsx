@@ -15,14 +15,16 @@ import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
 
 export default function Contact() {
 
+    const t = useTranslations('ContactPage');
+
     const locationDetails = [
         {
-            name: '+90 212 000 00 00',
+            name: t('phone'),
             href: 'phone',
             icon: <HiOutlinePhone size={24} />
         },
         {
-            name: 'Hüseyinağa, İstiklal Cd. No. 76, Istanbul',
+            name: t('address'),
             href: 'https://maps.app.goo.gl/ekRHmM1b74dUNg8RA',
             icon: <HiOutlineLocationMarker size={24} />
         },
@@ -53,9 +55,6 @@ export default function Contact() {
         
     ];
 
-    const t = useTranslations('ContactPage');
-
-
     return (
        <BentoLayout gridVariants={gridVariants}>
             {/* Left column */}
@@ -69,10 +68,10 @@ export default function Contact() {
 				>
                     <div className="mb-8">
                         <h1 className="text-3xl font-bold mb-4">
-                            Contact our experts
+                            {t('contactTitle')}
                         </h1>
                         <span className="text-subtitle">
-                            Need help with something? Need some info? Get in touch with our team.
+                            {t('contactSpan')}
                         </span>
                     </div>
                     <ContactForm />
@@ -90,7 +89,9 @@ export default function Contact() {
 				>
                     <div className="flex flex-col items-start">
                         <h2 className="text-title text-2xl font-semibold mb-8">
-                            Based in <i>Istanbul</i>
+                            {t.rich('basedIn', {
+                                italic: (chunks) => <i>{chunks}</i>
+                            })}
                         </h2>
                         
                         <div className="flex flex-col gap-8">
@@ -128,7 +129,7 @@ export default function Contact() {
                             blurDataURL={BLUR_DATA_URL}
                         />
                     </div> */}
-                    <LocationCard />
+                    <LocationCard t={t} />
 				</motion.div>
                 <motion.div 
 					className="p-4 min-h-[288px] md:min-h-0 col-span-4 row-span-4 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-2 relative overflow-hidden"
@@ -138,7 +139,9 @@ export default function Contact() {
 					variants={gridVariants}
 				>
 					<h2 className="text-2xl font-semibold mb-8">
-						Our <i>Socials</i>
+                        {t.rich('socials', {
+                            italic: (chunks) => <i>{chunks}</i>
+                        })}
 					</h2>
                     <div className="flex flex-col gap-8">
                         {socials.map((social, index) => (
