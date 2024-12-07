@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Metadata, Viewport } from "next";
@@ -11,18 +11,23 @@ import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-	title: "Aila Consulting",
-	description: "Fast and reliable visa, ikamet, and work permit consulting in Istanbul.",
-	keywords: "visa, ikamet, residence permit, work permit, turkey, istanbul, aila, consulting",
-};
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+    const t = await getTranslations({ locale, namespace: 'metadata' });
+
+    return {
+        title: t('home.title'),
+        description: t('home.description'),
+        keywords: t('home.keywords'),
+    };
+}
 
 export const viewport: Viewport = {
     initialScale: 1,
     width: 'device-width'
 }
 
-export default async function LocaleLayout({
+export default async function RootLayout({
 	children,
 	params: {locale}
 }: Readonly<{
