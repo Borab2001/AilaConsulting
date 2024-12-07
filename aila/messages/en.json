@@ -1,7 +1,10 @@
 {
     "HomePage": {
-        "grid1-title": "Transform your <i>international</i> relocation into a breeze with our <i>all-in-one</i> solution.",
-        "grid2-title": "Learn More",
-        "grid3"
+        "grid1Title": "Transform your <italic>international</italic> relocation into a breeze with our <italic>all-in-one</italic> solution.",
+        "grid2Title": "Learn More",
+        "grid3": ""
+    },
+    "AboutPage": {
+        "title": "About Page in development..."
     }
 }

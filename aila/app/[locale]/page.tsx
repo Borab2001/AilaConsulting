@@ -2,9 +2,12 @@
 
 import { motion } from "framer-motion";
 import TransitionLink from "@/lib/transition-link";
+// import Link from "next/link";
+import {useTranslations} from 'next-intl';
+import { Link } from '@/i18n/routing';
+
 import Work from "@/components/ui/work";
 import BentoLayout, { gridVariants } from "@/components/bento-layout";
-import Link from "next/link";
 
 export default function Home() {
 
@@ -23,6 +26,8 @@ export default function Home() {
         },
         
     ];
+
+	const t = useTranslations('HomePage');
 
 	return (
 		<BentoLayout gridVariants={gridVariants}>
@@ -50,7 +55,9 @@ export default function Home() {
 										
 					</div>
 					<h2 className="text-3xl font-bold mb-4">
-						Transform your <i>international</i> relocation into a breeze with our <i>all-in-one</i> solution.
+						{t.rich('grid1Title', {
+							italic: (chunks) => <i>{chunks}</i>
+						})}
 					</h2>
 				</motion.div>
 

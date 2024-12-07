@@ -1,6 +1,10 @@
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 import { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/sonner";
@@ -18,13 +22,25 @@ export const viewport: Viewport = {
     width: 'device-width'
 }
 
-export default function RootLayout({
+export default async function LocaleLayout({
 	children,
+	params: {locale}
 }: Readonly<{
 	children: React.ReactNode;
+	params: {locale: string};
 }>) {
+
+	// Ensure that the incoming `locale` is valid
+	if (!routing.locales.includes(locale as any)) {
+		notFound();
+	}
+	 
+	// Providing all messages to the client
+	// side is the easiest way to get started
+	const messages = await getMessages();
+	
 	return (
-		<html lang="en">
+		<html lang={locale}>
 			<head>
 				<meta charSet="UTF-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -37,9 +53,11 @@ export default function RootLayout({
 				<link rel="manifest" href="/site.webmanifest" />
 			</head>
 			<body className={inter.className}>
-				{children}
-				<Toaster />
-				<Analytics />
+				<NextIntlClientProvider messages={messages}>
+					{children}
+					<Toaster />
+					<Analytics />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);
