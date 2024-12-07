@@ -16,6 +16,16 @@
         "title": "About Page in development..."
     },
     "ContactPage": {
+        "firstName": "First Name",
+        "firstNamePlaceholder": "Jane",
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Smith",
+        "email": "Email",
+        "emailPlaceholder": "e.g jane@aila.com",
+        "message": "Message",
+        "messagePlaceholder": "Hi, I would like to know more about your services...",
+        "sendButton": "Send",
+        "sendButtonLoading": "Sending...",
         "phone": "+90 212 000 00 00",
         "address": "Hüseyinağa, İstiklal Cd. No. 76, Istanbul",
         "contactTitle": "Contact our experts",

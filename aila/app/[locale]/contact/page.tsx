@@ -74,7 +74,7 @@ export default function Contact() {
                             {t('contactSpan')}
                         </span>
                     </div>
-                    <ContactForm />
+                    <ContactForm t={t} />
 				</motion.div>
 			</div>
 
