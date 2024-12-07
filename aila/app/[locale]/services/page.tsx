@@ -6,8 +6,12 @@ import BentoLayout, { gridVariants } from "@/components/bento-layout";
 
 import { motion } from "framer-motion";
 import React from "react";
+import { useTranslations } from 'next-intl';
+
 
 export default function Services() {
+
+	const t = useTranslations('ServicesPage');
 
     return (
 		<BentoLayout gridVariants={gridVariants}>

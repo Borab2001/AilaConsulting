@@ -6,7 +6,8 @@ import ContactForm from "@/components/contact-form";
 
 import { motion } from "framer-motion";
 import React from "react";
-import Link from "next/link";
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaXTwitter } from "react-icons/fa6";
 import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
@@ -51,6 +52,9 @@ export default function Contact() {
         },
         
     ];
+
+    const t = useTranslations('ContactPage');
+
 
     return (
        <BentoLayout gridVariants={gridVariants}>

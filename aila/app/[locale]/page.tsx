@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import TransitionLink from "@/lib/transition-link";
-// import Link from "next/link";
-import {useTranslations} from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
+import TransitionLink from "@/lib/transition-link";
 import Work from "@/components/ui/work";
 import BentoLayout, { gridVariants } from "@/components/bento-layout";
 

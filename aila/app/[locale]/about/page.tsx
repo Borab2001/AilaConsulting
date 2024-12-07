@@ -1,4 +1,4 @@
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 import BentoLayout, { gridVariants } from "@/components/bento-layout";
 
