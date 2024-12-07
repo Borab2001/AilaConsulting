@@ -21,7 +21,7 @@
         "lastName": "Last Name",
         "lastNamePlaceholder": "Smith",
         "email": "Email",
-        "emailPlaceholder": "e.g jane@aila.com",
+        "emailPlaceholder": "e.g jane@email.com",
         "message": "Message",
         "messagePlaceholder": "Hi, I would like to know more about your services...",
         "sendButton": "Send",
@@ -38,5 +38,13 @@
     },
     "ServicesPage": {
         "title": ""
+    },
+    "Navbar": {
+        "navigation": "Navigation",
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+        "services": "Services",
+        "copyright": "Copyright"
     }
 }
