@@ -1,4 +1,26 @@
 {
+    "metadata": {
+        "home": {
+            "title": "Aila Consulting",
+            "description": "Fast and reliable visa, ikamet, and work permit consulting in Istanbul.",
+            "keywords": "visa, ikamet, residence permit, work permit, turkey, istanbul, aila, consulting"
+        },
+        "about": {
+            "title": "About Us",
+            "description": "Learn more about Aila Consulting and the background of our experts.",
+            "keywords": "about, aila, consulting, expert, experts, mission, team"
+        },
+        "services": {
+            "title": "Our Services",
+            "description": "Discover the services we offer at Aila Consulting.",
+            "keywords": "services, visa, ikamet, residence permit, work permit"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "description": "Get in touch with Aila Consulting.",
+            "keywords": "contact, aila, consulting, support"
+        }
+    },
     "HomePage": {
         "grid1Title": "Transform your <italic>international</italic> relocation into a breeze with our <italic>all-in-one</italic> solution.",
         "grid2Span": "Learn More",
