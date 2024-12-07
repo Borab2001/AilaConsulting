@@ -1,6 +1,9 @@
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
+
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+
 
 interface Service {
     title: string;
@@ -48,25 +51,27 @@ const thumbnailVariants = {
 // };
 
 export default function Work() {
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
-  const services: Service[] = [
-        {
-            title: 'Visa Solutions',
-            subtitle: 'Fast-track your student, work, and family visas.',
-            image: '/images/1.jpg',
-        },
-        {
-            title: 'Certified Translations',
-            subtitle: 'Certified translations in French, Turkish & Russian.',
-            image: '/images/2.jpg',
-        },
-        {
-            title: 'Residence Permit',
-            subtitle: 'Easy applications and renewals with expert support.',
-            image: '/images/3.jpg',
-        },
-  ];
+    const [selectedIndex, setSelectedIndex] = useState<number>(0);
+    const t = useTranslations('HomePage');
+
+    const services: Service[] = [
+            {
+                title: t('grid3Title1'),
+                subtitle: t('grid3Subtitle1'),
+                image: '/images/1.jpg',
+            },
+            {
+                title: t('grid3Title2'),
+                subtitle: t('grid3Subtitle2'),
+                image: '/images/2.jpg',
+            },
+            {
+                title: t('grid3Title3'),
+                subtitle: t('grid3Subtitle3'),
+                image: '/images/3.jpg',
+            },
+    ];
 
     return (
         <div className="relative z-10 size-full overflow-hidden">

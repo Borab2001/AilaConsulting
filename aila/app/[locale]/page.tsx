@@ -70,7 +70,7 @@ export default function Home() {
 				>
 					<TransitionLink href="/about" className="p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
 						<div className="scale-0 w-20 h-20 bg-bento border border-border text-title flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
-							<span>Learn More</span>
+							<span>{t('grid2Span')}</span>
 						</div>
 					</TransitionLink>
 				</motion.div>
@@ -112,7 +112,7 @@ export default function Home() {
 
 					</div>
 					<span className="text-balance text-md lg:text-lg mb-4">
-						We specialize in rapid visa approvals, certified translations and seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.
+						{t('grid4Span')}
 					</span>
 				</motion.div>
 
@@ -130,7 +130,7 @@ export default function Home() {
 						className="relative p-4 w-full h-full flex flex-col justify-between bg-primary group hover:bg-element text-bento hover:text-title transition ease-in-out duration-300"
 					>
 						<div className="flex flex-row items-center justify-between relative z-10">
-							<span className="font-light">We would love to hear from you</span>
+							<span className="font-light">{t('grid5Span')}</span>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 20 20"
@@ -144,7 +144,7 @@ export default function Home() {
 								/>
 							</svg>
 						</div>
-						<h2 className="text-5xl font-bold mb-4 relative z-10">Contact Us</h2>
+						<h2 className="text-5xl font-bold mb-4 relative z-10">{t('grid5Title')}</h2>
 					</TransitionLink>
 				</motion.div>
 			</div>
