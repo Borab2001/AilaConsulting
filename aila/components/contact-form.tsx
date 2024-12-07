@@ -71,7 +71,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                     control={form.control}
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel htmlFor="lastName">{t("firstName")}</FormLabel>
+                            <FormLabel htmlFor="lastName">{t("lastName")}</FormLabel>
                             <FormControl>
                                 <Input id="lastName" type="text" placeholder={t("lastNamePlaceholder")} {...field} />
                             </FormControl>
