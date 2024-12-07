@@ -9,7 +9,7 @@ import React from "react";
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaXTwitter } from "react-icons/fa6";
+import { FaBluesky, FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaThreads, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
 
 
@@ -43,16 +43,30 @@ export default function Contact() {
             icon: <FaXTwitter size={24} />
         },
         {
-            name: 'LinkedIn',
-            href: '/',
-            icon: <FaLinkedinIn size={24} />
+            name: '@ailaconsulting',
+            href: 'https://www.tiktok.com/@ailaconsulting',
+            icon: <FaTiktok size={24} />
         },
         {
-            name: 'Facebook',
-            href: '/',
-            icon: <FaFacebookF size={24} />
+            name: '@ailaconsulting',
+            href: 'https://bsky.app/profile/ailaconsulting.bsky.social',
+            icon: <FaBluesky size={24} />
         },
-        
+        // {
+        //     name: 'Threads',
+        //     href: '/',
+        //     icon: <FaThreads size={24} />
+        // },
+        //{
+        //     name: 'LinkedIn',
+        //     href: '/',
+        //     icon: <FaLinkedinIn size={24} />
+        // },
+        // {
+        //     name: 'Facebook',
+        //     href: '/',
+        //     icon: <FaFacebookF size={24} />
+        // },
     ];
 
     return (
