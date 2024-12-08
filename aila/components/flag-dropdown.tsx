@@ -23,9 +23,9 @@ const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownPr
 
     // Dropdown animation variants
     const dropdownVariants = {
-        hidden: { opacity: 0, y: 0 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-        exit: { opacity: 0, y: 0, transition: { duration: 0.2 } },
+        hidden: { opacity: 0, y: 0, x: 0 },
+        visible: { opacity: 1, y: 0, x: 0, transition: { duration: 0.3 } },
+        exit: { opacity: 0, y: 0, x: 0, transition: { duration: 0.2 } },
     };
 
     return (
@@ -34,9 +34,9 @@ const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownPr
                 {/* Trigger */}
                 <button
                     onClick={() => setIsOpen((prev) => !prev)}
-                    className="p-2 bg-bento border border-border rounded-lg m-0 bg-transparent focus:outline-none"
+                    className="p-2 bg-bento border border-border rounded-2xl w-16 h-16 m-0 bg-transparent focus:outline-none hover:bg-element"
                 >
-                    <span className="text-4xl">{currentFlag}</span>
+                    <span className="text-4xl w-9 h-10">{currentFlag}</span>
                 </button>
 
                 {/* Dropdown */}
@@ -47,7 +47,7 @@ const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownPr
                             initial="hidden"
                             animate="visible"
                             exit="exit"
-                            className="bg-bento border border-border absolute top-0 mt-0 right-0 shadow-lg rounded-lg overflow-hidden"
+                            className="bg-bento border border-border absolute top-0 mt-0 left-0 right-0 shadow-lg rounded-2xl overflow-hidden"
                         >
                             {sortedLocales.map((locale) => (
                                 <li
@@ -56,9 +56,9 @@ const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownPr
                                         onLocaleChange(locale.code);
                                         setIsOpen(false);
                                     }}
-                                    className="cursor-pointer text-4xl p-2 text-center hover:bg-element transition"
+                                    className="cursor-pointer p-2 w-16 h-16 flex items-center justify-center hover:bg-element transition"
                                 >
-                                    {locale.flag}
+                                    <span className="text-4xl w-9 h-10 text-center">{locale.flag}</span>
                                 </li>
                             ))}
                         </motion.ul>
