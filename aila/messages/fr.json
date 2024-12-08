@@ -1,7 +1,72 @@
 {
+    "metadata": {
+        "home": {
+            "title": "Aila Consulting",
+            "description": "",
+            "keywords": ""
+        },
+        "about": {
+            "title": "À Propos",
+            "description": "",
+            "keywords": ""
+        },
+        "services": {
+            "title": "Nos Services",
+            "description": "",
+            "keywords": ""
+        },
+        "contact": {
+            "title": "Contactez-nous",
+            "description": "",
+            "keywords": ""
+        }
+    },
     "HomePage": {
-        "grid1Title": "Transforme ton <i>international</i> relocation into a breeze avec notre <i>all-in-one</i> solution.",
-        "grid2Title": "Learn More",
-        "grid3": ""
+        "grid1Title": "",
+        "grid2Span": "Voir plus",
+        "grid3Title1": "",
+        "grid3Subtitle1": "",
+        "grid3Title2": "",
+        "grid3Subtitle2": "",
+        "grid3Title3": "",
+        "grid3Subtitle3": "",
+        "grid4Span": "",
+        "grid5Span": "",
+        "grid5Title": ""
+    },
+    "AboutPage": {
+        "title": ""
+    },
+    "ContactPage": {
+        "firstName": "Prénom",
+        "firstNamePlaceholder": "Jane",
+        "lastName": "Nom",
+        "lastNamePlaceholder": "Smith",
+        "email": "Adresse Mail",
+        "emailPlaceholder": "e.g jane@email.com",
+        "message": "Message",
+        "messagePlaceholder": "Hi, I would like to know more about your services...",
+        "sendButton": "Envoyer",
+        "sendButtonLoading": "En cours...",
+        "phone": "+90 212 000 00 00",
+        "address": "Hüseyinağa, İstiklal Cd. No. 76, Istanbul",
+        "contactTitle": "",
+        "contactSpan": "",
+        "basedIn": "Basé à <italic>Istanbul</italic>",
+        "socials": "Nos <italic>Réseaux</italic>",
+        "locationTitle": "Taksim",
+        "locationSubtitle": "Istanbul, Turquie",
+        "locationDetails": "L'avenue d'Istiklal..."
+    },
+    "ServicesPage": {
+        "title": ""
+    },
+    "Navbar": {
+        "navigation": "Navigation",
+        "home": "Accueil",
+        "about": "À Propos",
+        "contact": "Contact",
+        "services": "Services",
+        "copyright": "Copyright"
     }
 }
