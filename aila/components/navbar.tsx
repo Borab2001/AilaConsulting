@@ -1,11 +1,11 @@
 "use client";
 
 import TransitionLink from "@/lib/transition-link";
+import FlagDropdown from "./flag-dropdown";
 import { motion } from "framer-motion";
 
 import { useTranslations } from 'next-intl';
 import { useRouter, usePathname } from "next/navigation";
-
 
 export const menuSlide = {
     initial: {
@@ -66,21 +66,22 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const locales = [
-        { code: "en", name: "English", flag: "🇬🇧" },
-        { code: "fr", name: "Français", flag: "🇫🇷" },
-        { code: "tr", name: "Türkçe", flag: "🇹🇷" },
+        { code: "en", flag: "🇬🇧" },
+        { code: "fr", flag: "🇫🇷" },
+        { code: "tr", flag: "🇹🇷" },
     ];
 
-    // Handle language change
-    const handleLocaleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const newLocale = event.target.value;
-        // Replace the current locale with the selected one
+    const currentLocale = pathname.split("/")[1] || "en";
+
+    const handleLocaleChange = (newLocale: string) => {
         const segments = pathname.split("/").filter(Boolean);
+
         if (locales.some((locale) => locale.code === segments[0])) {
             segments[0] = newLocale;
         } else {
             segments.unshift(newLocale);
         }
+
         router.push(`/${segments.join("/")}`);
     };
 
@@ -92,6 +93,12 @@ const Navbar = () => {
             exit="exit"
             className="fixed z-40 top-0 right-0 max-w-[400px] w-full flex justify-center h-screen bg-bento border-l border-border"
         >
+            {/* Flag Dropdown */}
+            <FlagDropdown
+                locales={locales}
+                currentLocale={currentLocale}
+                onLocaleChange={handleLocaleChange}
+            />
             <div className="h-full p-menu md:py-24 flex flex-col justify-between">
                 <nav className="flex flex-col gap-8 mt-[5vh] md:mt-20 text-5xl text-primary capitalize">
                     <p className="w-full text-sm uppercase text-subtitle">{t("navigation")}</p>
@@ -115,31 +122,14 @@ const Navbar = () => {
                     }
                 </nav>
 
-                {/* Language Selector */}
-                <div className="flex flex-col items-center gap-4">
-                    <label htmlFor="language" className="text-sm uppercase text-subtitle">
-                        {t("language")}
-                    </label>
-                    <select
-                        id="language"
-                        onChange={handleLocaleChange}
-                        defaultValue={pathname.split("/")[1] || "en"}
-                        className="p-2 border rounded-md text-primary"
-                    >
-                        {locales.map((locale) => (
-                            <option key={locale.code} value={locale.code}>
-                                {locale.flag} {locale.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-                
+
                 <div className="flex flex-col justify-between gap-4 w-full uppercase">
                     <p className="text-sm uppercase text-subtitle">{t('copyright')}</p>
                     <span className="text-sm text-title capitalize">
                         &#169;{currentYear} Aila Consulting 
                     </span>
                 </div>
+                    
             </div>
         </motion.div>
     );
