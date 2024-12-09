@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 interface FlagDropdownProps {
     locales: { code: string; flag: string }[];
@@ -12,7 +11,6 @@ interface FlagDropdownProps {
 
 const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownProps) => {
     const [isOpen, setIsOpen] = useState(false);
-    const router = useRouter();
 
     // Find the current flag
     const currentFlag = locales.find((locale) => locale.code === currentLocale)?.flag;
@@ -25,6 +23,11 @@ const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownPr
 
     // Handle language switch with fade-out effect
     const handleLanguageChange = (newLocale: string) => {
+        if (newLocale === currentLocale) {
+            setIsOpen(false); // Close dropdown if current flag is clicked
+            return; // Do nothing if the user clicks the already selected language
+        }
+
         setIsOpen(false);
         document.body.style.transition = "opacity 0.5s ease-in-out";
         document.body.style.opacity = "0";

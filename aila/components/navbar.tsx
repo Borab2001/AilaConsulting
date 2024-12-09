@@ -104,6 +104,15 @@ const Navbar = () => {
                     <p className="w-full text-sm uppercase text-subtitle">{t("navigation")}</p>
                     {
                         links.map((link, index) => {
+                            // Construct locale-aware path
+                            const localizedPath =
+                                link.url === "/"
+                                    ? `/${currentLocale}`
+                                    : `/${currentLocale}${link.url}`;
+                            const isActive =
+                                pathname === localizedPath ||
+                                (pathname === `/${currentLocale}` && link.url === "/");
+
                             return (
                                 <motion.div 
                                     key={index}
@@ -112,8 +121,16 @@ const Navbar = () => {
                                     initial="initial"
                                     animate="enter"
                                     exit="exit"
+                                    className="relative"
                                 >
-                                    <TransitionLink href={link.url}>
+                                    <TransitionLink
+                                        href={link.url}
+                                        className={`block relative ${
+                                            isActive
+                                                ? "before:content-[''] before:w-3 before:h-3 before:rounded-full before:bg-primary before:absolute before:-left-8 before:top-1/2 before:-translate-y-1/2"
+                                                : ""
+                                        }`}
+                                    >
                                         {link.name}
                                     </TransitionLink>
                                 </motion.div>
