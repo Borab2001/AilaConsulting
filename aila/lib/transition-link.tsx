@@ -3,7 +3,7 @@
 import { Link } from '@/i18n/routing';
 import { LinkProps } from "next/link";
 import React from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useLocale } from 'next-intl';
 
 interface TransitionLinkProps extends LinkProps {
@@ -25,22 +25,37 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
     ...props
 }) => {
     const router = useRouter();
+    const pathname = usePathname(); // Get current path
     const locale = useLocale(); // Retrieve the current locale
 
     const handleTransition = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
+        
         if (onLinkClick) onLinkClick();
-        document.body.style.transition = "opacity 0.5s ease-in-out";
-        document.body.style.opacity = "0";
 
-        setTimeout(() => {
-            // Include the locale when pushing the route
-            const localizedHref = `/${locale}${href.startsWith('/') ? href : `/${href}`}`;
-            router.push(localizedHref);
+        // Construct the localized href
+        const localizedHref = `/${locale}${href.startsWith("/") ? href : `/${href}`}`;
+
+        if (pathname === localizedHref) {
+            // If the current page is the same, force a page refresh
+            document.body.style.transition = "opacity 0.5s ease-in-out";
+            document.body.style.opacity = "0";
+
             setTimeout(() => {
-                document.body.style.opacity = "1";
+                window.location.href = localizedHref; // Force reload the current page
             }, 500);
-        }, 500);
+        } else {
+            // Perform a regular transition
+            document.body.style.transition = "opacity 0.5s ease-in-out";
+            document.body.style.opacity = "0";
+
+            setTimeout(() => {
+                router.push(localizedHref);
+                setTimeout(() => {
+                    document.body.style.opacity = "1";
+                }, 500);
+            }, 500);
+        }
     };
 
     return (
