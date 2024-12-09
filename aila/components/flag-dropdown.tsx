@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface FlagDropdownProps {
     locales: { code: string; flag: string }[];
@@ -11,6 +12,7 @@ interface FlagDropdownProps {
 
 const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownProps) => {
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
     // Find the current flag
     const currentFlag = locales.find((locale) => locale.code === currentLocale)?.flag;
@@ -21,11 +23,25 @@ const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownPr
         ...locales.filter((locale) => locale.code !== currentLocale),
     ];
 
+    // Handle language switch with fade-out effect
+    const handleLanguageChange = (newLocale: string) => {
+        setIsOpen(false);
+        document.body.style.transition = "opacity 0.5s ease-in-out";
+        document.body.style.opacity = "0";
+
+        setTimeout(() => {
+            onLocaleChange(newLocale);
+            setTimeout(() => {
+                document.body.style.opacity = "1";
+            }, 500);
+        }, 500);
+    };
+
     // Dropdown animation variants
     const dropdownVariants = {
-        hidden: { opacity: 0, y: 0, x: 0 },
-        visible: { opacity: 1, y: 0, x: 0, transition: { duration: 0.3 } },
-        exit: { opacity: 0, y: 0, x: 0, transition: { duration: 0.2 } },
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 0.3 } },
+        exit: { opacity: 0, transition: { duration: 0.2 } },
     };
 
     return (
@@ -52,10 +68,7 @@ const FlagDropdown = ({ locales, currentLocale, onLocaleChange }: FlagDropdownPr
                             {sortedLocales.map((locale) => (
                                 <li
                                     key={locale.code}
-                                    onClick={() => {
-                                        onLocaleChange(locale.code);
-                                        setIsOpen(false);
-                                    }}
+                                    onClick={() => handleLanguageChange(locale.code)}
                                     className="cursor-pointer p-2 h-[62px] flex items-center justify-center hover:bg-element transition"
                                 >
                                     <span className="text-4xl">{locale.flag}</span>
