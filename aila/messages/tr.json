@@ -1,72 +1,73 @@
 {
     "metadata": {
         "home": {
-            "title": "Aila Consulting",
-            "description": "",
-            "keywords": ""
+            "title": "Aila Danışmanlık",
+            "description": "İstanbul'da hızlı ve güvenilir vize, ikamet ve çalışma izni danışmanlığı.",
+            "keywords": "vize, ikamet, oturma izni, çalışma izni, türkiye, istanbul, aila, danışmanlık"
         },
         "about": {
-            "title": "À Propos",
-            "description": "",
-            "keywords": ""
+            "title": "Hakkımızda",
+            "description": "Aila Danışmanlık ve uzmanlarımızın geçmişi hakkında daha fazla bilgi edinin.",
+            "keywords": "hakkımızda, aila, danışmanlık, uzman, misyon, ekip"
         },
         "services": {
-            "title": "Nos Services",
-            "description": "",
-            "keywords": ""
+            "title": "Hizmetlerimiz",
+            "description": "Aila Danışmanlık olarak sunduğumuz hizmetleri keşfedin.",
+            "keywords": "hizmetler, vize, ikamet, oturma izni, çalışma izni"
         },
         "contact": {
-            "title": "Contactez-nous",
-            "description": "",
-            "keywords": ""
+            "title": "Bize Ulaşın",
+            "description": "Aila Danışmanlık ile iletişime geçin.",
+            "keywords": "iletişim, aila, danışmanlık, destek"
         }
     },
     "HomePage": {
-        "grid1Title": "",
-        "grid2Span": "Daha gör",
-        "grid3Title1": "",
-        "grid3Subtitle1": "",
-        "grid3Title2": "",
-        "grid3Subtitle2": "",
-        "grid3Title3": "",
-        "grid3Subtitle3": "",
-        "grid4Span": "",
-        "grid5Span": "",
-        "grid5Title": ""
+        "grid1Title": "<italic>Uluslararası</italic> taşınmanızı <italic>tek çözüm</italic> ile kolaylaştırın.",
+        "grid2Span": "Daha Fazla Bilgi",
+        "grid3Title1": "Vize Çözümleri",
+        "grid3Subtitle1": "Öğrenci, çalışma ve aile vizelerinizi hızlandırın.",
+        "grid3Title2": "Yeminli Tercümeler",
+        "grid3Subtitle2": "Fransızca, Türkçe ve Rusça dillerinde yeminli tercümeler.",
+        "grid3Title3": "Oturma İzni",
+        "grid3Subtitle3": "Uzman desteğiyle kolay başvurular ve yenilemeler.",
+        "grid4Span": "Hızlı vize onayları, yeminli tercümeler ve oturma izni başvurularında kesintisiz destek sunuyoruz. Karmaşık süreçleri bize bırakın ve maceranıza odaklanın.",
+        "grid5Span": "Sizden haber almak isteriz",
+        "grid5Title": "Bize Ulaşın"
     },
     "AboutPage": {
-        "title": ""
+        "title": "Hakkımızda sayfası geliştiriliyor..."
     },
     "ContactPage": {
-        "firstName": "Isim",
-        "firstNamePlaceholder": "Jane",
+        "firstName": "Ad",
+        "firstNamePlaceholder": "Ayşe",
         "lastName": "Soyad",
-        "lastNamePlaceholder": "Smith",
-        "email": "Mail Adresi",
-        "emailPlaceholder": "e.g jane@email.com",
-        "message": "Message",
-        "messagePlaceholder": "Hi, I would like to know more about your services...",
-        "sendButton": "Envoyer",
-        "sendButtonLoading": "En cours...",
+        "lastNamePlaceholder": "Yılmaz",
+        "email": "E-posta",
+        "emailPlaceholder": "örn. ayse@email.com",
+        "message": "Mesaj",
+        "messagePlaceholder": "Merhaba, hizmetleriniz hakkında daha fazla bilgi almak istiyorum...",
+        "sendButton": "Gönder",
+        "sendButtonLoading": "Gönderiliyor...",
         "phone": "+90 212 000 00 00",
-        "address": "Hüseyinağa, İstiklal Cd. No. 76, Istanbul",
-        "contactTitle": "",
-        "contactSpan": "",
-        "basedIn": "Basé à <italic>Istanbul</italic>",
-        "socials": "Nos <italic>Réseaux</italic>",
+        "address": "Hüseyinağa, İstiklal Cd. No. 76, İstanbul",
+        "contactTitle": "Uzmanlarımızla iletişime geçin",
+        "contactSpan": "Bir şeye mi ihtiyacınız var? Bilgi mi almak istiyorsunuz? Ekibimizle iletişime geçin.",
+        "basedIn": "<italic>İstanbul</italic>'da yerleşik",
+        "socials": "<italic>Sosyal Medyamız</italic>",
         "locationTitle": "Taksim",
-        "locationSubtitle": "Istanbul, Turquie",
-        "locationDetails": "L'avenue d'Istiklal..."
+        "locationSubtitle": "İstanbul, Türkiye",
+        "locationDetails": "İstanbul'un Taksim bölgesindeki İstiklal Caddesi, şehrin en ünlü yaya caddelerinden biridir. Tarih, kültür ve canlı enerji ile dolup taşar. Danışmanlık şirketimiz tam burada, İstiklal Caddesi'nde, vize başvuruları, oturma izni ve tercüme ihtiyaçlarınız için hizmetinizde."
     },
     "ServicesPage": {
-        "title": ""
+        "title": "Bu sayfa hala geliştirme aşamasında...",
+        "translationTitle": "Birden fazla dilde tercüme hizmeti."
     },
     "Navbar": {
-        "navigation": "Navigation",
-        "home": "Accueil",
-        "about": "À Propos",
-        "contact": "Contact",
-        "services": "Services",
-        "copyright": "Copyright"
+        "navigation": "Navigasyon",
+        "home": "Anasayfa",
+        "about": "Hakkımızda",
+        "contact": "İletişim",
+        "services": "Hizmetler",
+        "copyright": "Telif Hakkı"
     }
 }
