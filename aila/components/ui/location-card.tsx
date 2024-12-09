@@ -7,7 +7,12 @@ import { useOutsideClick } from "@/app/hooks/outside-click";
 import Image from "next/image";
 import { FaPlus, FaX } from "react-icons/fa6";
 
-export function LocationCard() {
+interface LocationCardProps {
+  t: (key: string) => string;
+}
+
+export function LocationCard({ t }: LocationCardProps) {
+
 	const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
 		null
 	);
@@ -32,8 +37,24 @@ export function LocationCard() {
 		return () => window.removeEventListener("keydown", onKeyDown);
 	}, [active]);
 
- 	 useOutsideClick(ref, () => setActive(null));
+ 	useOutsideClick(ref, () => setActive(null));
 
+	const cards = [
+		{
+			title: t('locationTitle'),
+			subtitle: t('locationSubtitle'),
+			src: "/images/5.jpg",
+			open: <FaPlus size={16} />,
+			content: () => {
+				return (
+					<p>
+						{t('locationDetails')}
+					</p>
+				);
+			},
+		},
+	];
+	
 	return (
 		<>
 			<AnimatePresence>
@@ -166,19 +187,3 @@ export function LocationCard() {
 		</>
 	);
 }
-
-const cards = [
-	{
-		title: "Taksim",
-		subtitle: "Istanbul, Turkey",
-		src: "/images/5.jpg",
-		open: <FaPlus size={16} />,
-		content: () => {
-			return (
-				<p>
-					Istiklal Avenue, nestled in Taksim, Istanbul, is one of the city’s most iconic pedestrian streets, pulsing with history, culture, and vibrant energy. A hub of activity day and night, it’s a place where the heart of Istanbul beats loudest. Our consulting company is right here on Istiklal Avenue, ready to assist with all your translation needs, visa applications, and residence permits—making the process smooth and accessible in Istanbul’s most dynamic district.
-				</p>
-			);
-		},
-	},
-];

@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "home": {
+            "title": "Aila Consulting",
+            "description": "Consultation rapide et fiable pour les visas, ikamet et permis de travail à Istanbul.",
+            "keywords": "visa, ikamet, permis de résidence, permis de travail, Turquie, Istanbul, aila, consulting"
+        },
+        "about": {
+            "title": "À Propos de Nous",
+            "description": "Découvrez Aila Consulting et le parcours de nos experts.",
+            "keywords": "à propos, aila, consulting, expert, mission, équipe"
+        },
+        "services": {
+            "title": "Nos Services",
+            "description": "Découvrez les services que nous proposons chez Aila Consulting.",
+            "keywords": "services, visa, ikamet, permis de résidence, permis de travail"
+        },
+        "contact": {
+            "title": "Contactez-Nous",
+            "description": "Prenez contact avec Aila Consulting.",
+            "keywords": "contact, aila, consulting, assistance"
+        }
+    },
+    "HomePage": {
+        "grid1Title": "Transformez votre <italic>déménagement international</italic> en un jeu d'enfant avec notre solution <italic>tout-en-un</italic>.",
+        "grid2Span": "En savoir plus",
+        "grid3Title1": "Solutions de Visa",
+        "grid3Subtitle1": "Accélérez vos visas étudiant, travail et famille.",
+        "grid3Title2": "Traductions Certifiées",
+        "grid3Subtitle2": "Traductions certifiées en français, turc et russe.",
+        "grid3Title3": "Permis de Résidence",
+        "grid3Subtitle3": "Demandes et renouvellements facilités grâce à notre expertise.",
+        "grid4Span": "Nous sommes spécialisés dans les approbations rapides de visas, les traductions certifiées et l'assistance fluide pour les demandes et renouvellements de permis de résidence. Laissez-nous gérer les complexités et concentrez-vous sur votre aventure.",
+        "grid5Span": "Nous serions ravis d'avoir de vos nouvelles",
+        "grid5Title": "Contactez-Nous"
+    },
+    "AboutPage": {
+        "title": "Page À Propos en développement..."
+    },
+    "ContactPage": {
+        "firstName": "Prénom",
+        "firstNamePlaceholder": "Jane",
+        "lastName": "Nom de Famille",
+        "lastNamePlaceholder": "Smith",
+        "email": "Email",
+        "emailPlaceholder": "ex. jane@email.com",
+        "message": "Message",
+        "messagePlaceholder": "Bonjour, j'aimerais en savoir plus sur vos services...",
+        "sendButton": "Envoyer",
+        "sendButtonLoading": "Envoi...",
+        "phone": "+90 212 000 00 00",
+        "address": "Hüseyinağa, İstiklal Cd. No. 76, Istanbul",
+        "contactTitle": "Contactez nos experts",
+        "contactSpan": "Besoin d'aide ? Besoin d'informations ? Contactez notre équipe.",
+        "basedIn": "Basé à <italic>Istanbul</italic>",
+        "socials": "Nos <italic>Réseaux Sociaux</italic>",
+        "locationTitle": "Taksim",
+        "locationSubtitle": "Istanbul, Turquie",
+        "locationDetails": "L'avenue Istiklal, située à Taksim, Istanbul, est l'une des rues piétonnes les plus emblématiques de la ville, débordante d'histoire, de culture et d'énergie vibrante. Notre société de conseil se trouve ici même sur l'avenue Istiklal, prête à vous aider avec toutes vos demandes de traductions, de visas et de permis de résidence."
+    },
+    "ServicesPage": {
+        "title": "Cette page est encore en développement...",
+        "translationTitle": "Traductions dans plusieurs langues."
+    },
+    "Navbar": {
+        "navigation": "Navigation",
+        "home": "Accueil",
+        "about": "À Propos",
+        "contact": "Contact",
+        "services": "Services",
+        "copyright": "Copyright"
+    }
+}

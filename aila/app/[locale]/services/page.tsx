@@ -6,8 +6,12 @@ import BentoLayout, { gridVariants } from "@/components/bento-layout";
 
 import { motion } from "framer-motion";
 import React from "react";
+import { useTranslations } from 'next-intl';
+
 
 export default function Services() {
+
+	const t = useTranslations('ServicesPage');
 
     return (
 		<BentoLayout gridVariants={gridVariants}>
@@ -21,7 +25,7 @@ export default function Services() {
 					variants={gridVariants}
 				>
 					<h1 className="text-3xl font-bold mb-4">
-						Transform your <i>international</i> relocation into a breeze with our <i>all-in-one</i> solution.
+						{t('title')}
 					</h1>
 					<div className="w-[500px] h-[500px] absolute z-10 -right-1/4 -bottom-1/4 flex">
 						<Globe />
@@ -39,7 +43,7 @@ export default function Services() {
 					variants={gridVariants}
 				>
 					<h2 className="text-3xl font-bold mb-4">
-						Translations in multiple languages.
+						{t('translationTitle')}
 					</h2>
 					<ServiceBeams />
 				</motion.div>

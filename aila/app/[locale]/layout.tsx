@@ -1,3 +1,7 @@
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 import { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -7,24 +11,41 @@ import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-	title: "Aila Consulting",
-	description: "Fast and reliable visa, ikamet, and work permit consulting in Istanbul.",
-	keywords: "visa, ikamet, residence permit, work permit, turkey, istanbul, aila, consulting",
-};
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+    const t = await getTranslations({ locale, namespace: 'metadata' });
+
+    return {
+        title: t('home.title'),
+        description: t('home.description'),
+        keywords: t('home.keywords'),
+    };
+}
 
 export const viewport: Viewport = {
     initialScale: 1,
     width: 'device-width'
 }
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
+	params: {locale}
 }: Readonly<{
 	children: React.ReactNode;
+	params: {locale: string};
 }>) {
+
+	// Ensure that the incoming `locale` is valid
+	if (!routing.locales.includes(locale as any)) {
+		notFound();
+	}
+	 
+	// Providing all messages to the client
+	// side is the easiest way to get started
+	const messages = await getMessages();
+	
 	return (
-		<html lang="en">
+		<html lang={locale}>
 			<head>
 				<meta charSet="UTF-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -37,9 +58,11 @@ export default function RootLayout({
 				<link rel="manifest" href="/site.webmanifest" />
 			</head>
 			<body className={inter.className}>
-				{children}
-				<Toaster />
-				<Analytics />
+				<NextIntlClientProvider messages={messages}>
+					{children}
+					<Toaster />
+					<Analytics />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

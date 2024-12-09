@@ -1,6 +1,11 @@
+"use client";
+
 import TransitionLink from "@/lib/transition-link";
+import FlagDropdown from "./flag-dropdown";
 import { motion } from "framer-motion";
 
+import { useTranslations } from 'next-intl';
+import { useRouter, usePathname } from "next/navigation";
 
 export const menuSlide = {
     initial: {
@@ -32,21 +37,23 @@ export const slide = {
 
 const Navbar = () => {
 
+    const t = useTranslations('Navbar');
+
     const links = [
         {
-            name: 'Home',
+            name: t('home'),
             url: '/',
         },
         {
-            name: 'About',
+            name: t('about'),
             url: '/about',
         },
         {
-            name: 'Contact',
+            name: t('contact'),
             url: '/contact',
         },
         {
-            name: 'Services',
+            name: t('services'),
             url: '/services',
         },
         
@@ -55,6 +62,28 @@ const Navbar = () => {
 
     const currentYear = new Date().getFullYear();
 
+    const router = useRouter();
+    const pathname = usePathname();
+
+    const locales = [
+        { code: "en", flag: "🇬🇧" },
+        { code: "fr", flag: "🇫🇷" },
+        { code: "tr", flag: "🇹🇷" },
+    ];
+
+    const currentLocale = pathname.split("/")[1] || "en";
+
+    const handleLocaleChange = (newLocale: string) => {
+        const segments = pathname.split("/").filter(Boolean);
+
+        if (locales.some((locale) => locale.code === segments[0])) {
+            segments[0] = newLocale;
+        } else {
+            segments.unshift(newLocale);
+        }
+
+        router.push(`/${segments.join("/")}`);
+    };
 
     return (
         <motion.div 
@@ -64,9 +93,15 @@ const Navbar = () => {
             exit="exit"
             className="fixed z-40 top-0 right-0 max-w-[400px] w-full flex justify-center h-screen bg-bento border-l border-border"
         >
+            {/* Flag Dropdown */}
+            <FlagDropdown
+                locales={locales}
+                currentLocale={currentLocale}
+                onLocaleChange={handleLocaleChange}
+            />
             <div className="h-full p-menu md:py-24 flex flex-col justify-between">
                 <nav className="flex flex-col gap-8 mt-[5vh] md:mt-20 text-5xl text-primary capitalize">
-                    <p className="w-full text-sm uppercase text-subtitle">Navigation</p>
+                    <p className="w-full text-sm uppercase text-subtitle">{t("navigation")}</p>
                     {
                         links.map((link, index) => {
                             return (
@@ -86,12 +121,15 @@ const Navbar = () => {
                         })
                     }
                 </nav>
+
+
                 <div className="flex flex-col justify-between gap-4 w-full uppercase">
-                    <p className="text-sm uppercase text-subtitle">Copyright</p>
+                    <p className="text-sm uppercase text-subtitle">{t('copyright')}</p>
                     <span className="text-sm text-title capitalize">
                         &#169;{currentYear} Aila Consulting 
                     </span>
                 </div>
+                    
             </div>
         </motion.div>
     );

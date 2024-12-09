@@ -14,7 +14,13 @@ import { EmailSchema } from "@/schema";
 import { SendEmail } from "@/actions";
 
 
-const ContactForm = () => {
+interface ContactFormProps {
+    t: (key: string) => string;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({
+    t 
+}) => {
 
     const router = useRouter();
     const form = useForm<z.infer<typeof EmailSchema>>({
@@ -51,9 +57,9 @@ const ContactForm = () => {
                     control={form.control}
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel htmlFor="firstName">First Name</FormLabel>
+                            <FormLabel htmlFor="firstName">{t("firstName")}</FormLabel>
                             <FormControl>
-                                <Input id="firstName" type="text" {...field} placeholder="Your first name here..." />
+                                <Input id="firstName" type="text" {...field} placeholder={t("firstNamePlaceholder")} />
                             </FormControl>
                             <FormMessage>{form.formState.errors.firstName?.message}</FormMessage>
                         </FormItem>
@@ -65,9 +71,9 @@ const ContactForm = () => {
                     control={form.control}
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel htmlFor="lastName">Last Name</FormLabel>
+                            <FormLabel htmlFor="lastName">{t("lastName")}</FormLabel>
                             <FormControl>
-                                <Input id="lastName" type="text" placeholder="Your last name here..." {...field} />
+                                <Input id="lastName" type="text" placeholder={t("lastNamePlaceholder")} {...field} />
                             </FormControl>
                             <FormMessage>{form.formState.errors.lastName?.message}</FormMessage>
                         </FormItem>
@@ -79,9 +85,9 @@ const ContactForm = () => {
                     control={form.control}
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel htmlFor="email">Email</FormLabel>
+                            <FormLabel htmlFor="email">{t("email")}</FormLabel>
                             <FormControl>
-                                <Input id="email" type="email" placeholder="Your email here..." {...field} />
+                                <Input id="email" type="email" placeholder={t("emailPlaceholder")} {...field} />
                             </FormControl>
                             <FormMessage>{form.formState.errors.email?.message}</FormMessage>
                         </FormItem>
@@ -93,9 +99,9 @@ const ContactForm = () => {
                     control={form.control}
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel htmlFor="message">Message</FormLabel>
+                            <FormLabel htmlFor="message">{t("message")}</FormLabel>
                             <FormControl>
-                                <Textarea id="message" {...field} placeholder="Your message here..." />
+                                <Textarea id="message" {...field} placeholder={t("messagePlaceholder")} />
                             </FormControl>
                             <FormMessage>{form.formState.errors.message?.message}</FormMessage>
                         </FormItem>
@@ -112,10 +118,12 @@ const ContactForm = () => {
                                 strokeWidth={2}
                                 aria-hidden="true"
                             />
-                            Sending...
+                            {t("sendButtonLoading")}
                         </>
                     ) : (
-                        "Send"
+                        <>
+                            {t("sendButton")}
+                        </>
                     )}
                 </Button>
             </form>
