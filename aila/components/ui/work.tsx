@@ -3,7 +3,7 @@ import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Component1 from './component1';
+import { WorkList } from './work-list';
 import Component2 from './component2';
 import Component3 from './component3';
 
@@ -68,7 +68,7 @@ export default function Work() {
                 title: t('grid3Title1'),
                 subtitle: t('grid3Subtitle1'),
                 // image: '/images/1.jpg',
-                component: <Component1 />,
+                component: <WorkList />,
             },
             {
                 title: t('grid3Title2'),
