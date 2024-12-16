@@ -104,12 +104,6 @@ export default function Work() {
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSelected, onClick }) => {
-    const controls = useAnimation();
-
-    useEffect(() => {
-        controls.start(isSelected ? 'visible' : 'hidden');
-    }, [isSelected, controls]);
-
     return (
         <motion.button
             onClick={onClick}
@@ -152,10 +146,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
             <AnimatePresence>
                 {isSelected && (
                     <motion.div
-                        initial="hidden"
-                        animate={controls}
-                        exit="exit"
-                        variants={componentVariants}
+                        key="component"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto', transition: { duration: 0.5 } }}
+                        exit={{ opacity: 0, height: 0, transition: { duration: 0.5 } }}
                         className="relative block w-full"
                     >
                         {project.component}
