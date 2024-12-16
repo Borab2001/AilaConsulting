@@ -1,14 +1,18 @@
-import { motion, useAnimation } from 'framer-motion';
-import Image from 'next/image';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
+// import Image from 'next/image';
 
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Component1 from './component1';
+import Component2 from './component2';
+import Component3 from './component3';
 
 
 interface Service {
     title: string;
     subtitle: string;
-    image: string;
+    // image: string;
+    component: React.ReactNode;
 }
 
 interface ProjectItemProps {
@@ -19,23 +23,27 @@ interface ProjectItemProps {
     onClick: () => void;
 }
 
-const BLUR_DATA_URL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjCAvx/A8AA+oB81aCOA0AAAAASUVORK5CYII=';
+// const BLUR_DATA_URL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjCAvx/A8AA+oB81aCOA0AAAAASUVORK5CYII=';
 
 const headingVariants = {
-  hidden: { y: '100%' },
-  visible: {
-    y: 0,
-    transition: {
-      delay: 0.3,
-      staggerChildren: 0.18,
+    hidden: { y: '100%' },
+    visible: {
+        y: 0,
+        transition: {
+            delay: 0.3,
+            staggerChildren: 0.18,
+        },
     },
-  },
 };
 
-// Set thumbnail animation without delay for simultaneous effect
-const thumbnailVariants = {
-    hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: 'auto', transition: { duration: 0.5 } },
+// const thumbnailVariants = {
+//     hidden: { opacity: 0, height: 0 },
+//     visible: { opacity: 1, height: 'auto', transition: { duration: 0.5 } },
+// };
+const componentVariants = {
+    hidden: { opacity: 0, height: 0, transition: { duration: 0.5 } },  // Hide component (opacity and height to 0)
+    visible: { opacity: 1, height: 'auto', transition: { duration: 0.5, delay: 0.5 } },  // Fade in with auto height
+    exit: { opacity: 0, height: 0, transition: { duration: 0.5, when: "beforeChildren" } }, // Fade out and collapse height before unmount
 };
 
 // const borderVariants = {
@@ -59,17 +67,20 @@ export default function Work() {
             {
                 title: t('grid3Title1'),
                 subtitle: t('grid3Subtitle1'),
-                image: '/images/1.jpg',
+                // image: '/images/1.jpg',
+                component: <Component1 />,
             },
             {
                 title: t('grid3Title2'),
                 subtitle: t('grid3Subtitle2'),
-                image: '/images/2.jpg',
+                // image: '/images/2.jpg',
+                component: <Component2 />,
             },
             {
                 title: t('grid3Title3'),
                 subtitle: t('grid3Subtitle3'),
-                image: '/images/3.jpg',
+                // image: '/images/3.jpg',
+                component: <Component3 />,
             },
     ];
 
@@ -121,7 +132,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
             </div>
 
             {/* Thumbnail */}
-            <motion.div
+            {/* <motion.div
                 initial="hidden"
                 animate={controls}
                 variants={thumbnailVariants}
@@ -135,7 +146,22 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                     placeholder="blur"
                     blurDataURL={BLUR_DATA_URL}
                 />
-            </motion.div>
+            </motion.div> */}
+
+            {/* Component */}
+            <AnimatePresence>
+                {isSelected && (
+                    <motion.div
+                        initial="hidden"
+                        animate={controls}
+                        exit="exit"
+                        variants={componentVariants}
+                        className="relative block w-full"
+                    >
+                        {project.component}
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Border */}
             {/* {!isLast && (
