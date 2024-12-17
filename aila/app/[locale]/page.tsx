@@ -151,11 +151,11 @@ export default function Home() {
 
 			
 			{/* Right column */}
-			<div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+			<div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4 flex-grow-0 overflow-y-hidden">
 				
 				{/* Grid Child 3 */}
 				<motion.div 
-					className="p-4 min-h-[400px] md:min-h-0 col-span-4 row-span-8 max-lg:col-span-full bg-bento border border-border rounded-2xl w-full flex flex-col justify-between"	
+					className="p-4 min-h-[400px] md:min-h-0 col-span-4 row-span-8 max-lg:col-span-full bg-bento border border-border rounded-2xl w-full flex flex-grow-0 overflow-y-hidden flex-col justify-between"	
 					custom={2}
 					initial="hidden"
 					animate="visible"
@@ -186,7 +186,7 @@ export default function Home() {
 							</div>
 						</div>
 					</div> */}
-					<div className='col-span-4 row-span-8 max-lg:col-span-full'>
+					<div className='col-span-4 row-span-8 max-lg:col-span-full h-full flex-grow-0 overflow-y-hidden'>
 						<Work />
 					</div>
 					{/* <ServiceBeams /> */}
