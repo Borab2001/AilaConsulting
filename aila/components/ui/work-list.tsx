@@ -43,7 +43,7 @@ let notifications = [
     },
 ]
 
-notifications = Array.from({ length: 1 }, () => notifications).flat()
+notifications = Array.from({ length: 0 }, () => notifications).flat()
 
 function Notification({ name, description, icon, color, time }: Item) {
     return (
@@ -84,12 +84,12 @@ function Notification({ name, description, icon, color, time }: Item) {
 
 export function WorkList() {
    return (
-      <div className="my-2 bg-bento relative flex max-h-[300px] min-h-[300px] w-full max-w-lg flex-col overflow-hidden rounded-lg border p-6 shadow-lg">
-         <AnimatedList>
+      <div className="my-2 bg-bento relative flex flex-1 w-full max-w-lg flex-col overflow-hidden rounded-lg border p-6 shadow-lg">
+         {/* <AnimatedList>
             {notifications.map((item, idx) => (
                <Notification {...item} key={idx} />
             ))}
-         </AnimatedList>
+         </AnimatedList> */}
       </div>
    )
 }
