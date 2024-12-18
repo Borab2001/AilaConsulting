@@ -61,10 +61,16 @@ export default function Work() {
 
     const services: Service[] = [
             {
-                title: t('grid3Title2'),
-                subtitle: t('grid3Subtitle2'),
+                title: t('grid3Title1'),
+                subtitle: t('grid3Subtitle1'),
                 // image: '/images/1.jpg',
                 component: <Component2 />,
+            },
+            {
+                title: t('grid3Title2'),
+                subtitle: t('grid3Subtitle2'),
+                // image: '/images/3.jpg',
+                component: <WorkList />,
             },
             {
                 title: t('grid3Title3'),
@@ -72,12 +78,6 @@ export default function Work() {
                 // image: '/images/2.jpg',
                 component: <WorkGlobe />,
             },
-            {
-                title: t('grid3Title1'),
-                subtitle: t('grid3Subtitle1'),
-                // image: '/images/3.jpg',
-                component: <WorkList />,
-            }
     ];
 
     return (
