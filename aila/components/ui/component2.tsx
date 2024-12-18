@@ -1,6 +1,8 @@
+import { LanguageCluster } from "./language-cluster";
+
 const Component2 = () => {
     return <div className="w-full h-full">
-        Component 2
+        <LanguageCluster />
     </div>;
 };
 

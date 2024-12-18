@@ -4,9 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { WorkList } from './work-list';
-import Component2 from './component2';
-import Component3 from './work-globe';
 import WorkGlobe from './work-globe';
+import { LanguageCluster } from './language-cluster';
 
 
 interface Service {
@@ -64,7 +63,7 @@ export default function Work() {
                 title: t('grid3Title1'),
                 subtitle: t('grid3Subtitle1'),
                 // image: '/images/1.jpg',
-                component: <Component2 />,
+                component: <LanguageCluster />,
             },
             {
                 title: t('grid3Title2'),
@@ -169,7 +168,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                         key="component"
                         initial={{ opacity: 0, height: 0 }}
                         // animate={{ opacity: 1, height: 'auto' }}
-                        animate={{ opacity: 1, height: 'auto', transition: { duration: 0.5 } }}
+                        animate={{ opacity: 1, height: '100%', transition: { duration: 0.5 } }}
                         exit={{ opacity: 0, height: 0, transition: { duration: 0.5 } }}
                         // exit={{ opacity: 0, height: 0 }}
                         // transition={{ duration: 0.5 }}
