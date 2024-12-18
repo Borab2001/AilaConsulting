@@ -40,7 +40,7 @@ function Circle({
             }}
             style={{ "--opacity": opacity } as React.CSSProperties}
             className={clsx(
-                "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full",
+                "absolute left-1/2 top-[186px] -translate-x-1/2 -translate-y-1/2 rounded-full",
                 "bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,_theme(colors.element)_var(--opacity),transparent)_100%)]",
                 "ring-1 ring-inset ring-element/[100%]",
             )}
@@ -50,12 +50,12 @@ function Circle({
 
 function Circles() {
     return (
-        <div className="absolute inset-0">
-            {/* <Circle size={496} opacity="100%" delay={0.45} /> */}
-            <Circle size={372} opacity="100%" delay={0.3} />
-            <Circle size={248} opacity="100%" delay={0.15} />
-            <Circle size={124} opacity="100%" delay={0} />
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-red-600 to-35%  dark:from-red-600" /> */}
+        <div className="absolute left-1/2 h-full w-[26rem] -translate-x-1/2">
+            {/* <Circle size={491} opacity="100%" delay={0.45} /> */}
+            <Circle size={367} opacity="100%" delay={0.3} />
+            <Circle size={243} opacity="100%" delay={0.15} />
+            <Circle size={119} opacity="100%" delay={0} />
+        <div className="absolute inset-0 bg-gradient-to-t from-bento to-35%" />
         </div>
     );
 }
