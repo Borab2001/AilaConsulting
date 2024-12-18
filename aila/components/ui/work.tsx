@@ -101,12 +101,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
         <motion.div
             layout // Enables smooth height transitions
             className={`overflow-hidden flex flex-col transition-all duration-500 ${
-                isSelected ? 'flex-grow' : 'flex-none'
+                isSelected ? 'flex-grow pointer-events-none' : 'flex-none pointer-events-auto'
             }`}
         >    
             <motion.button
                 onClick={onClick}
-                className="w-full text-left cursor-pointer p-4"
+                className="w-full text-left cursor-pointer p-4 hover:bg-white/5 transition-colors duration-200"
             >
                 <div className="flex flex-col w-full justify-between text-left">
                     

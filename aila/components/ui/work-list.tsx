@@ -34,16 +34,9 @@ let notifications = [
         icon: '💬',
         color: '#FF3D71',
     },
-    {
-        name: 'Passport demand',
-        description: 'Description',
-        time: '2m ago',
-        icon: '🗞️',
-        color: '#1E86FF',
-    },
 ]
 
-notifications = Array.from({ length: 0 }, () => notifications).flat()
+notifications = Array.from({ length: 1 }, () => notifications).flat()
 
 function Notification({ name, description, icon, color, time }: Item) {
     return (
@@ -84,12 +77,14 @@ function Notification({ name, description, icon, color, time }: Item) {
 
 export function WorkList() {
     return (
-        <div className="my-2 bg-bento relative flex flex-1 w-full max-w-lg flex-col overflow-hidden rounded-lg border p-6 shadow-lg">
-            <AnimatedList>
-                {notifications.map((item, idx) => (
-                <Notification {...item} key={idx} />
-                ))}
-            </AnimatedList>
+        <div className="px-4 w-full h-full">
+            <div className="h-full bg-bento relative flex flex-1 w-full max-w-lg flex-col overflow-hidden rounded-lg border p-6 shadow-lg">
+                <AnimatedList>
+                    {notifications.map((item, idx) => (
+                    <Notification {...item} key={idx} />
+                    ))}
+                </AnimatedList>
+            </div>
         </div>
     )
 }
