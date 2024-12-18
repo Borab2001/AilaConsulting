@@ -83,13 +83,13 @@ function Notification({ name, description, icon, color, time }: Item) {
 }
 
 export function WorkList() {
-   return (
-      <div className="my-2 bg-bento relative flex flex-1 w-full max-w-lg flex-col overflow-hidden rounded-lg border p-6 shadow-lg">
-         {/* <AnimatedList>
-            {notifications.map((item, idx) => (
-               <Notification {...item} key={idx} />
-            ))}
-         </AnimatedList> */}
-      </div>
-   )
+    return (
+        <div className="my-2 bg-bento relative flex flex-1 w-full max-w-lg flex-col overflow-hidden rounded-lg border p-6 shadow-lg">
+            <AnimatedList>
+                {notifications.map((item, idx) => (
+                <Notification {...item} key={idx} />
+                ))}
+            </AnimatedList>
+        </div>
+    )
 }

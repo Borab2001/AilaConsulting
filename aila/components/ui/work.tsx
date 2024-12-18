@@ -5,7 +5,8 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { WorkList } from './work-list';
 import Component2 from './component2';
-import Component3 from './component3';
+import Component3 from './work-globe';
+import WorkGlobe from './work-globe';
 
 
 interface Service {
@@ -60,23 +61,23 @@ export default function Work() {
 
     const services: Service[] = [
             {
-                title: t('grid3Title1'),
-                subtitle: t('grid3Subtitle1'),
-                // image: '/images/1.jpg',
-                component: <WorkList />,
-            },
-            {
                 title: t('grid3Title2'),
                 subtitle: t('grid3Subtitle2'),
-                // image: '/images/2.jpg',
+                // image: '/images/1.jpg',
                 component: <Component2 />,
             },
             {
                 title: t('grid3Title3'),
                 subtitle: t('grid3Subtitle3'),
-                // image: '/images/3.jpg',
-                component: <Component3 />,
+                // image: '/images/2.jpg',
+                component: <WorkGlobe />,
             },
+            {
+                title: t('grid3Title1'),
+                subtitle: t('grid3Subtitle1'),
+                // image: '/images/3.jpg',
+                component: <WorkList />,
+            }
     ];
 
     return (
@@ -106,7 +107,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
         >    
             <motion.button
                 onClick={onClick}
-                className="w-full text-left cursor-pointer py-2"
+                className="w-full text-left cursor-pointer p-4"
             >
                 <div className="flex flex-col w-full justify-between text-left">
                     
@@ -172,7 +173,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                         exit={{ opacity: 0, height: 0, transition: { duration: 0.5 } }}
                         // exit={{ opacity: 0, height: 0 }}
                         // transition={{ duration: 0.5 }}
-                        className="relative"
+                        className="relative block w-full"
                     >
                         {project.component}
                     </motion.div>

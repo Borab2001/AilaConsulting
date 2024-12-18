@@ -48,7 +48,7 @@ function Marker({
 
     export function Map() {
     return (
-        <div aria-hidden="true" className="relative w-full h-[205px]">
+        <div aria-hidden="true" className="relative w-full h-[305px]">
             <div className="absolute inset-0 bg-[url('/images/turkey-dotted.svg')] aspect-video bg-[length:530px_430px] bg-[center_-75px] bg-no-repeat [mask-image:linear-gradient(to_bottom,black_50%,transparent)]" />        
             <div className="absolute inset-0">
                 <Marker
