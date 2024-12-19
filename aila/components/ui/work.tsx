@@ -106,7 +106,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
         >    
             <motion.button
                 onClick={onClick}
-                className="w-full text-left cursor-pointer p-4 hover:bg-white/5 transition-colors duration-200"
+                className="w-full text-left cursor-pointer p-4 hover:bg-element transition-colors duration-200"
             >
                 <div className="flex flex-col w-full justify-between text-left">
                     
