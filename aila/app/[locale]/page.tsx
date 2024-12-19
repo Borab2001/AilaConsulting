@@ -155,7 +155,7 @@ export default function Home() {
 				
 				{/* Grid Child 3 */}
 				<motion.div 
-					className="min-h-[400px] md:min-h-0 col-span-4 row-span-8 max-lg:col-span-full bg-bento border border-border rounded-2xl w-full flex flex-grow-0 overflow-y-hidden flex-col justify-between"	
+					className="min-h-[600px] lg:min-h-0 col-span-4 row-span-8 max-lg:col-span-full bg-bento border border-border rounded-2xl w-full flex flex-grow-0 overflow-y-hidden flex-col justify-between"	
 					custom={2}
 					initial="hidden"
 					animate="visible"
