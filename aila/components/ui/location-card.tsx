@@ -43,7 +43,7 @@ export function LocationCard({ t }: LocationCardProps) {
 		{
 			title: t('locationTitle'),
 			subtitle: t('locationSubtitle'),
-			src: "/images/5.jpg",
+			src: "/images/taksim.webp",
 			open: <FaPlus size={16} />,
 			content: () => {
 				return (

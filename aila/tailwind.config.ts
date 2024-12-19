@@ -12,7 +12,7 @@ const config: Config = {
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-  			'istanbul': "url('/images/4.jpg')"
+  			'istanbul': "url('/images/istanbulv1.webp')"
   		},
   		width: {
   			'header': 'calc(100% - 2rem)'
