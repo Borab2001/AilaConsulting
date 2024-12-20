@@ -108,7 +108,7 @@ export default function Work() {
     ];
 
     return (
-        <div className="relative flex flex-col h-full overflow-hidden">
+        <div className="relative flex flex-col h-full overflow-hidden md:justify-between">
                 {services.map((service, index) => (
                     <ProjectItem
                         key={service.title}
@@ -131,13 +131,18 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
     return (
         <motion.div
             layout // Enables smooth height transitions
-            className={`static overflow-hidden md:overflow-visible lg:overflow-hidden flex flex-col transition-all duration-500 my-0 md:my-auto lg:my-0 ${
-                isSelected ? 'flex-grow md:flex-none lg:flex-grow pointer-events-none' : 'flex-none pointer-events-auto'
-            }`}
+            className={`static overflow-hidden md:overflow-visible lg:overflow-hidden flex flex-col transition-all duration-500 pl-0 py-0 md:pl-2 md:py-2 lg:pl-0 lg:py-0
+                ${
+                    isSelected ? 'flex-grow md:flex-none lg:flex-grow pointer-events-none' : 'flex-none pointer-events-auto'
+                }`
+            }
         >    
             <motion.button
                 onClick={onClick}
-                className="relative group w-full md:w-1/2 lg:w-full text-left cursor-pointer p-4 lg:hover:bg-element transition-colors duration-200"
+                className={`
+                    relative group w-full md:w-max lg:w-full text-left cursor-pointer p-4 lg:hover:bg-element transition-colors duration-200 rounded-none md:rounded-xl lg:rounded-none
+                    ${isSelected ? 'bg-transparent md:bg-element lg:bg-transparent' : ''    
+                }`}
             >
                 <div className="flex flex-col w-full justify-between text-left">
                     
@@ -173,7 +178,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                     {/* </div> */}
                     
                 </div>
-                {
+                {/* {
                     !isSelected && (
                         <div className='z-10 absolute top-4 right-2 w-8 h-8 hidden lg:flex opacity-0 group-hover:opacity-100 transition-all duration-200 items-center justify-center bg-elementBorder rounded-full'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="size-4">
@@ -181,7 +186,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                             </svg>
                         </div>
                     )
-                }
+                } */}
             </motion.button>
 
                 {/* Thumbnail */}

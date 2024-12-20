@@ -138,7 +138,7 @@ export function MarqueeList() {
 
     return (
         <div className="relative w-full h-full">
-            <div className="absolute h-full left-1/2 -translate-x-1/2 md:left-0 md:-translate-x-0 lg:left-1/2 lg:-translate-x-1/2 overflow-hidden py-2 flex flex-col md:flex-row lg:flex-col">
+            <div className="absolute h-full left-1/2 -translate-x-1/2 md:left-0 md:-translate-x-0 lg:left-1/2 lg:-translate-x-1/2 overflow-hidden py-2 md:py-0 lg:py-2 flex flex-col md:flex-row lg:flex-col">
             {/*  */}
                 {isVertical ? (
                     <>
