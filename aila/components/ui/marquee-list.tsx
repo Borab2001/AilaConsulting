@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Marquee } from "./marquee";
 import { useTranslations } from 'next-intl';
 
@@ -37,6 +38,19 @@ const MarqueeCard = ({
 
 export function MarqueeList() {
     const t = useTranslations('Marquee');
+    const [isVertical, setIsVertical] = useState(false);
+
+    // Listen for screen size changes
+    useEffect(() => {
+        const updateLayout = () => {
+        setIsVertical(window.innerWidth >= 768 && window.innerWidth < 1024); // md to lg breakpoints
+        };
+        updateLayout(); // Set initial state
+        window.addEventListener("resize", updateLayout);
+
+        return () => window.removeEventListener("resize", updateLayout);
+    }, []);
+
 
     const reviews = [
         {
@@ -124,17 +138,37 @@ export function MarqueeList() {
 
     return (
         <div className="relative w-full h-full">
-            <div className="absolute h-full left-1/2 -translate-x-1/2 overflow-hidden py-2">
-                <Marquee pauseOnHover className="[--duration:20s]">
-                    {firstRow.map((review) => (
-                        <MarqueeCard key={review.username} {...review} />
-                    ))}
-                </Marquee>
-                <Marquee reverse pauseOnHover className="[--duration:20s]">
-                    {secondRow.map((review) => (
-                        <MarqueeCard key={review.username} {...review} />
-                    ))}
-                </Marquee>
+            <div className="absolute h-full left-1/2 -translate-x-1/2 md:left-0 md:-translate-x-0 lg:left-1/2 lg:-translate-x-1/2 overflow-hidden py-2 flex flex-col md:flex-row lg:flex-col">
+            {/*  */}
+                {isVertical ? (
+                    <>
+                        <Marquee pauseOnHover vertical className="[--duration:20s]">
+                            {firstRow.map((review) => (
+                                <MarqueeCard key={review.username} {...review} />
+                            ))}
+                        </Marquee>
+
+                        <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+                            {secondRow.map((review) => (
+                                <MarqueeCard key={review.username} {...review} />
+                            ))}
+                        </Marquee>
+                    </>
+                ) : (
+                    <>
+                        <Marquee pauseOnHover className="[--duration:20s]">
+                            {firstRow.map((review) => (
+                                <MarqueeCard key={review.username} {...review} />
+                            ))}
+                        </Marquee>
+
+                        <Marquee reverse pauseOnHover className="[--duration:20s]">
+                            {secondRow.map((review) => (
+                                <MarqueeCard key={review.username} {...review} />
+                            ))}
+                        </Marquee>
+                    </>
+                )}
 
                 {/* Gradient on both left and right sides for fade effect */}
                 {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-bento"></div>

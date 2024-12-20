@@ -50,12 +50,12 @@ function Circle({
 
 function Circles() {
     return (
-        <div className="absolute left-1/2 h-full w-[26rem] -translate-x-1/2">
+        <div className="absolute left-1/2 h-full w-[26rem] -translate-x-1/2 md:left-0 md:translate-x-0 lg:left-1/2 lg:-translate-x-1/2">
             {/* <Circle size={491} opacity="100%" delay={0.45} /> */}
             <Circle size={367} opacity="100%" delay={0.3} />
             <Circle size={243} opacity="100%" delay={0.15} />
             <Circle size={119} opacity="100%" delay={0} />
-            <div className="absolute inset-0 bg-gradient-to-t from-bento to-35%" />
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-bento to-35%" /> */}
         </div>
     );
 }
@@ -109,7 +109,7 @@ export function LanguageCluster() {
         <div className="w-full h-full">
             <div aria-hidden="true" className="relative h-full overflow-hidden">
                 <Circles />
-                <div className="absolute left-1/2 h-full w-[26rem] -translate-x-1/2">
+                <div className="absolute left-1/2 h-full w-[26rem] -translate-x-1/2 md:left-0 md:translate-x-0 lg:left-1/2 lg:-translate-x-1/2">
                     <MainLanguage />
                     <Language
                         flag="🇫🇷"
@@ -126,7 +126,7 @@ export function LanguageCluster() {
                     <Language
                         flag="🇬🇷"
                         left={200}
-                        top={280}
+                        top={260}
                         hover={{ x: 3, y: 5, rotate: 7, delay: 0.2 }}
                     />
                     <Language
@@ -148,6 +148,7 @@ export function LanguageCluster() {
                         hover={{ x: -3, y: 5, rotate: 3, delay: 0.15 }}
                     /> */}
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-bento to-15%" />
             </div>
         </div>
     );

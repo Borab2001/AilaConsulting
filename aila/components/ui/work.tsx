@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 // import Image from 'next/image';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 // import { WorkList } from './work-list';
 import WorkGlobe from './work-globe';
@@ -54,6 +54,32 @@ interface ProjectItemProps {
 //     },
 // };
 
+function useResponsiveDimensions() {
+    const [dimensions, setDimensions] = useState({ height: 'auto', minHeight: '0' });
+
+    useEffect(() => {
+        const updateDimensions = () => {
+            if (window.matchMedia('(min-width: 1024px)').matches) {
+                // Large screens (lg and above)
+                setDimensions({ height: '100%', minHeight: 'none' });
+            } else if (window.matchMedia('(min-width: 768px)').matches) {
+                // Medium screens (md and above)
+                setDimensions({ height: '348px', minHeight: 'none' });
+            } else {
+                // Small screens
+                setDimensions({ height: '100%', minHeight: 'none' });
+            }
+        };
+
+        updateDimensions(); // Set initial dimensions
+        window.addEventListener('resize', updateDimensions);
+
+        return () => window.removeEventListener('resize', updateDimensions);
+    }, []);
+
+    return dimensions;
+}
+
 export default function Work() {
 
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
@@ -82,7 +108,7 @@ export default function Work() {
     ];
 
     return (
-        <div className="flex flex-col h-full overflow-hidden">
+        <div className="relative flex flex-col h-full overflow-hidden">
                 {services.map((service, index) => (
                     <ProjectItem
                         key={service.title}
@@ -99,16 +125,19 @@ export default function Work() {
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSelected, onClick }) => {
+
+    const { height, minHeight } = useResponsiveDimensions();
+
     return (
         <motion.div
             layout // Enables smooth height transitions
-            className={`overflow-hidden flex flex-col transition-all duration-500 ${
-                isSelected ? 'flex-grow pointer-events-none' : 'flex-none pointer-events-auto'
+            className={`static overflow-hidden md:overflow-visible lg:overflow-hidden flex flex-col transition-all duration-500 my-0 md:my-auto lg:my-0 ${
+                isSelected ? 'flex-grow md:flex-none lg:flex-grow pointer-events-none' : 'flex-none pointer-events-auto'
             }`}
         >    
             <motion.button
                 onClick={onClick}
-                className="relative group w-full text-left cursor-pointer p-4 lg:hover:bg-element transition-colors duration-200"
+                className="relative group w-full md:w-1/2 lg:w-full text-left cursor-pointer p-4 lg:hover:bg-element transition-colors duration-200"
             >
                 <div className="flex flex-col w-full justify-between text-left">
                     
@@ -179,11 +208,17 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                         key="component"
                         initial={{ opacity: 0, height: 0 }}
                         // animate={{ opacity: 1, height: 'auto' }}
-                        animate={{ opacity: 1, height: '100%', transition: { duration: 0.5 } }}
+                        animate={{ 
+                            opacity: 1, 
+                            height, // Dynamic height
+                            minHeight, // Dynamic minHeight
+                            // : responsiveMinHeight,
+                            transition: { duration: 0.5 } 
+                        }}
                         exit={{ opacity: 0, height: 0, transition: { duration: 0.5 } }}
                         // exit={{ opacity: 0, height: 0 }}
                         // transition={{ duration: 0.5 }}
-                        className="relative block w-full"
+                        className="relative block w-full md:absolute md:z-10 md:top-0 md:bottom-0 md:right-0 md:left-1/2 lg:-inset-0 lg:z-0 lg:relative"
                     >
                         {project.component}
                     </motion.div>
