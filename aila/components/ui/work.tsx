@@ -3,9 +3,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { WorkList } from './work-list';
+// import { WorkList } from './work-list';
 import WorkGlobe from './work-globe';
 import { LanguageCluster } from './language-cluster';
+import { MarqueeList } from './marquee-list';
 
 
 interface Service {
@@ -69,7 +70,8 @@ export default function Work() {
                 title: t('grid3Title2'),
                 subtitle: t('grid3Subtitle2'),
                 // image: '/images/3.jpg',
-                component: <WorkList />,
+                // component: <WorkList />,
+                component: <MarqueeList />,
             },
             {
                 title: t('grid3Title3'),
