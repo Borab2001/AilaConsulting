@@ -42,7 +42,7 @@ function Circle({
             className={clsx(
                 "absolute left-1/2 top-[186px] -translate-x-1/2 -translate-y-1/2 rounded-full",
                 "bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,_theme(colors.element)_var(--opacity),transparent)_100%)]",
-                "ring-1 ring-inset ring-element/[100%]",
+                "ring-1 ring-inset ring-border/[100%]",
             )}
         />
     );
@@ -55,7 +55,7 @@ function Circles() {
             <Circle size={367} opacity="100%" delay={0.3} />
             <Circle size={243} opacity="100%" delay={0.15} />
             <Circle size={119} opacity="100%" delay={0} />
-        <div className="absolute inset-0 bg-gradient-to-t from-bento to-35%" />
+            <div className="absolute inset-0 bg-gradient-to-t from-bento to-35%" />
         </div>
     );
 }
