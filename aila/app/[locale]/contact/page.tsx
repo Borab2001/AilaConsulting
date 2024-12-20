@@ -135,7 +135,7 @@ export default function Contact() {
                     {/* <div className="relative block aspect-[4/3] w-full origin-top overflow-hidden rounded-2xl"
                     >
                         <Image
-                            src="/images/5.jpg"
+                            src="/images/taksim.webp"
                             alt="Taksim"
                             fill={true}
                             className="object-cover transition-transform duration-500 ease-in-out"

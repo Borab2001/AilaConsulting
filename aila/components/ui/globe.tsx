@@ -26,7 +26,7 @@ export default function Globe() {
                 markerColor: [0.267, 0, 0.969], // #4400f7
                 glowColor: [0.6, 0.6, 0.6], // #cccccc
                 markers: [
-                    { location: [41.0082, 28.9784], size: 0.08 } // Istanbul
+                    // { location: [41.0082, 28.9784], size: 0.08 } // Istanbul
                 ],
                 onRender: (state) => {
                     state.phi = phi;
