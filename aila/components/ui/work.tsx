@@ -108,7 +108,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
         >    
             <motion.button
                 onClick={onClick}
-                className="w-full text-left cursor-pointer p-4 hover:bg-element transition-colors duration-200"
+                className="relative group w-full text-left cursor-pointer p-4 hover:bg-element transition-colors duration-200"
             >
                 <div className="flex flex-col w-full justify-between text-left">
                     
@@ -144,6 +144,15 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                     {/* </div> */}
                     
                 </div>
+                {
+                    !isSelected && (
+                        <div className='z-10 absolute top-4 right-2 w-8 h-8 flex opacity-0 group-hover:opacity-100 transition-all duration-200 items-center justify-center bg-elementBorder rounded-full'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="size-4">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    )
+                }
             </motion.button>
 
                 {/* Thumbnail */}
