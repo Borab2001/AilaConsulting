@@ -33,6 +33,7 @@
         "grid4Span": "We specialize in rapid visa approvals, certified translations and seamless assistance for residence permit applications and renewals. Leave the complexities to us and focus on your global adventure.",
         "grid5Span": "We would love to hear from you",
         "grid5Title": "Contact Us"
+
     },
     "AboutPage": {
         "title": "About Page in development..."
@@ -69,5 +70,31 @@
         "contact": "Contact",
         "services": "Services",
         "copyright": "Copyright"
+    },
+    "Marquee": {
+        "marqueeName1": "Student",
+        "marqueeUsername1": "@student",
+        "marqueeBody1": "I've never seen anything like this before. It's amazing. I love it.",
+        "marqueeBackground1": "#4400f7",
+        "marqueeName2": "Student",
+        "marqueeUsername2": "@student",
+        "marqueeBody2": "I don't know what to say. I'm speechless. This is amazing.",
+        "marqueeBackground2": "#9400f7",
+        "marqueeName3": "Student",
+        "marqueeUsername3": "@student",
+        "marqueeBody3": "I'm at a loss for words. This is amazing. I love it.",
+        "marqueeBackground3": "#f70052",
+        "marqueeName4": "Student",
+        "marqueeUsername4": "@student",
+        "marqueeBody4": "I'm shocked, wow... You guys are awesome, I can't thank you enough.",
+        "marqueeBackground4": "#003ef7",
+        "marqueeName5": "Student",
+        "marqueeUsername5": "@student",
+        "marqueeBody5": "I don't know what to say. I'm speechless. This is amazing.",
+        "marqueeBackground5": "#389406",
+        "marqueeName6": "Student",
+        "marqueeUsername6": "@student",
+        "marqueeBody6": "I'm at a loss for words. This is amazing. I love it.",
+        "marqueeBackground6": "#f70000"
     }
 }

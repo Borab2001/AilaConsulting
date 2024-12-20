@@ -82,6 +82,7 @@ const reviews = [
     },
 ];
 
+
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
@@ -98,6 +99,7 @@ const MarqueeCard = ({
     username: string;
     body: string;
 }) => {
+    
     return (
         <figure
             className="relative w-64 h-32 cursor-pointer overflow-hidden rounded-xl bg-element border border-elementBorder p-4"
