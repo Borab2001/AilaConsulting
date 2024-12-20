@@ -69,5 +69,31 @@
         "contact": "Contact",
         "services": "Services",
         "copyright": "Copyright"
+    },
+    "Marquee": {
+        "marqueeName1": "Étudiant",
+        "marqueeUsername1": "@etudiant",
+        "marqueeBody1": "Je n'ai jamais rien vu de tel. C'est incroyable. J'adore.",
+        "marqueeBackground1": "#4400f7",
+        "marqueeName2": "Étudiant",
+        "marqueeUsername2": "@etudiant",
+        "marqueeBody2": "Je ne sais pas quoi dire. Je suis sans voix. C'est incroyable.",
+        "marqueeBackground2": "#9400f7",
+        "marqueeName3": "Étudiant",
+        "marqueeUsername3": "@etudiant",
+        "marqueeBody3": "Je suis à court de mots. C'est incroyable. J'adore.",
+        "marqueeBackground3": "#f70052",
+        "marqueeName4": "Étudiant",
+        "marqueeUsername4": "@etudiant",
+        "marqueeBody4": "Je suis choqué, wow... Vous êtes géniaux, je ne vous remercierai jamais assez.",
+        "marqueeBackground4": "#003ef7",
+        "marqueeName5": "Étudiant",
+        "marqueeUsername5": "@etudiant",
+        "marqueeBody5": "Je ne sais pas quoi dire. Je suis sans voix. C'est incroyable.",
+        "marqueeBackground5": "#389406",
+        "marqueeName6": "Étudiant",
+        "marqueeUsername6": "@etudiant",
+        "marqueeBody6": "Je suis à court de mots. C'est incroyable. J'adore.",
+        "marqueeBackground6": "#f70000"
     }
 }
