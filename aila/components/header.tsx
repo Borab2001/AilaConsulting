@@ -2,8 +2,10 @@
 
 import TransitionLink from "@/lib/transition-link";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 import MobileHeader from "./header-button";
+import Image from "next/image";
+import Logo from "@/public/logo.svg";
 
 const Header = () => {
 
@@ -18,8 +20,19 @@ const Header = () => {
                 <TransitionLink 
                     href="/" 
                     className="w-fit"
+                    as={'image'}
                 >
-                    <Image src="/logo.svg" width={300} height={300} alt={"Logo"} />
+                    <Image 
+                        src={Logo}
+                        alt="Aila Logo" 
+                        priority
+                        style={{
+                            width: "100%",
+                            maxWidth: "300px",
+                            height: "auto",
+                            objectFit: "contain"
+                        }}
+                    />
                 </TransitionLink>
             </div>
             

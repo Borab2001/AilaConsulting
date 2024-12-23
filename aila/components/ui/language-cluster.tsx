@@ -136,7 +136,7 @@ export function LanguageCluster() {
                         hover={{ x: -2, y: -5, rotate: -6, delay: 0.15 }}
                     />
                     <Language
-                        flag="🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+                        flag="🇬🇧"
                         left={40}
                         top={196}
                         hover={{ x: -4, y: -5, rotate: -6, delay: 0.35 }}
