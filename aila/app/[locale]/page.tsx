@@ -66,7 +66,7 @@ export default function Home() {
 					animate="visible"
 					variants={gridVariants}	
 				>
-					<TransitionLink href="/about" className="relative p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
+					<TransitionLink href="/about" as={'image'} className="relative p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
 						<Image 
 							src={Istanbul} 
 							alt={t('grid2ImageAlt')} 

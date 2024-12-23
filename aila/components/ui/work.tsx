@@ -55,19 +55,19 @@ interface ProjectItemProps {
 // };
 
 function useResponsiveDimensions() {
-    const [dimensions, setDimensions] = useState({ height: 'auto', minHeight: '0' });
+    const [dimensions, setDimensions] = useState({ height: 'auto'});
 
     useEffect(() => {
         const updateDimensions = () => {
             if (window.matchMedia('(min-width: 1024px)').matches) {
                 // Large screens (lg and above)
-                setDimensions({ height: '100%', minHeight: 'none' });
+                setDimensions({ height: '100%' });
             } else if (window.matchMedia('(min-width: 768px)').matches) {
                 // Medium screens (md and above)
-                setDimensions({ height: '348px', minHeight: 'none' });
+                setDimensions({ height: '348px' });
             } else {
                 // Small screens
-                setDimensions({ height: '100%', minHeight: 'none' });
+                setDimensions({ height: '100%' });
             }
         };
 
@@ -126,7 +126,7 @@ export default function Work() {
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSelected, onClick }) => {
 
-    const { height, minHeight } = useResponsiveDimensions();
+    const { height } = useResponsiveDimensions();
 
     return (
         <motion.div
@@ -216,8 +216,6 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index, isLast, isSel
                         animate={{ 
                             opacity: 1, 
                             height, // Dynamic height
-                            minHeight, // Dynamic minHeight
-                            // : responsiveMinHeight,
                             transition: { duration: 0.5 } 
                         }}
                         exit={{ opacity: 0, height: 0, transition: { duration: 0.5 } }}
