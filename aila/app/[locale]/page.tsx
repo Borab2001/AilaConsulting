@@ -7,6 +7,8 @@ import { useTranslations } from 'next-intl';
 import TransitionLink from "@/lib/transition-link";
 import Work from "@/components/ui/work";
 import BentoLayout, { gridVariants } from "@/components/bento-layout";
+import Image from "next/image";
+import Istanbul from "@/public/images/istanbulv1.webp";
 
 export default function Home() {
 
@@ -58,13 +60,24 @@ export default function Home() {
 
 				{/* Grid Child 2 */}
 				<motion.div 
-					className="min-h-[480px] md:min-h-0 col-span-3 row-span-5 max-lg:col-span-4 max-md:col-span-full bg-istanbul bg-cover bg-center rounded-2xl w-full flex-grow border border-border"
+					className="min-h-[480px] md:min-h-0 col-span-3 row-span-5 max-lg:col-span-4 max-md:col-span-full rounded-2xl w-full flex-grow border border-border overflow-hidden"
 					custom={1}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}	
 				>
-					<TransitionLink href="/about" className="p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
+					<TransitionLink href="/about" className="relative p-4 h-full w-full flex justify-center items-center group group-hover:blur-md cursor-pointer">
+						<Image 
+							src={Istanbul} 
+							alt={t('grid2ImageAlt')} 
+							priority
+							fill
+							sizes="100%"
+							style={{ 
+								objectFit: 'cover' 
+							}}
+							placeholder="blur"
+						/>
 						<div className="scale-0 w-20 h-20 bg-bento border border-border text-title flex justify-center items-center text-center text-balance rounded-full transition-all ease-in-out duration-500 group-hover:scale-100 ">
 							<span>{t('grid2Span')}</span>
 						</div>
