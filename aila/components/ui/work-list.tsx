@@ -81,7 +81,7 @@ export function WorkList() {
             <div className="h-full bg-bento relative flex flex-1 w-full max-w-lg flex-col overflow-hidden rounded-lg border p-6 shadow-lg">
                 <AnimatedList>
                     {notifications.map((item, idx) => (
-                    <Notification {...item} key={idx} />
+                        <Notification {...item} key={idx} />
                     ))}
                 </AnimatedList>
             </div>
