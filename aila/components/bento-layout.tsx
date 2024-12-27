@@ -27,13 +27,15 @@ const BentoLayout: React.FC<BentoLayoutProps> = ({
     gridVariants
 }) => {
     return (
-        <main className="flex flex-1 flex-grow h-full px-4 pb-4 pt-20 lg:p-4">
+        <main className="flex flex-1 flex-grow h-full p-4">
             {/* Bento Grid */}
-            <div className="grid h-auto flex-1 min-h-[700px] grid-cols-12 grid-rows-10 gap-4 max-lg:h-auto max-lg:grid-rows-none">
-                <div className="col-span-full row-span-1">
+            <div className="w-full flex flex-col min-h-[700px] gap-4">
+                <div className="w-full h-16 flex-shrink-0">
                     <Header />
                 </div>
-                {children}
+                <div className="pb-4 h-full grid flex-grow-1 grid-cols-12 grid-rows-9 gap-4 max-lg:h-auto max-lg:grid-rows-none">
+                    {children}
+                </div>
             </div>
         </main>
     );

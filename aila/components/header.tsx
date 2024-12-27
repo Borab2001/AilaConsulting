@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <motion.header 
-            className="w-full flex gap-4"
+            className="w-full h-full flex gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}    
