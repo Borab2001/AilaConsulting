@@ -33,7 +33,7 @@ const BentoLayout: React.FC<BentoLayoutProps> = ({
                 <div className="w-full h-16 flex-shrink-0">
                     <Header />
                 </div>
-                <div className="pb-4 h-full grid flex-grow-1 grid-cols-12 grid-rows-9 gap-4 max-lg:h-auto max-lg:grid-rows-none">
+                <div className="h-full grid flex-grow-1 grid-cols-12 grid-rows-9 gap-4 max-lg:h-auto max-lg:grid-rows-none">
                     {children}
                 </div>
             </div>
