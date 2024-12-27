@@ -17,7 +17,7 @@ export default function Services() {
     return (
 		<BentoLayout gridVariants={gridVariants}>
 			{/* Left column */}
-			<div className="col-span-5 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+			<div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
 				<motion.div 
 					className="p-4 min-h-[700px] lg:min-h-0 col-span-5 row-span-9 max-lg:col-span-8 max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
 					custom={0}
@@ -25,20 +25,25 @@ export default function Services() {
 					animate="visible"
 					variants={gridVariants}
 				>
-					<h1 className="text-3xl font-bold mb-4">
-						{t('title')}
-					</h1>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum, ratione nulla numquam et voluptate architecto, quia perspiciatis tenetur recusandae repudiandae asperiores rerum. Beatae dolore reiciendis consequuntur officia maxime laborum.</p>
-					<div className="w-[500px] h-[500px] absolute z-10 -right-1/4 -bottom-1/4 flex">
-						<Globe />
+					<div className="flex-1 flex flex-col gap-4">
+						<h1 className="text-3xl font-bold mb-2">
+							{t('globeTitle')}
+						</h1>
+						<p>{t('globeDescription1')}</p>
+						<p>{t('globeDescription2')}</p>
+					</div>
+					<div className="w-full h-[300px]">
+						<div className="w-[500px] h-[500px] absolute z-10 -right-1/4 -bottom-1/4 flex">
+							<Globe />
+						</div>
 					</div>
 				</motion.div>
 			</div>
 
 			{/* Right column */}
-			<div className="col-span-7 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+			<div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
 				<motion.div 
-					className="p-4 min-h-[288px] col-span-7 row-span-4 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
+					className="p-4 min-h-[288px] col-span-8 row-span-4 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
 					custom={1}
 					initial="hidden"
 					animate="visible"
@@ -51,17 +56,16 @@ export default function Services() {
 				</motion.div>
 
 				<motion.div 
-					className="p-4 min-h-[288px] col-span-7 row-span-5 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
+					className="p-4 min-h-[288px] col-span-8 row-span-5 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
 					custom={1}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}
 				>
 					<h2 className="text-3xl font-bold mb-4">
-						{/* {t('')} */}
-						Your visa faster than ever
+						{t('visaTitle')}
 					</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum, ratione nulla numquam et voluptate architecto, quia perspiciatis tenetur recusandae repudiandae asperiores rerum. Beatae dolore reiciendis consequuntur officia maxime laborum.</p>
+					<p>{t('visaDescription')}</p>
 					<MarqueeList />
 				</motion.div>
 			</div>

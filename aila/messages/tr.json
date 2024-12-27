@@ -60,8 +60,8 @@
         "locationDetails": "İstanbul'un Taksim bölgesindeki İstiklal Caddesi, şehrin en ünlü yaya caddelerinden biridir. Tarih, kültür ve canlı enerji ile dolup taşar. Danışmanlık şirketimiz tam burada, İstiklal Caddesi'nde, vize başvuruları, oturma izni ve tercüme ihtiyaçlarınız için hizmetinizde."
     },
     "ServicesPage": {
-        "title": "Bu sayfa hala geliştirme aşamasında...",
-        "translationTitle": "Birden fazla dilde tercüme hizmeti."
+        "globeTitle": "Bu sayfa hala geliştirme aşamasında...",
+        "translationTitle": "Birden fazla dilde tercüme hizmeti"
     },
     "Navbar": {
         "navigation": "Navigasyon",

@@ -60,8 +60,8 @@
         "locationDetails": "L'avenue Istiklal, située à Taksim, Istanbul, est l'une des rues piétonnes les plus emblématiques de la ville, débordante d'histoire, de culture et d'énergie vibrante. Notre société de conseil se trouve ici même sur l'avenue Istiklal, prête à vous aider avec toutes vos demandes de traductions, de visas et de permis de résidence."
     },
     "ServicesPage": {
-        "title": "Cette page est encore en développement...",
-        "translationTitle": "Traductions dans plusieurs langues."
+        "globeTitle": "Cette page est encore en développement...",
+        "translationTitle": "Traductions dans plusieurs langues"
     },
     "Navbar": {
         "navigation": "Navigation",
