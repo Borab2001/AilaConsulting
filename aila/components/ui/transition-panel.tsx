@@ -39,6 +39,7 @@ export function TransitionPanel({
                     animate='center'
                     exit='exit'
                     {...motionProps}
+                    className='h-full w-full'
                 >
                     {children[activeIndex]}
                 </motion.div>
