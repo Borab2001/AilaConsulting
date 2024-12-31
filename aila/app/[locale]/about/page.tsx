@@ -102,6 +102,35 @@ export default function About() {
                     </TransitionPanel>
                 </motion.div>
             </div>
+
+            <div className="col-span-8 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
+                <motion.div 
+                    className="p-4 min-h-[288px] col-span-8 row-span-4 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
+                    custom={1}
+                    initial="hidden"
+                    animate="visible"
+                    variants={gridVariants}
+                >
+                    <TransitionPanel
+                        activeIndex={activeIndex}
+                        transition={{ duration: 0.4, ease: 'easeInOut' }}
+                        variants={{
+                            enter: { opacity: 1, x: "-100%", filter: 'blur(0px)' },
+                            center: { opacity: 1, x: 0, filter: 'blur(0px)' },
+                            exit: { opacity: 1, x: "100%", filter: 'blur(0px)' },
+                        }}
+                        className='h-full w-full'
+                    >
+                        {abouts.map((item, index) => (
+                            <div key={index} className='h-full w-full'>
+                                <h2 className="text-3xl font-bold mb-4">
+                                    {item.content}
+                                </h2>
+                            </div>
+                        ))}
+                    </TransitionPanel>
+                </motion.div>
+            </div>
         </BentoLayout>
     );
 }
