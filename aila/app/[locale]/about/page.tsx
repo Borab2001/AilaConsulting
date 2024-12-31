@@ -16,29 +16,32 @@ export default function About() {
 
     const abouts = [
         {
-          name: 'Alain',
-          surname: 'Peksoyler',
-          image: Test,
-          subtitle: 'Refining Visual Harmony',
-          content:
-            'Explore the principles of motion aesthetics that enhance the visual appeal of interfaces. Learn to balance timing, easing, and the flow of motion to create seamless user experiences.',
+            name: 'Alain',
+            surname: 'Peksoyler',
+            image: Test,
+            title: 'Co-Founder of Aila',
+            subtitle: 'Refining Visual Harmony',
+            content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
         },
         {
-          name: 'Isabelle',
-          surname: 'Bahar',
-          image: Test,
-          subtitle: 'Narrative and Expression',
-          content:
-            'Delve into how motion can be used as an artistic tool to tell stories and evoke emotions, making digital interactions feel more human and expressive.',
+            name: 'Isabelle',
+            surname: 'Bahar',
+            title: 'Co-Founder of Aila',
+            image: Test,
+            subtitle: 'Narrative and Expression',
+            content:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
         },
-        {
-          name: 'Aila',
-          surname: '',
-          image: Test,
-          subtitle: 'Mastering Motion Tools',
-          content:
-            'Gain proficiency in advanced techniques such as physics-based animations, 3D transformations, and complex sequencing to elevate your design skills and implementation.',
-        },
+        // {
+        //     name: 'Aila',
+        //     surname: '',
+        //     title: '',
+        //     image: Test,
+        //     subtitle: 'Mastering Motion Tools',
+        //     content:
+        //         'Gain proficiency in advanced techniques such as physics-based animations, 3D transformations, and complex sequencing to elevate your design skills and implementation.',
+        // },
       ];
 
     return (
@@ -92,10 +95,12 @@ export default function About() {
                                     placeholder="blur"
                                 />
                                 
-                                <h1 className='absolute h-auto bottom-0 left-0 text-5xl break-words p-4'>
+                                <h1 className='absolute h-auto bottom-0 left-0 text-5xl break-words p-4 font-semibold italic leading-tight'>
                                     {item.name}
-                                    <br/>
-                                    {item.surname}
+                                    {/* <br/>
+                                    <span className='uppercase'>
+                                        {item.surname}
+                                    </span> */}
                                 </h1>
                             </div>
                         ))}
@@ -123,9 +128,15 @@ export default function About() {
                     >
                         {abouts.map((item, index) => (
                             <div key={index} className='h-full w-full'>
-                                <h2 className="text-3xl font-bold mb-4">
-                                    {item.content}
+                                <h2 className="text-primary text-3xl font-semibold mb-2">
+                                    {item.name} {item.surname}
                                 </h2>
+                                <h3 className='text-subtitle text-lg font-medium mb-4 italic'>
+                                   {item.title} 
+                                </h3>
+                                <p className='text-text text-base'>
+                                    {item.content}
+                                </p>
                             </div>
                         ))}
                     </TransitionPanel>
