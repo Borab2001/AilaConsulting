@@ -19,7 +19,7 @@ export default function Services() {
 			{/* Left column */}
 			<div className="col-span-4 row-span-9 grid grid-cols-subgrid grid-rows-subgrid max-lg:col-span-full max-lg:grid-rows-none max-lg:gap-4">
 				<motion.div 
-					className="p-4 min-h-[700px] lg:min-h-0 col-span-5 row-span-9 max-lg:col-span-8 max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
+					className="p-4 min-h-[700px] lg:min-h-0 col-span-5 row-span-9 max-lg:col-span-12 max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col md:flex-row lg:flex-col justify-between gap-4 relative overflow-hidden"
 					custom={0}
 					initial="hidden"
 					animate="visible"
@@ -32,7 +32,7 @@ export default function Services() {
 						<p>{t('globeDescription1')}</p>
 						<p>{t('globeDescription2')}</p>
 					</div>
-					<div className="w-full h-[300px]">
+					<div className="h-[300px]">
 						<div className="w-[500px] h-[500px] absolute z-10 -right-1/4 -bottom-1/4 flex">
 							<Globe />
 						</div>
@@ -56,16 +56,18 @@ export default function Services() {
 				</motion.div>
 
 				<motion.div 
-					className="p-4 min-h-[288px] col-span-8 row-span-5 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col justify-between gap-4 relative overflow-hidden"
+					className="p-4 min-h-[500px] lg:min-h-[288px] col-span-8 row-span-5 max-lg:col-span-full max-md:col-span-full bg-bento border border-border text-title rounded-2xl w-full flex flex-col md:flex-row lg:flex-col justify-between gap-4 relative overflow-hidden"
 					custom={1}
 					initial="hidden"
 					animate="visible"
 					variants={gridVariants}
 				>
-					<h2 className="text-3xl font-bold mb-4">
-						{t('visaTitle')}
-					</h2>
-					<p>{t('visaDescription')}</p>
+					<div className="flex flex-col gap-4">
+						<h2 className="text-3xl font-bold mb-4">
+							{t('visaTitle')}
+						</h2>
+						<p>{t('visaDescription')}</p>
+					</div>
 					<MarqueeList />
 				</motion.div>
 			</div>
